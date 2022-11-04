@@ -1,36 +1,38 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 02 - FuncionesConRetorno.c
+**      Archivo: 14 - 04 - Fabs.c
 **      SO: Windows 10
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
+**      Notas:
+**          Sqrt nos ayuda a sacar la raíz cuadrada:
+**
+**              sqrt(dato);
 ** #########################################################################################
 */
 
 // Directivas de prerpocesador
 #include <stdio.h>
+#include <math.h>
 
 // Prototipo(s) de funcion(es)
-int SUMAR(int n1, int n2);
-
-// Variables globales
-int a, b;
+void fncMatSqrt();
 
 // Main Function
 int main(){
     
-    printf("De el primer numero: "); scanf("%i", &a);
-    printf("De el segundo numero: "); scanf("%i", &b);
-
-    printf("La suma de %i y % i es: %i", a, b, SUMAR(a, b));
+    fncMatSqrt();
     
     return 0;
 }
 
 // Funcion(es)
-int SUMAR(int n1, int n2){
-    int S = 0;
-    S = n1 + n2;
+void fncMatSqrt(){
+    float  n1, cambio = 0;
 
-    return S;
+    printf("De un numero: "); scanf("%f", &n1);
+
+    cambio = sqrt(n1);
+
+    printf("La raíz cuadrada de %.2f es: %.2f", n1, cambio);
 }

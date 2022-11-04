@@ -1,6 +1,6 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 02 - FuncionesConRetorno.c
+**      Archivo: 15 - 02 - Coseno.c
 **      SO: Windows 10
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
@@ -9,28 +9,26 @@
 
 // Directivas de prerpocesador
 #include <stdio.h>
+#include <math.h>
 
 // Prototipo(s) de funcion(es)
-int SUMAR(int n1, int n2);
-
-// Variables globales
-int a, b;
+void fncCoseno();
 
 // Main Function
 int main(){
     
-    printf("De el primer numero: "); scanf("%i", &a);
-    printf("De el segundo numero: "); scanf("%i", &b);
-
-    printf("La suma de %i y % i es: %i", a, b, SUMAR(a, b));
+    fncCoseno();
     
     return 0;
 }
 
 // Funcion(es)
-int SUMAR(int n1, int n2){
-    int S = 0;
-    S = n1 + n2;
+void fncCoseno(){
+    float  n1, cambio = 0;
 
-    return S;
+    printf("De un angulo: "); scanf("%f", &n1);
+
+    cambio = cos(n1);
+
+    printf("El coseno de %.2f es: %.2f", n1, cambio);
 }

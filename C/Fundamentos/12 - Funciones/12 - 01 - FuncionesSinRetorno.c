@@ -4,14 +4,6 @@
 **      SO: Windows 10
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
-**      Notas:
-**          Estructura de una función sin retorno:
-**
-**          void nombreFuncion(parametros){
-**              ...
-**              Código de la función (Intrucciones);
-**              ..
-**          }
 ** #########################################################################################
 */
 

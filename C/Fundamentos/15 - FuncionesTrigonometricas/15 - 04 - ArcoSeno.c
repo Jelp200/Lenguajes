@@ -1,6 +1,6 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 02 - FuncionesConRetorno.c
+**      Archivo: 15 - 04 - ArcoSeno.c
 **      SO: Windows 10
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
@@ -9,28 +9,26 @@
 
 // Directivas de prerpocesador
 #include <stdio.h>
+#include <math.h>
 
 // Prototipo(s) de funcion(es)
-int SUMAR(int n1, int n2);
-
-// Variables globales
-int a, b;
+void fncArcoSeno();
 
 // Main Function
 int main(){
     
-    printf("De el primer numero: "); scanf("%i", &a);
-    printf("De el segundo numero: "); scanf("%i", &b);
-
-    printf("La suma de %i y % i es: %i", a, b, SUMAR(a, b));
+    fncArcoSeno();
     
     return 0;
 }
 
 // Funcion(es)
-int SUMAR(int n1, int n2){
-    int S = 0;
-    S = n1 + n2;
+void fncArcoSeno(){
+    float  n1, cambio = 0;
 
-    return S;
+    printf("De un angulo: "); scanf("%f", &n1);
+
+    cambio = asin(n1);
+
+    printf("El arcoseno de %.2f es: %.2f", n1, cambio);
 }

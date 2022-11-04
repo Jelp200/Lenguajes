@@ -1,36 +1,39 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 02 - FuncionesConRetorno.c
+**      Archivo: 14 - 06 - Pow.c
 **      SO: Windows 10
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
+**      Notas:
+**          Pow nos ayuda a elevar un dato a una potencia:
+**
+**              pow(dato, exponente);
 ** #########################################################################################
 */
 
 // Directivas de prerpocesador
 #include <stdio.h>
+#include <math.h>
 
 // Prototipo(s) de funcion(es)
-int SUMAR(int n1, int n2);
-
-// Variables globales
-int a, b;
+void fncMatFmod();
 
 // Main Function
 int main(){
     
-    printf("De el primer numero: "); scanf("%i", &a);
-    printf("De el segundo numero: "); scanf("%i", &b);
-
-    printf("La suma de %i y % i es: %i", a, b, SUMAR(a, b));
+    fncMatFmod();
     
     return 0;
 }
 
 // Funcion(es)
-int SUMAR(int n1, int n2){
-    int S = 0;
-    S = n1 + n2;
+void fncMatFmod(){
+    float  n1, e, cambio = 0;
 
-    return S;
+    printf("De un numero: "); scanf("%f", &n1);
+    printf("De el exponente: "); scanf("%f", &e);
+
+    cambio = pow(n1, e);
+
+    printf("%.2f a la %.2f es: %.2f", n1, e, cambio);
 }

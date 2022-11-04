@@ -1,6 +1,6 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 02 - FuncionesConRetorno.c
+**      Archivo: 12 - 03 - FuncionRecursiva.c
 **      SO: Windows 10
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
@@ -11,26 +11,25 @@
 #include <stdio.h>
 
 // Prototipo(s) de funcion(es)
-int SUMAR(int n1, int n2);
-
-// Variables globales
-int a, b;
+long factorial(int n);
 
 // Main Function
 int main(){
     
-    printf("De el primer numero: "); scanf("%i", &a);
-    printf("De el segundo numero: "); scanf("%i", &b);
-
-    printf("La suma de %i y % i es: %i", a, b, SUMAR(a, b));
+    int n;
     
+    printf("\tEscriba un numero: "); scanf("%i", &n);
+
+    printf("\n\tEl factorial del numero es: %li", factorial(n));
+
     return 0;
 }
 
 // Funcion(es)
-int SUMAR(int n1, int n2){
-    int S = 0;
-    S = n1 + n2;
-
-    return S;
+long factorial(int n){
+    if(n <= 1){
+        return 1;
+    }else{
+        return (n * factorial(n - 1));
+    }
 }
