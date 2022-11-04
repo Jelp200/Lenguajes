@@ -8,6 +8,7 @@ Este repositorio contiene los lenguajes de programación que he aprendido a lo l
 ### :yellow_circle: Lenguaje JavaScript [:muscle:]
 ### :yellow_circle: HTML                [:skull:]
 ### :yellow_circle: CSS                 [:paintbrush:]
+### :orange_circle: MATLAB              [:man_scientist:]
 
 
 ### Clonar el repositorio :octocat:
