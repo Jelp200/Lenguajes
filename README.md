@@ -1,13 +1,13 @@
 # Lenguajes :desktop_computer:
 Este repositorio contiene los lenguajes de programación que he aprendido a lo largo de la carrera de ingeniería en comunicaciones y electrónica.
 
-### :green_circle: Lenguaje C :croissant:
-### :green_circle: Lenguaje C++ :croissant:++
-### :green_circle: Lenguaje Python :snake:
-### :green_circle: Lenguaje Java :coffe:
-### :yellow_circle: Lenguaje JavaScript :muscle:
-### :yellow_circle: HTML :skull:
-### :yellow_circle: CSS :paintbrush:
+### :green_circle: Lenguaje C           [:croissant:]
+### :green_circle: Lenguaje C++         [:croissant:++]
+### :green_circle: Lenguaje Python      [:snake:]
+### :green_circle: Lenguaje Java        [:coffee:]
+### :yellow_circle: Lenguaje JavaScript [:muscle:]
+### :yellow_circle: HTML                [:skull:]
+### :yellow_circle: CSS                 [:paintbrush:]
 
 
 ### Clonar el repositorio :octocat:
