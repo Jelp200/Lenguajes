@@ -4,7 +4,7 @@ Un arreglo unidimensional se puede ver de la siguiente manera.
 ╔══════════════════════════════════════╦════════════════════════════════════╗
 ║             Á L G E B R A            ║                  C                 ║
 ╠══════════════════════════════════════╬════════════════════════════════════╣
-║           x = [x¹, x², x³]           ║  tDato Nombre[Tamaño] = {Valores}  ║
+║           x = [x¹, x², x³]           ║      tDato x[3] = {x1, x2, x3}     ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
 ```
 Y en memoria se puede visualizar como.
