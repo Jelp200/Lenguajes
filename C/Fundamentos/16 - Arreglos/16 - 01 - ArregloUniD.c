@@ -45,6 +45,5 @@ int main(){
     while (++indice < 10){
         printf("\nEl valor del array[%i] es: %i", indice, arregloUniD2[indice]);
     }
-
     return 0;
 }
