@@ -1,6 +1,6 @@
 /*
 ** #########################################################################################
-**      Archivo: 14 - 06 - Pow.c
+**      Archivo: 16 - 01 - ArregloUniD.c
 **      SO: Windows 10
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
