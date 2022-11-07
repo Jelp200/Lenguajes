@@ -1,5 +1,5 @@
-/***********************************************************************
-**
+/*
+** #########################################################################################
 **  Archivo         :   17 - menuAvanzado.c
 **  Proyecto        :   Mr.C (Ejercicios)
 **  Herramienta(s)  :   Code::Blocks / Visual Studio Code
@@ -9,8 +9,8 @@
 **  Descripcion     :
 **                      Realizar un programa donde el usuario adivine el
 **                      numero secreto.
-**
-***********************************************************************/
+** #########################################################################################
+*/
 
 // Directivas de preprocesador.
 #include <stdio.h>

@@ -1,5 +1,5 @@
-/***********************************************************************
-**
+/*
+** #########################################################################################
 **  Archivo         :   15 - cuentaRegresiva.c
 **  Proyecto        :   Mr.C (Ejercicios)
 **  Herramienta(s)  :   Code::Blocks / Visual Studio Code
@@ -9,8 +9,8 @@
 **  Descripcion     :
 **                      Realizar un programa que realice una cuenta
 **                      regresiva desde el 100 hasta el 0.
-**
-***********************************************************************/
+** #########################################################################################
+*/
 
 // Directivas de preprocesador.
 #include <stdio.h>

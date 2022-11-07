@@ -1,5 +1,5 @@
-/***********************************************************************
-**
+/*
+** #########################################################################################
 **  Archivo         :   19 - ACII.c
 **  Proyecto        :   Mr.C (Ejercicios)
 **  Herramienta(s)  :   Code::Blocks / Visual Studio Code
@@ -7,9 +7,9 @@
 **  Autores         :
 **                      Jelp 200
 **  Descripcion     :
-**                      Realizar un programa que imprima el código ASCII.
-**
-***********************************************************************/
+**                      Realizar un programa que imprima el cÃ³digo ASCII.
+** #########################################################################################
+*/
 
 // Directivas de preprocesador.
 #include <stdio.h>

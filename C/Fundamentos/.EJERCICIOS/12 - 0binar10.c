@@ -1,5 +1,5 @@
-/***********************************************************************
-**
+/*
+** #########################################################################################
 **  Archivo         :   11 - mayorEdad.c
 **  Proyecto        :   Mr.C (Ejercicios)
 **  Herramienta(s)  :   Code::Blocks / Visual Studio Code
@@ -9,8 +9,8 @@
 **  Descripcion     :
 **                      Realizar un programa donde el usuario de un numero
 **                      del 0 - 10 y este se visualice en binario.
-**
-***********************************************************************/
+** #########################################################################################
+*/
 
 // Directivas de preprocesador.
 #include <stdio.h>
@@ -34,7 +34,7 @@ unsigned short int n;
 // Funcion principal.
 int main(void){
 
-    printf("De el número a convertir: "); scanf("%i", &n);
+    printf("De el nï¿½mero a convertir: "); scanf("%i", &n);
 
     if((n >= 0) || (n <= 10)){
         switch(n){

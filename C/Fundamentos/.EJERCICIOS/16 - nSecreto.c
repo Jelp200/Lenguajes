@@ -1,5 +1,5 @@
-/***********************************************************************
-**
+/*
+** #########################################################################################
 **  Archivo         :   16 - nSecreto.c
 **  Proyecto        :   Mr.C (Ejercicios)
 **  Herramienta(s)  :   Code::Blocks / Visual Studio Code
@@ -9,8 +9,8 @@
 **  Descripcion     :
 **                      Realizar un programa donde el usuario adivine el
 **                      numero secreto.
-**
-***********************************************************************/
+** #########################################################################################
+*/
 
 // Directivas de preprocesador.
 #include <stdio.h>
@@ -26,11 +26,11 @@ int main(){
         puts("\n\t\tNUMERO SECRETO.");
         printf("\n\t\tDe el numero secreto: "); scanf("%i", &opc);
         if(opc == nRandom){
-            printf("\n\t\tAcerto al número secreto...");
+            printf("\n\t\tAcerto al nï¿½mero secreto...");
             break;
 
         }else{
-            printf("\n\t\tIntentelo otra vez, el número secreto esta entre 0 y 5...");
+            printf("\n\t\tIntentelo otra vez, el nï¿½mero secreto esta entre 0 y 5...");
 
             intento -= 1;
             printf("\n\t\tLe quedan %i intentos.\n\n\n", intento);

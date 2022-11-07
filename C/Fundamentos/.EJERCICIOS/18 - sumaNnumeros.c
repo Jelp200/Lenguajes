@@ -1,5 +1,5 @@
-/***********************************************************************
-**
+/*
+** #########################################################################################
 **  Archivo         :   18 - sumaNnumeros.c
 **  Proyecto        :   Mr.C (Ejercicios)
 **  Herramienta(s)  :   Code::Blocks / Visual Studio Code
@@ -9,8 +9,8 @@
 **  Descripcion     :
 **                      Realizar un programa donde el usuario solo ingrese
 **                      el numero de elementos que quiere sumar y los sume.
-**
-***********************************************************************/
+** #########################################################################################
+*/
 
 // Directivas de preprocesador.
 #include <stdio.h>

@@ -1,5 +1,5 @@
-/***********************************************************************
-**
+/*
+** #########################################################################################
 **  Archivo         :   14 - menuOpciones.c
 **  Proyecto        :   Mr.C (Ejercicios)
 **  Herramienta(s)  :   Code::Blocks / Visual Studio Code
@@ -9,8 +9,8 @@
 **  Descripcion     :
 **                      Realizar un programa que tenga un menpu de
 **                      opciones.
-**
-***********************************************************************/
+** #########################################################################################
+*/
 
 // Directivas de preprocesador.
 #include <stdio.h>
@@ -35,7 +35,7 @@ int main(){
             case 4: printf("\nOpcion %i dentro de un menu.\n", opc); break;
             case 5: printf("\nOpcion %i dentro de un menu.\n", opc); break;
             case 0: break;
-            default: printf("\nDe una opción correcta..."); break;
+            default: printf("\nDe una opciï¿½n correcta..."); break;
         }
     }
 
