@@ -31,7 +31,7 @@ int main(){
 
         if (strcmp(Pswrd, PswrdUsr) == 0){
             printf("Bienvenido al sistema...");
-            break;;
+            break;
         }else{
             iRest--;
             printf("\n\nPassword incorrecto, le quedan %i intentos...\n", iRest);

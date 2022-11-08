@@ -1,6 +1,6 @@
 /*
 ** #########################################################################################
-**      Archivo: 11 - 07 - Strrev.c
+**      Archivo: 11 - 08 - Strrev.c
 **      SO: Windows 10
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
