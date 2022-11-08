@@ -17,9 +17,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Prototipo(s) de funcion(es).
+void Usuario();
+void Edad();
+void Pais();
+
 // Funcion principal.
 int main(void){
 
-    printf("\n\t[Jelp 200] [22] [Mexico]");
+    Usuario();
+    Edad();
+    Pais();
+
     return 0;
+}
+
+// Funcion(es);
+void Usuario(){
+    printf("\n\t[Jelp 200] ");
+}
+
+void Edad(){
+    printf("[22] ");
+}
+
+void Pais(){
+    printf("[Mexico]");
 }
