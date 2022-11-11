@@ -1,7 +1,7 @@
 # Lenguajes :desktop_computer:
 Este repositorio contiene los lenguajes de programación que he aprendido a lo largo de la carrera de ingeniería en comunicaciones y electrónica.
 
-<a href = "/C">### :green_circle: Lenguaje C           [:croissant:]</a>
+### :green_circle: Lenguaje C           [:croissant:]
 ### :green_circle: Lenguaje C++         [:croissant:++]
 ### :green_circle: Lenguaje Python      [:snake:]
 ### :green_circle: Lenguaje Java        [:coffee:]
