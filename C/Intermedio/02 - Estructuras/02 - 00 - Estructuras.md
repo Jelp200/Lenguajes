@@ -36,3 +36,10 @@ struct{
 
 struct tarjetas cli1, cli2;
 ```
+De igual manera podemos agregar arreglos en nuestras estructuras.
+```C
+struct persona{
+    char nombre[20];
+    int edad;
+} personas[5];
+```
