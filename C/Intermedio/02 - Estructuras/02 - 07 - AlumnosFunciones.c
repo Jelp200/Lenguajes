@@ -257,4 +257,5 @@ void modMaterias(Alumno *alumnoMod, int indice){
 En este código utilizamos el paso por referencia y paso por valor los cuales nos ayudaran a
 visualizar los datos de la estructura (paso por valor) y modificar la estructura (paso por
 referencia) dada su posición en la memoria.
+
 */
