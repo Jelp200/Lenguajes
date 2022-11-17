@@ -3,7 +3,8 @@ En el lenguaje C podemos trabajar con archivos, ya sea para modificar, crear o g
 ### 1. Archivos de texto.
 Podemos guardar cualquier texto ingresado, lo malo es que que el texto que ingresemos solo podra ser texto plano, nada de subrayado, negritas u otro tipo de arreglo al texto.
 ### 2. Archivos binarios.
-Podremos guardar texto, ya sea plano o  con arreglos, deigual manera podremos guardar otros tipos de datos tales como música, fotos y muchos otros tipos de datos, ya que el guardado, modificacion o creación de estos datos se haran en lenguaje maquina y esto nos dara muchas ventajas tales como tener archivos multiplataforma.
+Podremos guardar texto, ya sea plano o  con arreglos, de igual manera podremos guardar otros tipos de datos tales como música, fotos y muchos otros tipos de datos, ya que el guardado, modificacion o creación de estos datos se haran en lenguaje maquina y esto nos dara muchas ventajas tales como tener archivos multiplataforma.
+
 Dentro de el manejo de archivos tenemos funciones las cuales nos ayudaran a poder hacer manejo de dichos archivos, estas son: 
 ```txt
               F U N C I O N              S I G N I F I C A D O
