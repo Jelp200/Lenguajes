@@ -7,7 +7,7 @@ Podremos guardar texto, ya sea plano o  con arreglos, de igual manera podremos g
 
 Dentro de el manejo de archivos tenemos funciones las cuales nos ayudaran a poder hacer manejo de dichos archivos, estas son: 
 ```txt
-              F U N C I O N              S I G N I F I C A D O
+              F U N C I O N                                          S I G N I F I C A D O
 ╔══════════════════════════════════════╗
 ║                fopen()               ║    <-      Abre un archivo.
 ╠══════════════════════════════════════╣
