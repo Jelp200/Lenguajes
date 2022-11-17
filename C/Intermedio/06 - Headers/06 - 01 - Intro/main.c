@@ -12,6 +12,8 @@
 //! Llamamos a las librerias creadas
 #include "suma.h"
 #include "resta.h"
+#include "producto.h"
+#include "cociente.h"
 
 // Main Function
 int main() {
@@ -33,6 +35,14 @@ int main() {
     printf("\n\tLa resta es: %i", RR);
 
     wit();
+
+    int RP = producto(p_a, p_b);
+    printf("\n\tEl producto es: %i", RP);
+
+    wit();
+
+    int RC = cociente(p_a, p_b);
+    printf("\n\tEl cociente es: %.2f", RC);
     
     return 0;
 }
