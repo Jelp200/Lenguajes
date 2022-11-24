@@ -17,10 +17,11 @@
 ;   itectura y el set de instrucciones.                                              *
 ;*************************************************************************************
 ;                                                                                    *
-;    Filename:    Plantilla                                                          *
-;    File Version: 1.0                                                               *
+;    Archivo:   Plantilla                                                            *
+;    Version:   1.0                                                                  *
 ;                                                                                    *
-;    Author:   Jelp 200                                                              *
+;    Autor:     Jose Luis Bravo                                                      *
+;    Edicion:   Jorge Peña                                                           *
 ;                                                                                    * 
 ;*************************************************************************************
 ;                                                                                    *
