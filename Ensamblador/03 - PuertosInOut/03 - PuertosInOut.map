@@ -1,0 +1,57 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Fri Dec 16 12:34:25 2022
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                   .org_1       code   0x001000    program   0x000032
+.config_300000_03 - PUERTOSINOUT.O    romdata   0x300000    program   0x000001
+.config_300001_03 - PUERTOSINOUT.O    romdata   0x300001    program   0x000001
+.config_300002_03 - PUERTOSINOUT.O    romdata   0x300002    program   0x000001
+.config_300003_03 - PUERTOSINOUT.O    romdata   0x300003    program   0x000001
+.config_300005_03 - PUERTOSINOUT.O    romdata   0x300005    program   0x000001
+.config_300006_03 - PUERTOSINOUT.O    romdata   0x300006    program   0x000001
+.config_300008_03 - PUERTOSINOUT.O    romdata   0x300008    program   0x000001
+.config_300009_03 - PUERTOSINOUT.O    romdata   0x300009    program   0x000001
+.config_30000A_03 - PUERTOSINOUT.O    romdata   0x30000a    program   0x000001
+.config_30000B_03 - PUERTOSINOUT.O    romdata   0x30000b    program   0x000001
+.config_30000C_03 - PUERTOSINOUT.O    romdata   0x30000c    program   0x000001
+.config_30000D_03 - PUERTOSINOUT.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x001000    0x001031      
+                            0x300000    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            68 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 CPUERTOS   0x001010    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\03 - PuertosInOut\03 - PuertosInOut.asm
+                   INICIO   0x001000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\03 - PuertosInOut\03 - PuertosInOut.asm
+                     LEER   0x001020    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\03 - PuertosInOut\03 - PuertosInOut.asm
+             RESET_VECTOR   0x000000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\03 - PuertosInOut\03 - PuertosInOut.asm
+                     etq1   0x001004    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\03 - PuertosInOut\03 - PuertosInOut.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             RESET_VECTOR   0x000000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\03 - PuertosInOut\03 - PuertosInOut.asm
+                   INICIO   0x001000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\03 - PuertosInOut\03 - PuertosInOut.asm
+                     etq1   0x001004    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\03 - PuertosInOut\03 - PuertosInOut.asm
+                 CPUERTOS   0x001010    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\03 - PuertosInOut\03 - PuertosInOut.asm
+                     LEER   0x001020    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\03 - PuertosInOut\03 - PuertosInOut.asm
+
+
