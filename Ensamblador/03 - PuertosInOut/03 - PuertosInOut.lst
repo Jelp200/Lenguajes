@@ -1,4 +1,4 @@
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE  1
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00042     CONFIG FCMEN    = OFF
                       00043     CONFIG IESO     = OFF
                       00044     CONFIG PWRT     = OFF
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE  2
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00090 
                       00091 RESET_VECTOR    ORG             0
                       00092 
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE  3
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -131,7 +131,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00099 ; el PROGRAMA PRINCIPAL inicia aqui
                       00100 
                       00101         ORG             0x1000
-001000                00102 INICIO                          ; *** Codigo principal va aquí **
+001000                00102 INICIO                          ; *** Codigo principal va aqu� **
                       00103     ;SUB-RUTINAS
 001000 EC?? F???      00104             call CPUERTOS
 001004 EC?? F???      00105 etq1:       call LEER
@@ -144,31 +144,31 @@ Warning[203]: Found opcode in column 1. (RETURN)
                       00111 ; Espacio para subrutinas
                       00112 ;**************************************************************************************
 001010                00113 CPUERTOS
-001010 0E0F           00114     movlw   0x0F
+001010 0E0F           00114     movlw   0x0F                ; Desactivar el convertidor analog/digital
 001012 6EC1           00115     movwf   ADCON1
-001014 0EFF           00116     movlw   0xFF
-001016 6E93           00117     movwf   TRISB
-001018 0E00           00118         movlw   0x00
-00101A 6E95           00119     movwf   TRISD
-00101C 6E83           00120     movwf   PORTD
+001014 0EFF           00116     movlw   0xFF                ; W <- 0xFF
+001016 6E93           00117     movwf   TRISB               ; TRISB <- W (PORT-IN)
+001018 0E00           00118         movlw   0x00            ; W <- 0x00
+00101A 6E95           00119     movwf   TRISD               ; TRISD <- W
+00101C 6E83           00120     movwf   PORTD               ; PORTD <- W
 00101E 0012           00121     RETURN
                       00122 
 001020                00123 LEER
-001020 3881           00124     swapf   PORTB, 0
-001022 0B0F           00125     andlw   0x0F
-001024 6E50           00126     movwf   0x50
-001026 080C           00127     sublw   0x0C
-                      00128     ;Salto condicional
-001028 E6??           00129     BN      LEER
-00102A 5050           00130     movf    0x50, 0
-00102C 0F00           00131     addlw   0x00
-00102E 0007           00132     daw
-001030 0012           00133     RETURN
-                      00134 
-                      00135 ;**************************************************************************************
-                      00136 ;Fin del programa
-                      00137         END
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE  4
+001020 3881           00124     swapf   PORTB, 0    ; Intercambio H (DATO xxxx) to L (xxxx DATO)
+001022 0B0F           00125     andlw   0x0F                ; Enmascaramiento (xxxx DATO)(0000 1111) = 0000 DATO -> W
+001024 6E50           00126     movwf   0x50                ; 0x50 <- W
+001026 080C           00127     sublw   0x0C                ; W <- (0x0C - W)
+001028 E6??           00128     BN      LEER                ; Salto condicional �W positivo? Si es as� continua, sino, se repite el 
+                            bloque anterior
+00102A 5050           00129     movf    0x50, 0             ; 0x50 <- W
+00102C 0F00           00130     addlw   0x00
+00102E 0007           00131     daw
+001030 0012           00132     RETURN
+                      00133 
+                      00134 ;**************************************************************************************
+                      00135 ;Fin del programa
+                      00136         END
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE  4
 
 
 SYMBOL TABLE
@@ -227,7 +227,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE  5
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE  5
 
 
 SYMBOL TABLE
@@ -286,7 +286,7 @@ CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
 CMIF                              00000006
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE  6
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE  6
 
 
 SYMBOL TABLE
@@ -345,7 +345,7 @@ EEIF                              00000004
 EEIP                              00000004
 EEPGD                             00000007
 ENDP0                             00000003
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE  7
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE  7
 
 
 SYMBOL TABLE
@@ -404,7 +404,7 @@ HLVDL2                            00000002
 HLVDL3                            00000003
 I2C_DAT                           00000005
 I2C_READ                          00000002
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE  8
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE  8
 
 
 SYMBOL TABLE
@@ -463,7 +463,7 @@ LATA4                             00000004
 LATA5                             00000005
 LATA6                             00000006
 LATB                              00000F8A
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE  9
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE  9
 
 
 SYMBOL TABLE
@@ -522,7 +522,7 @@ NOT_POR                           00000001
 NOT_RBPU                          00000007
 NOT_RI                            00000004
 NOT_T1SYNC                        00000002
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 10
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 10
 
 
 SYMBOL TABLE
@@ -581,7 +581,7 @@ PLUSW2                            00000FDB
 POR                               00000001
 PORTA                             00000F80
 PORTB                             00000F81
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 11
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 11
 
 
 SYMBOL TABLE
@@ -640,7 +640,7 @@ RC4                               00000004
 RC5                               00000005
 RC6                               00000006
 RC7                               00000007
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 12
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 12
 
 
 SYMBOL TABLE
@@ -699,7 +699,7 @@ SPEN                              00000007
 SPP0                              00000000
 SPP1                              00000001
 SPP2                              00000002
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 13
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 13
 
 
 SYMBOL TABLE
@@ -758,7 +758,7 @@ T0CS                              00000005
 T0IE                              00000005
 T0IF                              00000002
 T0IP                              00000002
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 14
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 14
 
 
 SYMBOL TABLE
@@ -817,7 +817,7 @@ TMR2IF                            00000001
 TMR2IP                            00000001
 TMR2ON                            00000002
 TMR3                              00000FB2
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 15
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 15
 
 
 SYMBOL TABLE
@@ -876,7 +876,7 @@ TRISE0                            00000000
 TRISE1                            00000001
 TRISE2                            00000002
 TRMT                              00000001
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 16
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 16
 
 
 SYMBOL TABLE
@@ -935,7 +935,7 @@ URSTIF                            00000000
 USBEN                             00000003
 USBIE                             00000005
 USBIF                             00000005
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 17
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 17
 
 
 SYMBOL TABLE
@@ -994,7 +994,7 @@ _CP2_OFF_5L                       000000FF
 _CP2_ON_5L                        000000FB
 _CP3_OFF_5L                       000000FF
 _CP3_ON_5L                        000000F7
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 18
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 18
 
 
 SYMBOL TABLE
@@ -1053,7 +1053,7 @@ _LPT1OSC_ON_3H                    000000FF
 _LVP_OFF_4L                       000000FB
 _LVP_ON_4L                        000000FF
 _MCLRE_OFF_3H                     0000007F
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 19
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 19
 
 
 SYMBOL TABLE
@@ -1112,7 +1112,7 @@ _WRTD_OFF_6H                      000000FF
 _WRTD_ON_6H                       0000007F
 _XINST_OFF_4L                     000000BF
 _XINST_ON_4L                      000000FF
-MPASM  5.51             03 - PUERTOSINOUT.ASM   12-16-2022  12:34:23         PAGE 20
+MPASM  5.51             03 - PUERTOSINOUT.ASM   12-27-2022  0:57:11         PAGE 20
 
 
 SYMBOL TABLE

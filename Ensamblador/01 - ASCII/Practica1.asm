@@ -101,21 +101,25 @@ RESET_VECTOR	ORG		0
 	ORG		0x1000					; Direccion de memoria donde iniciaremos
 INICIO								; *** Codigo principal va aqui **
 
-	movf	0x50, 0					;
-	addlw	0x30					;
-	movwf	0x50					;
-	movf	0x51, 0
-	addlw	0x30
-	movwf	0x51
-	movf	0x52, 0
-	addlw	0x30
-	movwf	0x52
-	movf	0x53, 0
-	addlw	0x30
-	movwf	0x53
-	movf	0x54, 0
-	addlw	0x30
-	movwf	0x54
+	movf	0x50, 0					; Lectura hacía el acumulador [0x50] -> W, "0" indica la misma posición de memoria.
+	addlw	0x30					; Suma 30 al cumulador [0x30] + W -> W.
+	movwf	0x50					; Ingresa el resultado de la suma depositado en el acumulador a la dirección [0x50]
+
+	movf	0x51, 0					; Lectura hacía el acumulador [0x51] -> W, "0" indica la misma posición de memoria.
+	addlw	0x30					; Suma 30 al cumulador [0x30] + W -> W.
+	movwf	0x51					; Ingresa el resultado de la suma depositado en el acumulador a la dirección [0x51]
+
+	movf	0x52, 0					; Lectura hacía el acumulador [0x52] -> W, "0" indica la misma posición de memoria.
+	addlw	0x30					; Suma 30 al cumulador [0x30] + W -> W.
+	movwf	0x52					; Ingresa el resultado de la suma depositado en el acumulador a la dirección [0x52]
+
+	movf	0x53, 0					; Lectura hacía el acumulador [0x53] -> W, "0" indica la misma posición de memoria.
+	addlw	0x30					; Suma 30 al cumulador [0x30] + W -> W.
+	movwf	0x53					; Ingresa el resultado de la suma depositado en el acumulador a la dirección [0x53]
+
+	movf	0x54, 0					; Lectura hacía el acumulador [0x54] -> W, "0" indica la misma posición de memoria.
+	addlw	0x30					; Suma 30 al cumulador [0x30] + W -> W.
+	movwf	0x54					; Ingresa el resultado de la suma depositado en el acumulador a la dirección [0x54]
 									; Fin del main	
 ;**************************************************************************************
 ; Espacio para subrutinas

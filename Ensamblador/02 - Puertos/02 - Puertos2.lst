@@ -1,4 +1,4 @@
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE  1
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00042     CONFIG FCMEN    = OFF
                       00043     CONFIG IESO     = OFF
                       00044     CONFIG PWRT     = OFF
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE  2
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00090 
                       00091 RESET_VECTOR    ORG             0
                       00092 
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE  3
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -141,20 +141,18 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 001008 0E00           00109         movlw   0x00            ; Cargamos el acumulador
 00100A 6E93           00110         movwf   TRISB           ; TRIB <- 0x00 (Salida)
                       00111 
-00100C                00112 LEER
-00100C 5080           00113         movf    PORTA, 0                ; Leemos puerto A
-00100E 0F30           00114         addlw   0x30                    ; Agregamos/sumamos 30
-001010 6E81           00115         movwf   PORTB           ; Ingresamos el valor en PORTB
-001012 EF?? F???      00116         goto    LEER
-                      00117 
-                      00118 ;**************************************************************************************
-                      00119 ; Espacio para subrutinas
+                      00112 ;**************************************************************************************
+                      00113 ; Espacio para subrutinas
+                      00114 ;**************************************************************************************
+00100C                00115 LEER
+00100C 5080           00116         movf    PORTA, 0                ; Leemos puerto A
+00100E 0F30           00117         addlw   0x30                    ; Agregamos/sumamos 30
+001010 6E81           00118         movwf   PORTB           ; Ingresamos el valor en PORTB
+001012 EF?? F???      00119         goto    LEER
                       00120 ;**************************************************************************************
-                      00121 
-                      00122 ;**************************************************************************************
-                      00123 ;Fin del programa
-                      00124         END
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE  4
+                      00121 ;Fin del programa
+                      00122         END
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE  4
 
 
 SYMBOL TABLE
@@ -213,7 +211,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE  5
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE  5
 
 
 SYMBOL TABLE
@@ -272,7 +270,7 @@ CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
 CMIF                              00000006
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE  6
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE  6
 
 
 SYMBOL TABLE
@@ -331,7 +329,7 @@ EEIP                              00000004
 EEPGD                             00000007
 ENDP0                             00000003
 ENDP1                             00000004
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE  7
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE  7
 
 
 SYMBOL TABLE
@@ -390,7 +388,7 @@ HLVDL3                            00000003
 I2C_DAT                           00000005
 I2C_READ                          00000002
 I2C_START                         00000003
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE  8
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE  8
 
 
 SYMBOL TABLE
@@ -449,7 +447,7 @@ LATA5                             00000005
 LATA6                             00000006
 LATB                              00000F8A
 LATB0                             00000000
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE  9
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE  9
 
 
 SYMBOL TABLE
@@ -508,7 +506,7 @@ NOT_RBPU                          00000007
 NOT_RI                            00000004
 NOT_T1SYNC                        00000002
 NOT_T3SYNC                        00000002
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 10
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 10
 
 
 SYMBOL TABLE
@@ -567,7 +565,7 @@ POR                               00000001
 PORTA                             00000F80
 PORTB                             00000F81
 PORTC                             00000F82
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 11
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 11
 
 
 SYMBOL TABLE
@@ -626,7 +624,7 @@ RC5                               00000005
 RC6                               00000006
 RC7                               00000007
 RCEN                              00000003
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 12
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 12
 
 
 SYMBOL TABLE
@@ -685,7 +683,7 @@ SPP0                              00000000
 SPP1                              00000001
 SPP2                              00000002
 SPP3                              00000003
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 13
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 13
 
 
 SYMBOL TABLE
@@ -744,7 +742,7 @@ T0IE                              00000005
 T0IF                              00000002
 T0IP                              00000002
 T0PS0                             00000000
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 14
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 14
 
 
 SYMBOL TABLE
@@ -803,7 +801,7 @@ TMR2IP                            00000001
 TMR2ON                            00000002
 TMR3                              00000FB2
 TMR3CS                            00000001
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 15
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 15
 
 
 SYMBOL TABLE
@@ -862,7 +860,7 @@ TRISE1                            00000001
 TRISE2                            00000002
 TRMT                              00000001
 TRNIE                             00000003
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 16
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 16
 
 
 SYMBOL TABLE
@@ -921,7 +919,7 @@ USBEN                             00000003
 USBIE                             00000005
 USBIF                             00000005
 USBIP                             00000005
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 17
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 17
 
 
 SYMBOL TABLE
@@ -980,7 +978,7 @@ _CP2_ON_5L                        000000FB
 _CP3_OFF_5L                       000000FF
 _CP3_ON_5L                        000000F7
 _CPB_OFF_5H                       000000FF
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 18
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 18
 
 
 SYMBOL TABLE
@@ -1039,7 +1037,7 @@ _LVP_OFF_4L                       000000FB
 _LVP_ON_4L                        000000FF
 _MCLRE_OFF_3H                     0000007F
 _MCLRE_ON_3H                      000000FF
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 19
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 19
 
 
 SYMBOL TABLE
@@ -1098,7 +1096,7 @@ _WRTD_ON_6H                       0000007F
 _XINST_OFF_4L                     000000BF
 _XINST_ON_4L                      000000FF
 __18F4550                         00000001
-MPASM  5.51                 02 - PUERTOS2.ASM   12-7-2022  22:42:21         PAGE 20
+MPASM  5.51                 02 - PUERTOS2.ASM   12-21-2022  21:59:59         PAGE 20
 
 
 SYMBOL TABLE

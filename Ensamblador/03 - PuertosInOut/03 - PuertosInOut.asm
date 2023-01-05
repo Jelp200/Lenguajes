@@ -99,7 +99,7 @@ RESET_VECTOR	ORG		0
 ; el PROGRAMA PRINCIPAL inicia aqui
 
 	ORG		0x1000
-INICIO				; *** Codigo principal va aquÃ­ **
+INICIO				; *** Codigo principal va aquí **
     ;SUB-RUTINAS
             call CPUERTOS
 etq1:	    call LEER
@@ -111,23 +111,22 @@ RETURN
 ; Espacio para subrutinas
 ;**************************************************************************************
 CPUERTOS
-    movlw   0x0F
+    movlw   0x0F		; Desactivar el convertidor analog/digital
     movwf   ADCON1
-    movlw   0xFF
-    movwf   TRISB
-	movlw   0x00
-    movwf   TRISD
-    movwf   PORTD
+    movlw   0xFF		; W <- 0xFF
+    movwf   TRISB		; TRISB <- W (PORT-IN)
+	movlw   0x00		; W <- 0x00
+    movwf   TRISD		; TRISD <- W
+    movwf   PORTD		; PORTD <- W
     RETURN
 
 LEER
-    swapf   PORTB, 0
-    andlw   0x0F
-    movwf   0x50
-    sublw   0x0C
-    ;Salto condicional
-    BN      LEER
-    movf    0x50, 0
+    swapf   PORTB, 0	; Intercambio H (DATO xxxx) to L (xxxx DATO)
+    andlw   0x0F		; Enmascaramiento (xxxx DATO)(0000 1111) = 0000 DATO -> W
+    movwf   0x50		; 0x50 <- W
+    sublw   0x0C		; W <- (0x0C - W)
+    BN      LEER		; Salto condicional ¿W positivo? Si es así continua, sino, se repite el bloque anterior
+    movf    0x50, 0		; 0x50 <- W
     addlw   0x00
     daw
     RETURN

@@ -1,4 +1,4 @@
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE  1
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00041     CONFIG FOSC     = HSPLL_HS
                       00042     CONFIG FCMEN    = OFF
                       00043     CONFIG IESO     = OFF
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE  2
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00089 ; Esta seccion se ejecutara cuando ocurra un RESET.
                       00090 
 000000                00091 RESET_VECTOR    ORG             0
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE  3
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -134,31 +134,45 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 001000                00101         ORG             0x1000                                  ; Direccion de memoria donde iniciaremos
 001000                00102 INICIO                                                          ; *** Codigo principal va aqui **
                       00103 
-001000 5050           00104         movf    0x50, 0                                 ;
-001002 0F30           00105         addlw   0x30                                    ;
-001004 6E50           00106         movwf   0x50                                    ;
-001006 5051           00107         movf    0x51, 0
-001008 0F30           00108         addlw   0x30
-00100A 6E51           00109         movwf   0x51
-00100C 5052           00110         movf    0x52, 0
-00100E 0F30           00111         addlw   0x30
-001010 6E52           00112         movwf   0x52
-001012 5053           00113         movf    0x53, 0
-001014 0F30           00114         addlw   0x30
-001016 6E53           00115         movwf   0x53
-001018 5054           00116         movf    0x54, 0
-00101A 0F30           00117         addlw   0x30
-00101C 6E54           00118         movwf   0x54
-                      00119                                                                         ; Fin del main  
-                      00120 ;**************************************************************************************
-                      00121 ; Espacio para subrutinas
-                      00122 ;**************************************************************************************
-                      00123 
-                      00124                                         
-                      00125 ;**************************************************************************************
-                      00126 ;Fin del programa
-                      00127         END
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE  4
+001000 5050           00104         movf    0x50, 0                                 ; Lectura hacía el acumulador [0x50] -> W, "0" i
+                            ndica la misma posición de memoria.
+001002 0F30           00105         addlw   0x30                                    ; Suma 30 al cumulador [0x30] + W -> W.
+001004 6E50           00106         movwf   0x50                                    ; Ingresa el resultado de la suma depositado en 
+                            el acumulador a la dirección [0x50]
+                      00107 
+001006 5051           00108         movf    0x51, 0                                 ; Lectura hacía el acumulador [0x51] -> W, "0" i
+                            ndica la misma posición de memoria.
+001008 0F30           00109         addlw   0x30                                    ; Suma 30 al cumulador [0x30] + W -> W.
+00100A 6E51           00110         movwf   0x51                                    ; Ingresa el resultado de la suma depositado en 
+                            el acumulador a la dirección [0x51]
+                      00111 
+00100C 5052           00112         movf    0x52, 0                                 ; Lectura hacía el acumulador [0x52] -> W, "0" i
+                            ndica la misma posición de memoria.
+00100E 0F30           00113         addlw   0x30                                    ; Suma 30 al cumulador [0x30] + W -> W.
+001010 6E52           00114         movwf   0x52                                    ; Ingresa el resultado de la suma depositado en 
+                            el acumulador a la dirección [0x52]
+                      00115 
+001012 5053           00116         movf    0x53, 0                                 ; Lectura hacía el acumulador [0x53] -> W, "0" i
+                            ndica la misma posición de memoria.
+001014 0F30           00117         addlw   0x30                                    ; Suma 30 al cumulador [0x30] + W -> W.
+001016 6E53           00118         movwf   0x53                                    ; Ingresa el resultado de la suma depositado en 
+                            el acumulador a la dirección [0x53]
+                      00119 
+001018 5054           00120         movf    0x54, 0                                 ; Lectura hacía el acumulador [0x54] -> W, "0" i
+                            ndica la misma posición de memoria.
+00101A 0F30           00121         addlw   0x30                                    ; Suma 30 al cumulador [0x30] + W -> W.
+00101C 6E54           00122         movwf   0x54                                    ; Ingresa el resultado de la suma depositado en 
+                            el acumulador a la dirección [0x54]
+                      00123                                                                         ; Fin del main  
+                      00124 ;**************************************************************************************
+                      00125 ; Espacio para subrutinas
+                      00126 ;**************************************************************************************
+                      00127 
+                      00128                                         
+                      00129 ;**************************************************************************************
+                      00130 ;Fin del programa
+                      00131         END
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE  4
 
 
 SYMBOL TABLE
@@ -217,7 +231,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE  5
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE  5
 
 
 SYMBOL TABLE
@@ -276,7 +290,7 @@ CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
 CMIF                              00000006
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE  6
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE  6
 
 
 SYMBOL TABLE
@@ -335,7 +349,7 @@ EEIP                              00000004
 EEPGD                             00000007
 ENDP0                             00000003
 ENDP1                             00000004
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE  7
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE  7
 
 
 SYMBOL TABLE
@@ -394,7 +408,7 @@ HLVDL3                            00000003
 I2C_DAT                           00000005
 I2C_READ                          00000002
 I2C_START                         00000003
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE  8
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE  8
 
 
 SYMBOL TABLE
@@ -453,7 +467,7 @@ LATA5                             00000005
 LATA6                             00000006
 LATB                              00000F8A
 LATB0                             00000000
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE  9
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE  9
 
 
 SYMBOL TABLE
@@ -512,7 +526,7 @@ NOT_RI                            00000004
 NOT_T1SYNC                        00000002
 NOT_T3SYNC                        00000002
 NOT_TO                            00000003
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 10
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 10
 
 
 SYMBOL TABLE
@@ -571,7 +585,7 @@ PORTA                             00000F80
 PORTB                             00000F81
 PORTC                             00000F82
 PORTD                             00000F83
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 11
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 11
 
 
 SYMBOL TABLE
@@ -630,7 +644,7 @@ RC6                               00000006
 RC7                               00000007
 RCEN                              00000003
 RCIDL                             00000006
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 12
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 12
 
 
 SYMBOL TABLE
@@ -689,7 +703,7 @@ SPP1                              00000001
 SPP2                              00000002
 SPP3                              00000003
 SPP4                              00000004
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 13
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 13
 
 
 SYMBOL TABLE
@@ -748,7 +762,7 @@ T0IF                              00000002
 T0IP                              00000002
 T0PS0                             00000000
 T0PS1                             00000001
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 14
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 14
 
 
 SYMBOL TABLE
@@ -807,7 +821,7 @@ TMR2ON                            00000002
 TMR3                              00000FB2
 TMR3CS                            00000001
 TMR3H                             00000FB3
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 15
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 15
 
 
 SYMBOL TABLE
@@ -866,7 +880,7 @@ TRISE2                            00000002
 TRMT                              00000001
 TRNIE                             00000003
 TRNIF                             00000003
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 16
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 16
 
 
 SYMBOL TABLE
@@ -925,7 +939,7 @@ USBIE                             00000005
 USBIF                             00000005
 USBIP                             00000005
 USTAT                             00000F6C
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 17
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 17
 
 
 SYMBOL TABLE
@@ -984,7 +998,7 @@ _CP3_OFF_5L                       000000FF
 _CP3_ON_5L                        000000F7
 _CPB_OFF_5H                       000000FF
 _CPB_ON_5H                        000000BF
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 18
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 18
 
 
 SYMBOL TABLE
@@ -1043,7 +1057,7 @@ _LVP_ON_4L                        000000FF
 _MCLRE_OFF_3H                     0000007F
 _MCLRE_ON_3H                      000000FF
 _PBADEN_OFF_3H                    000000FD
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 19
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 19
 
 
 SYMBOL TABLE
@@ -1102,7 +1116,7 @@ _XINST_OFF_4L                     000000BF
 _XINST_ON_4L                      000000FF
 __18F4550                         00000001
 __DEBUG                           1
-MPASM  5.51                     PRACTICA1.ASM   11-24-2022  16:56:22         PAGE 20
+MPASM  5.51                     PRACTICA1.ASM   12-21-2022  21:34:02         PAGE 20
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
