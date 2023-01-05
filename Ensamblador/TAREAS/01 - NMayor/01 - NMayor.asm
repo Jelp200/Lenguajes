@@ -1,21 +1,4 @@
 ;*************************************************************************************
-;   Este archivo es una plantilla basica para el PIC18F4550 utilizando lenguaje      *
-;   ensamblador. Copea este archivo dentro de tu directorio de proyecto y            *
-;   modificalo o agrega lo necesario.                                                *
-;                                                                                    *
-;   La arquitectura del PIC18FXXXX nos permite dos configuraciones de interrupcion.  *
-;   Esta pantilla de codigo está escrita para priorizar los niveles de interrupcion  *
-;   y los bits IPEN en el registro RCON deben configurarse para habilitar los        *
-;   niveles de prioridad. Si el IPEN se deja es su estado 0 predeterminado, solo se  *
-;   utilizara el vector de interrupcion 0x008 y las variables WREG_TEMP, BSR_TEMP y  *
-;   STATUS_TEMP no se utilizaran.                                                    *
-;                                                                                    *
-;   Consulte la guía del MPASM para obtener informacion adicional sobre las caracte_ *
-;   risticas del lenguaje ensamblador.                                               *
-;                                                                                    *
-;   Consulte la hoja de datos del PIC18FXX50/XX55 para información extra de la arqu_ *
-;   itectura y el set de instrucciones.                                              *
-;*************************************************************************************
 ;                                                                                    *
 ;    Archivo:     01 - NMayor                                                        *
 ;    Version:     1.0                                                                *
