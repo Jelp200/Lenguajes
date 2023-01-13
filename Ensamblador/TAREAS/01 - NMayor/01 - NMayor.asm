@@ -1,7 +1,7 @@
 ;*************************************************************************************
 ;                                                                                    *
 ;    Archivo:     01 - NMayor                                                        *
-;    Version:     1.0                                                                *
+;    Version:     1.1                                                                *
 ;                                                                                    *
 ;    Autor:       Jorge Peña Paz                                                     *
 ;                                                                                    *
@@ -109,17 +109,14 @@ LEER
 	swapf	PORTB, 0
 	andlw	0x0F
 	movwf	0x50
-	movwf	0x51
 	; Ingreso dato 2.
 	swapf	PORTB, 0
 	andlw	0x0F
 	movwf	0x52
-	movwf	0x53
 	; Ingreso dato 3.
 	swapf	PORTB, 0
 	andlw	0x0F
 	movwf	0x54
-	movwf	0x55
 	RETURN
 
 COMPARATIVA
