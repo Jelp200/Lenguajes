@@ -1,39 +1,23 @@
-;*************************************************************************************
-;   Este archivo es una plantilla basica para el PIC18F4550 utilizando lenguaje      *
-;   ensamblador. Copea este archivo dentro de tu directorio de proyecto y            *
-;   modificalo o agrega lo necesario.                                                *
-;                                                                                    *
-;   La arquitectura del PIC18FXXXX nos permite dos configuraciones de interrupcion.  *
-;   Esta pantilla de codigo está escrita para priorizar los niveles de interrupcion  *
-;   y los bits IPEN en el registro RCON deben configurarse para habilitar los        *
-;   niveles de prioridad. Si el IPEN se deja es su estado 0 predeterminado, solo se  *
-;   utilizara el vector de interrupcion 0x008 y las variables WREG_TEMP, BSR_TEMP y  *
-;   STATUS_TEMP no se utilizaran.                                                    *
-;                                                                                    *
-;   Consulte la guía del MPASM para obtener informacion adicional sobre las caracte_ *
-;   risticas del lenguaje ensamblador.                                               *
-;                                                                                    *
-;   Consulte la hoja de datos del PIC18FXX50/XX55 para información extra de la arqu_ *
-;   itectura y el set de instrucciones.                                              *
-;*************************************************************************************
-;                                                                                    *
-;    Archivo:   Plantilla                                                            *
-;    Version:   1.0                                                                  *
-;                                                                                    *
-;    Autor:     Jose Luis Bravo                                                      *
-;    Edicion:   Jorge Peña                                                           *
-;                                                                                    * 
-;*************************************************************************************
-;                                                                                    *
-;    Archivos requeridos: P18F4550.INC                                               *
-;                                                                                    *
-;*************************************************************************************
+;#####################################################################################
+;    Archivo:       01 - Practica1                                                           
+;    SO:            Windows 10                                                           
+;    Version:       1.1                                                                  
+;    Herramientas:  Visual Studio Code                                               
+;                   Mplab
+;    Autor:         Jorge Peña
+;    Notas:
+;                   Visualizar el código ASCII en las primeras 5 celdas de memoria.                                             
+;#####################################################################################
+;                                                                                    
+;    Archivos requeridos: P18F4550.INC                                               
+;                                                                                    
+;#####################################################################################
 
     LIST P = 18F4550, F = INHX32	; Directiva para definir el procesador.
 	#include <P18F4550.INC>		    ; Definición de variables especificas del procesador.
 
-;**************************************************************************************
-;   Configuration de bits
+;-------------------------------------------------------------------------------------
+;   CONFIGURACION DE LOS BITS
 
 	CONFIG PLLDIV   = 5             ; (20 MHz crystal en PICDEM FS USB board)
     CONFIG CPUDIV   = OSC1_PLL2	
@@ -83,49 +67,41 @@
 ; DEFINICION DE VARIABLES
 ; 
 
-
-;**************************************************************************************
-; Reset vector
-; Esta seccion se ejecutara cuando ocurra un RESET.
+;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+; RESET VECTOR
+; Esta sección se ejecutara cuando ocurra un RESET.
 
 RESET_VECTOR	ORG		0
 
 		goto	INICIO				; Va hacia el inicio del codigo principal
 
-;**************************************************************************************
-
-;**************************************************************************************
-; Inicio del programa main
-; el PROGRAMA PRINCIPAL inicia aqui
-
+;______________________________________________________________________________________
+;   MAIN FUNCTION
 	ORG		0x1000					; Direccion de memoria donde iniciaremos
 INICIO								; *** Codigo principal va aqui **
 
-	movf	0x50, 0					; Lectura hac�a el acumulador [0x50] -> W, "0" indica la misma posici�n de memoria.
+	movf	0x50, 0					; Lectura hac�a el acumulador [0x50] -> W, "0" indica la misma posici�n de memoria.
 	addlw	0x30					; Suma 30 al cumulador [0x30] + W -> W.
-	movwf	0x50					; Ingresa el resultado de la suma depositado en el acumulador a la direcci�n [0x50]
+	movwf	0x50					; Ingresa el resultado de la suma depositado en el acumulador a la direcci�n [0x50]
 
-	movf	0x51, 0					; Lectura hac�a el acumulador [0x51] -> W, "0" indica la misma posici�n de memoria.
+	movf	0x51, 0					; Lectura hac�a el acumulador [0x51] -> W, "0" indica la misma posici�n de memoria.
 	addlw	0x30					; Suma 30 al cumulador [0x30] + W -> W.
-	movwf	0x51					; Ingresa el resultado de la suma depositado en el acumulador a la direcci�n [0x51]
+	movwf	0x51					; Ingresa el resultado de la suma depositado en el acumulador a la direcci�n [0x51]
 
-	movf	0x52, 0					; Lectura hac�a el acumulador [0x52] -> W, "0" indica la misma posici�n de memoria.
+	movf	0x52, 0					; Lectura hac�a el acumulador [0x52] -> W, "0" indica la misma posici�n de memoria.
 	addlw	0x30					; Suma 30 al cumulador [0x30] + W -> W.
-	movwf	0x52					; Ingresa el resultado de la suma depositado en el acumulador a la direcci�n [0x52]
+	movwf	0x52					; Ingresa el resultado de la suma depositado en el acumulador a la direcci�n [0x52]
 
-	movf	0x53, 0					; Lectura hac�a el acumulador [0x53] -> W, "0" indica la misma posici�n de memoria.
+	movf	0x53, 0					; Lectura hac�a el acumulador [0x53] -> W, "0" indica la misma posici�n de memoria.
 	addlw	0x30					; Suma 30 al cumulador [0x30] + W -> W.
-	movwf	0x53					; Ingresa el resultado de la suma depositado en el acumulador a la direcci�n [0x53]
+	movwf	0x53					; Ingresa el resultado de la suma depositado en el acumulador a la direcci�n [0x53]
 
-	movf	0x54, 0					; Lectura hac�a el acumulador [0x54] -> W, "0" indica la misma posici�n de memoria.
+	movf	0x54, 0					; Lectura hac�a el acumulador [0x54] -> W, "0" indica la misma posici�n de memoria.
 	addlw	0x30					; Suma 30 al cumulador [0x30] + W -> W.
-	movwf	0x54					; Ingresa el resultado de la suma depositado en el acumulador a la direcci�n [0x54]
+	movwf	0x54					; Ingresa el resultado de la suma depositado en el acumulador a la direcci�n [0x54]
 									; Fin del main	
-;**************************************************************************************
-; Espacio para subrutinas
-;**************************************************************************************
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;   SUB-RUTINAS
 
-					
-;**************************************************************************************
-;Fin del programa
 	END
+;______________________________________________________________________________________
