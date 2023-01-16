@@ -1,14 +1,12 @@
 ;#####################################################################################
 ;    Archivo:       04 - TiemposEjecucion                                                           
 ;    SO:            Windows 10                                                           
-;    Version:       1.0                                                                  
+;    Version:       1.1                                                                  
 ;    Herramientas:  Visual Studio Code                                               
 ;                   Mplab
 ;    Autor:         Jorge Peña
 ;    Notas:
-;                   Elaborar un programa en ASM de una rutina que despliegue una cnta
-;                   ascendente en el display de 7 egmentos en el PORTD con intervalo
-;                   de 7 segundos.                                             
+;                   Calcular los tiempos de ejecución de un programa.                                             
 ;#####################################################################################
 ;                                                                                    
 ;    Archivos requeridos: P18F4550.INC                                               

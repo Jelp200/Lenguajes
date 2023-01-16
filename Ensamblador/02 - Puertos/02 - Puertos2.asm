@@ -1,39 +1,23 @@
-;*************************************************************************************
-;   Este archivo es una plantilla basica para el PIC18F4550 utilizando lenguaje      *
-;   ensamblador. Copea este archivo dentro de tu directorio de proyecto y            *
-;   modificalo o agrega lo necesario.                                                *
-;                                                                                    *
-;   La arquitectura del PIC18FXXXX nos permite dos configuraciones de interrupcion.  *
-;   Esta pantilla de codigo está escrita para priorizar los niveles de interrupcion  *
-;   y los bits IPEN en el registro RCON deben configurarse para habilitar los        *
-;   niveles de prioridad. Si el IPEN se deja es su estado 0 predeterminado, solo se  *
-;   utilizara el vector de interrupcion 0x008 y las variables WREG_TEMP, BSR_TEMP y  *
-;   STATUS_TEMP no se utilizaran.                                                    *
-;                                                                                    *
-;   Consulte la guía del MPASM para obtener informacion adicional sobre las caracte_ *
-;   risticas del lenguaje ensamblador.                                               *
-;                                                                                    *
-;   Consulte la hoja de datos del PIC18FXX50/XX55 para información extra de la arqu_ *
-;   itectura y el set de instrucciones.                                              *
-;*************************************************************************************
-;                                                                                    *
-;    Archivo:   Plantilla                                                            *
-;    Version:   1.0                                                                  *
-;                                                                                    *
-;    Autor:     Jose Luis Bravo                                                      *
-;    Edicion:   Jorge Peña                                                           *
-;                                                                                    * 
-;*************************************************************************************
-;                                                                                    *
-;    Archivos requeridos: P18F4550.INC                                               *
-;                                                                                    *
-;*************************************************************************************
+;#####################################################################################
+;    Archivo:       02 - Puertos2                                                           
+;    SO:            Windows 10                                                           
+;    Version:       1.1                                                                  
+;    Herramientas:  Visual Studio Code                                               
+;                   Mplab
+;    Autor:         Jorge Peña
+;    Notas:
+;                   Configuracion de los puertos del PIC 18F4550.                                             
+;#####################################################################################
+;                                                                                    
+;    Archivos requeridos: P18F4550.INC                                               
+;                                                                                    
+;#####################################################################################
 
     LIST P = 18F4550, F = INHX32	; Directiva para definir el procesador.
 	#include <P18F4550.INC>		    ; Definición de variables especificas del procesador.
 
-;**************************************************************************************
-;   Configuration de bits
+;-------------------------------------------------------------------------------------
+;   CONFIGURACION DE LOS BITS
 
 	CONFIG PLLDIV   = 5             ; (20 MHz crystal en PICDEM FS USB board)
     CONFIG CPUDIV   = OSC1_PLL2	
@@ -83,21 +67,15 @@
 ; DEFINICION DE VARIABLES
 ; 
 
-
-;**************************************************************************************
-; Reset vector
+;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+; RESET VECTOR
 ; Esta sección se ejecutara cuando ocurra un RESET.
 
 RESET_VECTOR	ORG		0
 
 		goto	INICIO		;go to start of main code
-
-;**************************************************************************************
-
-;**************************************************************************************
-; Inicio del programa main
-; el PROGRAMA PRINCIPAL inicia aqui
-
+;______________________________________________________________________________________
+;   MAIN FUNCTION
 	ORG		0x1000
 INICIO
 	; Deshabilitamos el convertidor analogico/digital.
@@ -109,14 +87,13 @@ INICIO
 	movlw	0x00            ; Cargamos el acumulador
 	movwf	TRISB           ; TRIB <- 0x00 (Salida)
 
-;**************************************************************************************
-; Espacio para subrutinas
-;**************************************************************************************
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;   SUB-RUTINAS
 LEER
 	movf	PORTA, 0		; Leemos puerto A
 	addlw	0x30			; Agregamos/sumamos 30
 	movwf	PORTB           ; Ingresamos el valor en PORTB
 	goto 	LEER
-;**************************************************************************************
-;Fin del programa
-	END
+
+END
+;______________________________________________________________________________________
