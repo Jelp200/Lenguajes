@@ -1,0 +1,69 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Wed Jan 18 19:54:46 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                   .org_1       code   0x001000    program   0x000078
+.config_300000_06 - MOTOR.O    romdata   0x300000    program   0x000001
+.config_300001_06 - MOTOR.O    romdata   0x300001    program   0x000001
+.config_300002_06 - MOTOR.O    romdata   0x300002    program   0x000001
+.config_300003_06 - MOTOR.O    romdata   0x300003    program   0x000001
+.config_300005_06 - MOTOR.O    romdata   0x300005    program   0x000001
+.config_300006_06 - MOTOR.O    romdata   0x300006    program   0x000001
+.config_300008_06 - MOTOR.O    romdata   0x300008    program   0x000001
+.config_300009_06 - MOTOR.O    romdata   0x300009    program   0x000001
+.config_30000A_06 - MOTOR.O    romdata   0x30000a    program   0x000001
+.config_30000B_06 - MOTOR.O    romdata   0x30000b    program   0x000001
+.config_30000C_06 - MOTOR.O    romdata   0x30000c    program   0x000001
+.config_30000D_06 - MOTOR.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x001000    0x001077      
+                            0x300000    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            138 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 CPUERTOS   0x001010    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                    GTIME   0x00104a    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                   INICIO   0x001000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     LEER   0x00101c    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                      PWM   0x001034    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+             RESET_VECTOR   0x000000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     TMRO   0x001060    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     etq1   0x00102e    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     etq2   0x00104e    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     etq3   0x00106c    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     etqI   0x001004    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             RESET_VECTOR   0x000000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                   INICIO   0x001000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     etqI   0x001004    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                 CPUERTOS   0x001010    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     LEER   0x00101c    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     etq1   0x00102e    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                      PWM   0x001034    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                    GTIME   0x00104a    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     etq2   0x00104e    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     TMRO   0x001060    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+                     etq3   0x00106c    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\06 - Motor\06 - Motor.asm
+
+

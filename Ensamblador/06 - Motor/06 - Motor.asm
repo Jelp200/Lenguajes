@@ -1,12 +1,12 @@
 ;#####################################################################################
-;    Archivo:       05 - ConvertidorAD                                                           
+;    Archivo:       06 - Motor                                                           
 ;    SO:            Windows 10                                                           
-;    Version:       1.2                                                                  
+;    Version:       1.1                                                                  
 ;    Herramientas:  Visual Studio Code                                               
 ;                   Mplab
 ;    Autor:         Jorge Peña
 ;    Notas:
-;                   Emplear el módulo de conversión analógico/digital.                                             
+;                   Generar intervalos de tiempo empleando TMR0.                                             
 ;#####################################################################################
 ;                                                                                    
 ;    Archivos requeridos: P18F4550.INC                                               
@@ -65,14 +65,13 @@
     config EBTRB    = OFF
 ;-------------------------------------------------------------------------------------
 ; DEFINICION DE VARIABLES
-Rdd         EQU         0x50
-Rdvr        EQU         0x51
-Rcc         EQU         0x52
-R0          EQU         0x53
+RH      EQU     0x10
+RL      EQU     0x11
+R6      EQU     0x12
+RTCON   EQU     0x13
+RTH     EQU     0x14
+RTL     EQU     0x15
 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-; RESET VECTOR
-; Esta sección se ejecutara cuando ocurra un RESET.
-
 RESET_VECTOR	ORG		0
 
 		goto	INICIO                  ; Salta a la funcion principal
@@ -81,89 +80,73 @@ RESET_VECTOR	ORG		0
 	ORG		0x1000
 INICIO
     call    CPUERTOS
-    call    CDAC
-    ; BSF pone a 1 un bit de un registro.
-    etqM:   bsf     ADCON0, 1           ; 0000 0000 -> 0000 0001 (Configuramos el converitdor)
-            call    LEER
-            call    DISP
-            goto    etqM
+    ; Llamamos a la etiqueta LEER.
+    etqI:   call    LEER
+            call    PWM
+            goto    etqI
 
 ;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ;   SUB-RUTINAS
 
 ; Configuracion de los puertos
 CPUERTOS
-    movlw   0x01		; W <- 0x01
-    movwf   TRISA		; TRISA <- W (PORT-IN)
-	movlw   0x00		; W <- 0x00
-    movwf   TRISD		; TRISD <- W (PORT-OUT)
-    movwf   PORTD		; PORTD <- W (0000 0000)
+    ;Deshabilitamos el convertidor analogico/digital
+    movlw   0x0F		        ; W <- 0x0F
+    movwf   ADCON1		        ; ADCON1  <- W.
+
+    clrf    TRISA				; TRISA (PORT-OUT)
+    movlw   0xFF                ; W <- 0xFF
+    movwf   TRISB               ; TRISB <- W (PORT-IN)
     RETURN
 
-; Configuracion del modulo de conversiÃ³n analÃ³gico/digital
-CDAC
-    movlw   0x01        ; W <- 0x01
-    movwf   ADCON0      ; ADCON0 <- W (Encendemos el convertidor) "REGISTRO DE CONTROL 0"
-    movlw   0x0E        ; W <- 0x0E
-    ; Tendremos en ADCON1 los iguiente - - 0 0   1 1 1 0
-    ; Lo cual significa que:
-    ;       bit 7 - 6 no tendrmeos uso
-    ;       bit 5 (0) el voltaje de referencia bajo es tierra.
-    ;       bit 4 (0) el voltaje de referencia alto es Vcc (5V)
-    ;       bit 3 - 0 (1) Configuracion de los puertos de control los cuales seran:
-    ;           D   D   D   D   D   D   D   D   D   D   D   D   A
-    ;           (Solo AN0 sera analogica y de AN1 a AN12 seran digitales)
-    movwf   ADCON1
-    movlw   0x0C
-    ; Tendremos en ADCON2 los iguiente 0 - 0 0   1 1 0 0
-    ; Lo cual significa que:
-    ;       bit 7 (0) justifica la posicion del resultado a la izquierda.
-    ;       bit 6 no tendra uso
-    ;       bit 5 - 3 (001) indica los tiempos de adquisicion los cuales seran 2 Tad.
-    ;       bit 2 - 0 (100) indica la frecuencia de muestreo.
-    movwf   ADCON2
-    RETURN
-
-; Leemos los 8 bits del registro ADRESH
+; Leemos los 4 bits mas significativos de PORTB
 LEER
-    ; Si el bit en ADCON0 es 0 este seguira, sino se repetira hasta que sea 0. 
-    etqL:	btfsc   ADCON0, 1
-		    goto    etqL
-		    movf    ADRESH, 0
-		    movwf   Rdd
-		    movlw   0x05
-		    movwf   Rdvr
-		    call    DIVISION
-		    movf    Rcc, 0
-		    RETURN
-
-DIVISION
-    clrf    R0
-    clrf    Rcc
-    etqD:   movf   Rdvr, 0
-            addwf   R0, 0
-            movwf   R0
-
-            cpfsgt  Rdd
-			;RETURN
-
-            movf    Rcc, 0
-            addlw   0x01
-            daw
-            movwf   Rcc
-            goto    etqD
+    movf    PORTB, 0            ; W <- PORTB
+    andlw   0xF0                ; Enmacaramiento (DATO xxxx)(1111 0000) = DATO 0000 -> W
+    bz      etq1                ; DATO = 0?
+    movwf   RH                  ; RH <- W
+    swapf   RH, 1               ; Intercambio "H (DATO 0000)" to "L (0000 DATO)"
+    movf    RH, 0               ; W <- RH
+    sublw   0x10                ; W <- (0x10 - W) "Siendo 0x10 = 16 binario"
+    movwf   RL                  ; RL <- W
     RETURN
 
-DISP
-    movwf   PORTD
+    etq1:  	bcf	 	PORTA, 1	; Limpiamos el bit 1 del PORTA "0"
+            goto	LEER
+
+; Generamos la modulación de ancho de pulso
+PWM
+    movff   RH, R6              ; R6 <- RH "(Destino) <- (Fuente)"
+    bsf     PORTA, 1            ; Hacemos set en el bit 1 del PORTA "1"
+    call    GTIME
+    movff   RL, R6              ; R6 <- RL "(Destino) <- (Fuente)"
+    bcf     PORTA, 1            ; Limpiamos el bit 1 del PORTA "0"
+    call	GTIME
+    RETURN
+
+;Configura TMR0 para un tiempo de un milisegundo y genera un ciclo de espera cuya duración depende del valor en R6
+GTIME
+    movlw   0x08                ; W <- 0x08
+    movwf   RTCON               ; RTCON <- W
+    etq2:	movlw	0x0D        ; W <- 0xD1
+            movwf   RTH         ; RTH <- W
+            movlw   0x20        ; W <- 0x20
+            movwf   RTL         ; RTL <- W
+            call    TMRO
+            decf    R6, 1       ; Decrementa en 1 a R6
+            bnz     etq2      	; R6 = 0?
+    RETURN
+
+; Recibe los parametros de config de los registros RTH, RTL y RTCON
+TMRO
+    movff   RTCON, T0CON        ; T0CON <- RTCON
+    movff   RTH, TMR0H          ; TMR0H <- RTH
+    movff   RTL, TMR0L          ; TMR0L <- RTL
+    etq3:   btfss   INTCON, 2
+            goto    etq3
+    bcf     INTCON, 2
+    bcf     T0CON, 7
     RETURN
 
 END
 ;______________________________________________________________________________________
-
-; "BSF"     bit set (Activar un bit)
-; "BTFSC"   bit test file set if is zero
-; "CLRF"    Borra un registro
-; "CPFSGT"  Compara un archivo contra el acumulador y salta si es mayor
-; NOTA:
-;   Agregar ECU para poder generar R0, Rdd, Rcc y Rvdr
