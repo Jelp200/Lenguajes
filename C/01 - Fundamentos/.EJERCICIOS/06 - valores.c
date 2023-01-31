@@ -48,6 +48,9 @@ int main(void){
     printf("\tDe un numero grande: "); scanf("%lf", &d);
     system("cls");
 
-    printf("\tChar: %c\n\tString: %s\n\tInt: %i\n\tFloat: %.2f\n\tDouble: %lf", c, cadena, n, fn, d);
+    printf("\tChar: %c\n\tString: %s\n\tInt: %i\n\tFloat: %.2f\n\tDouble: %.2lf\n\n", c, cadena, n, fn, d);
+
+    system("pause");
+
     return 0;
 }

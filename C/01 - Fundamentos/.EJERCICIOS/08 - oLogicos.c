@@ -23,7 +23,7 @@ int main(void){
     printf("De el primer estado (0 o 1): "); scanf("%i", &A);
     printf("De el segundo estado (0 o 1): "); scanf("%i", &B);
 
-    if(((A == 0) || (A == 1)) && (A == 0) || (A == 1)){
+    if(((A == 0) || (A == 1)) && (B == 0) || (B == 1)){
 
         system("cls");
 

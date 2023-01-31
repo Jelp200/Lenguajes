@@ -32,7 +32,9 @@ int main(void){
     system("cls");
 
     printf("Numero: %li", n);
-    printf("\nCaracter: %c", c);
+    printf("\nCaracter: %c\n\n", c);
+
+    system("pause");
 
     return 0;
 }

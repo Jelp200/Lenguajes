@@ -40,7 +40,9 @@ int main(void){
     printf("\tUsuario: %s", usuario);
     printf("\n\tEdad: %s", edad);
     printf("\n\tEscuela: %s", escuela);
-    printf("\n\tInstitucion: %s", institucion);
+    printf("\n\tInstitucion: %s\n\n", institucion);
+
+    system("pause");
 
     return 0;
 }

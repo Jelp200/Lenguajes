@@ -34,7 +34,7 @@ unsigned short int n;
 // Funcion principal.
 int main(void){
 
-    printf("De el n�mero a convertir: "); scanf("%i", &n);
+    printf("De el numero a convertir: "); scanf("%i", &n);
 
     if((n >= 0) || (n <= 10)){
         switch(n){

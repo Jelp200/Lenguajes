@@ -19,7 +19,7 @@
 int main(){
     int contador = 0;
 
-    contador = 100;
+    printf("De el limite superior de la cuenta:"); scanf("%i", &contador);
 
     while (contador >= 0){
         system("cls");

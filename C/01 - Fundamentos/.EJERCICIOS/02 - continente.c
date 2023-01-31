@@ -27,5 +27,7 @@ int main(void){
     printf("\n\t[Mexico]");
     printf("\n\t[CDMX]");
     printf("\n\t[Benito Juarez]\n");
+
+    system("pause");
     return 0;
 }

@@ -7,8 +7,8 @@
 **  Autores         :
 **                      Jelp 200
 **  Descripcion     :
-**                      Realizar un programa donde el usuario adivine el
-**                      numero secreto.
+**                      Realizar un programa donde el usuario de dos numeros y en un menu de
+**                      los resultados.
 ** #########################################################################################
 */
 

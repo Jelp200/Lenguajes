@@ -26,11 +26,11 @@ int main(){
         puts("\n\t\tNUMERO SECRETO.");
         printf("\n\t\tDe el numero secreto: "); scanf("%i", &opc);
         if(opc == nRandom){
-            printf("\n\t\tAcerto al n�mero secreto...");
+            printf("\n\t\tAcerto al numero secreto...");
             break;
 
         }else{
-            printf("\n\t\tIntentelo otra vez, el n�mero secreto esta entre 0 y 5...");
+            printf("\n\t\tIntentelo otra vez, el numero secreto esta entre 0 y 5...");
 
             intento -= 1;
             printf("\n\t\tLe quedan %i intentos.\n\n\n", intento);

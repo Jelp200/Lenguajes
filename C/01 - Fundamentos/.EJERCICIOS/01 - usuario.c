@@ -21,5 +21,7 @@
 int main(void){
 
     printf("\n\t[Jelp 200] [22] [Mexico]");
+
+    system("pause");
     return 0;
 }

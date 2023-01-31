@@ -40,8 +40,10 @@ int main(void){
     printf("\tLa suma de \"%i\" y \"%i\" es: %i", n1, n2, S);
     printf("\n\tLa resta de \"%i\" y \"%i\" es: %i", n1, n2, R);
     printf("\n\tEl producto de \"%i\" y \"%i\" es: %i", n1, n2, P);
-    printf("\n\tEl cociente de \"%f\" y \"%f\" es: %.2f", n1, n2, C);
-    printf("\n\tEl modulo de \"%f\" y \"%f\" es: %.2f", n1, n2, M);
+    printf("\n\tEl cociente de \"%i\" y \"%i\" es: %.2f", n1, n2, C);
+    printf("\n\tEl modulo de \"%i\" y \"%i\" es: %.2f", n1, n2, M);
+
+    system("pause");
 
     return 0;
 }
