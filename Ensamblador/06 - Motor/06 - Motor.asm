@@ -1,12 +1,15 @@
 ;#####################################################################################
 ;    Archivo:       06 - Motor                                                           
 ;    SO:            Windows 10                                                           
-;    Version:       1.1                                                                  
+;    Version:       1.4                                                                  
 ;    Herramientas:  Visual Studio Code                                               
 ;                   Mplab
 ;    Autor:         Jorge Peña
 ;    Notas:
-;                   Generar intervalos de tiempo empleando TMR0.                                             
+;                   Generar intervalos de tiempo empleando TMR0.
+;    Retoques:
+;                   Se corrigio el bucle de la "etq3" disparando el septimo bit de
+;                   T0CON.
 ;#####################################################################################
 ;                                                                                    
 ;    Archivos requeridos: P18F4550.INC                                               
@@ -65,12 +68,12 @@
     config EBTRB    = OFF
 ;-------------------------------------------------------------------------------------
 ; DEFINICION DE VARIABLES
-RH      EQU     0x10
-RL      EQU     0x11
-R6      EQU     0x12
-RTCON   EQU     0x13
-RTH     EQU     0x14
-RTL     EQU     0x15
+RH      EQU     0x50
+RL      EQU     0x51
+R6      EQU     0x52
+RTCON   EQU     0x53
+RTH     EQU     0x54
+RTL     EQU     0x55
 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 RESET_VECTOR	ORG		0
 
@@ -89,23 +92,23 @@ INICIO
 ;   SUB-RUTINAS
 
 ; Configuracion de los puertos
-CPUERTOS
+CPUERTOS:
     ;Deshabilitamos el convertidor analogico/digital
     movlw   0x0F		        ; W <- 0x0F
     movwf   ADCON1		        ; ADCON1  <- W.
 
-    clrf    TRISA				; TRISA (PORT-OUT)
     movlw   0xFF                ; W <- 0xFF
     movwf   TRISB               ; TRISB <- W (PORT-IN)
+	clrf    TRISA				; TRISA (PORT-OUT)
     RETURN
 
 ; Leemos los 4 bits mas significativos de PORTB
-LEER
+LEER:
     movf    PORTB, 0            ; W <- PORTB
-    andlw   0xF0                ; Enmacaramiento (DATO xxxx)(1111 0000) = DATO 0000 -> W
+	andlw   0xF0                ; Enmacaramiento (DATO xxxx)(1111 0000) = DATO 0000 -> W			
     bz      etq1                ; DATO = 0?
     movwf   RH                  ; RH <- W
-    swapf   RH, 1               ; Intercambio "H (DATO 0000)" to "L (0000 DATO)"
+    swapf   RH, 1	        ; Intercambio "H (DATO 0000)" to "L (0000 DATO)"
     movf    RH, 0               ; W <- RH
     sublw   0x10                ; W <- (0x10 - W) "Siendo 0x10 = 16 binario"
     movwf   RL                  ; RL <- W
@@ -115,7 +118,7 @@ LEER
             goto	LEER
 
 ; Generamos la modulación de ancho de pulso
-PWM
+PWM:
     movff   RH, R6              ; R6 <- RH "(Destino) <- (Fuente)"
     bsf     PORTA, 1            ; Hacemos set en el bit 1 del PORTA "1"
     call    GTIME
@@ -125,10 +128,10 @@ PWM
     RETURN
 
 ;Configura TMR0 para un tiempo de un milisegundo y genera un ciclo de espera cuya duración depende del valor en R6
-GTIME
+GTIME:
     movlw   0x08                ; W <- 0x08
     movwf   RTCON               ; RTCON <- W
-    etq2:	movlw	0x0D        ; W <- 0xD1
+    etq2:	movlw	0xD1        ; W <- 0xD1
             movwf   RTH         ; RTH <- W
             movlw   0x20        ; W <- 0x20
             movwf   RTL         ; RTL <- W
@@ -138,12 +141,13 @@ GTIME
     RETURN
 
 ; Recibe los parametros de config de los registros RTH, RTL y RTCON
-TMRO
+TMRO:
     movff   RTCON, T0CON        ; T0CON <- RTCON
     movff   RTH, TMR0H          ; TMR0H <- RTH
     movff   RTL, TMR0L          ; TMR0L <- RTL
+	bsf		T0CON, 7	        ; TMR0ON <- 1
     etq3:   btfss   INTCON, 2
-            goto    etq3
+            goto      etq3
     bcf     INTCON, 2
     bcf     T0CON, 7
     RETURN

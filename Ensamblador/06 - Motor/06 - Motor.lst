@@ -1,4 +1,4 @@
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE  1
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -7,7 +7,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00001 ;#####################################################################################
                       00002 ;    Archivo:       06 - Motor                                                           
                       00003 ;    SO:            Windows 10                                                           
-                      00004 ;    Version:       1.1                                                                  
+                      00004 ;    Version:       1.3                                                                  
                       00005 ;    Herramientas:  Visual Studio Code                                               
                       00006 ;                   Mplab
                       00007 ;    Autor:         Jorge Peña
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00039                                                                 ; firmware debe ingresar en el gestor de
                              arranque o la aplicación main
                       00040                                                                 ; despues de reset. Para hacer esto, nec
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE  2
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -92,12 +92,12 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00065     config EBTRB    = OFF
                       00066 ;-------------------------------------------------------------------------------------
                       00067 ; DEFINICION DE VARIABLES
-  00000010            00068 RH      EQU     0x10
-  00000011            00069 RL      EQU     0x11
-  00000012            00070 R6      EQU     0x12
-  00000013            00071 RTCON   EQU     0x13
-  00000014            00072 RTH     EQU     0x14
-  00000015            00073 RTL     EQU     0x15
+  00000050            00068 RH      EQU     0x50
+  00000051            00069 RL      EQU     0x51
+  00000052            00070 R6      EQU     0x52
+  00000053            00071 RTCON   EQU     0x53
+  00000054            00072 RTH     EQU     0x54
+  00000055            00073 RTL     EQU     0x55
                       00074 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
                       00075 RESET_VECTOR    ORG             0
@@ -116,7 +116,7 @@ Warning[207]: Found label after column 1. (etqI)
                       00087 
                       00088 ;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                       00089 ;   SUB-RUTINAS
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE  3
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -124,26 +124,27 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 
                       00090 
                       00091 ; Configuracion de los puertos
-001010                00092 CPUERTOS
+001010                00092 CPUERTOS:
                       00093     ;Deshabilitamos el convertidor analogico/digital
 001010 0E0F           00094     movlw   0x0F                        ; W <- 0x0F
 001012 6EC1           00095     movwf   ADCON1                      ; ADCON1  <- W.
                       00096 
-001014 6A92           00097     clrf    TRISA                               ; TRISA (PORT-OUT)
-001016 0EFF           00098     movlw   0xFF                ; W <- 0xFF
-001018 6E93           00099     movwf   TRISB               ; TRISB <- W (PORT-IN)
+001014 0EFF           00097     movlw   0xFF                ; W <- 0xFF
+001016 6E93           00098     movwf   TRISB               ; TRISB <- W (PORT-IN)
+001018 6A92           00099         clrf    TRISA                           ; TRISA (PORT-OUT)
 00101A 0012           00100     RETURN
                       00101 
                       00102 ; Leemos los 4 bits mas significativos de PORTB
-00101C                00103 LEER
+00101C                00103 LEER:
 00101C 5081           00104     movf    PORTB, 0            ; W <- PORTB
-00101E 0BF0           00105     andlw   0xF0                ; Enmacaramiento (DATO xxxx)(1111 0000) = DATO 0000 -> W
+00101E 0BF0           00105         andlw   0xF0                ; Enmacaramiento (DATO xxxx)(1111 0000) = DATO 0000 -> W            
+                                    
 001020 E0??           00106     bz      etq1                ; DATO = 0?
-001022 6E10           00107     movwf   RH                  ; RH <- W
-001024 3A10           00108     swapf   RH, 1               ; Intercambio "H (DATO 0000)" to "L (0000 DATO)"
-001026 5010           00109     movf    RH, 0               ; W <- RH
+001022 6E50           00107     movwf   RH                  ; RH <- W
+001024 3A50           00108     swapf   RH, 1               ; Intercambio "H (DATO 0000)" to "L (0000 DATO)"
+001026 5050           00109     movf    RH, 0               ; W <- RH
 001028 0810           00110     sublw   0x10                ; W <- (0x10 - W) "Siendo 0x10 = 16 binario"
-00102A 6E11           00111     movwf   RL                  ; RL <- W
+00102A 6E51           00111     movwf   RL                  ; RL <- W
 00102C 0012           00112     RETURN
                       00113 
 Warning[207]: Found label after column 1. (etq1)
@@ -151,51 +152,52 @@ Warning[207]: Found label after column 1. (etq1)
 001030 EF?? F???      00115             goto        LEER
                       00116 
                       00117 ; Generamos la modulación de ancho de pulso
-001034                00118 PWM
-001034 C010 F012      00119     movff   RH, R6              ; R6 <- RH "(Destino) <- (Fuente)"
+001034                00118 PWM:
+001034 C050 F052      00119     movff   RH, R6              ; R6 <- RH "(Destino) <- (Fuente)"
 001038 8280           00120     bsf     PORTA, 1            ; Hacemos set en el bit 1 del PORTA "1"
 00103A EC?? F???      00121     call    GTIME
-00103E C011 F012      00122     movff   RL, R6              ; R6 <- RL "(Destino) <- (Fuente)"
+00103E C051 F052      00122     movff   RL, R6              ; R6 <- RL "(Destino) <- (Fuente)"
 001042 9280           00123     bcf     PORTA, 1            ; Limpiamos el bit 1 del PORTA "0"
 001044 EC?? F???      00124     call        GTIME
 001048 0012           00125     RETURN
                       00126 
                       00127 ;Configura TMR0 para un tiempo de un milisegundo y genera un ciclo de espera cuya duración depende del 
                             valor en R6
-00104A                00128 GTIME
+00104A                00128 GTIME:
 00104A 0E08           00129     movlw   0x08                ; W <- 0x08
-00104C 6E13           00130     movwf   RTCON               ; RTCON <- W
+00104C 6E53           00130     movwf   RTCON               ; RTCON <- W
 Warning[207]: Found label after column 1. (etq2)
-00104E 0E0D           00131     etq2:       movlw   0x0D        ; W <- 0xD1
-001050 6E14           00132             movwf   RTH         ; RTH <- W
+00104E 0ED1           00131     etq2:       movlw   0xD1        ; W <- 0xD1
+001050 6E54           00132             movwf   RTH         ; RTH <- W
 001052 0E20           00133             movlw   0x20        ; W <- 0x20
-001054 6E15           00134             movwf   RTL         ; RTL <- W
+001054 6E55           00134             movwf   RTL         ; RTL <- W
 001056 EC?? F???      00135             call    TMRO
-00105A 0612           00136             decf    R6, 1       ; Decrementa en 1 a R6
+00105A 0652           00136             decf    R6, 1       ; Decrementa en 1 a R6
 00105C E1??           00137             bnz     etq2        ; R6 = 0?
 00105E 0012           00138     RETURN
-                      00139 
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE  4
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE  4
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
+                      00139 
                       00140 ; Recibe los parametros de config de los registros RTH, RTL y RTCON
-001060                00141 TMRO
-001060 C013 FFD5      00142     movff   RTCON, T0CON        ; T0CON <- RTCON
-001064 C014 FFD7      00143     movff   RTH, TMR0H          ; TMR0H <- RTH
-001068 C015 FFD6      00144     movff   RTL, TMR0L          ; TMR0L <- RTL
+001060                00141 TMRO:
+001060 C053 FFD5      00142     movff   RTCON, T0CON        ; T0CON <- RTCON
+001064 C054 FFD7      00143     movff   RTH, TMR0H          ; TMR0H <- RTH
+001068 C055 FFD6      00144     movff   RTL, TMR0L          ; TMR0L <- RTL
+00106C 8ED5           00145         bsf             T0CON, 7                ; TMR0ON <- 1
 Warning[207]: Found label after column 1. (etq3)
-00106C A4F2           00145     etq3:   btfss   INTCON, 2
-00106E EF?? F???      00146             goto    etq3
-001072 94F2           00147     bcf     INTCON, 2
-001074 9ED5           00148     bcf     T0CON, 7
-001076 0012           00149     RETURN
-                      00150 
+00106E A4F2           00146     etq3:   btfss   INTCON, 2
+001070 EF?? F???      00147             goto      etq3
+001074 94F2           00148     bcf     INTCON, 2
+001076 9ED5           00149     bcf     T0CON, 7
+001078 0012           00150     RETURN
+                      00151 
 Warning[205]: Found directive in column 1. (END)
-                      00151 END
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE  5
+                      00152 END
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE  5
 
 
 SYMBOL TABLE
@@ -254,7 +256,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE  6
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE  6
 
 
 SYMBOL TABLE
@@ -313,7 +315,7 @@ CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
 CMIF                              00000006
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE  7
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE  7
 
 
 SYMBOL TABLE
@@ -372,7 +374,7 @@ EEIF                              00000004
 EEIP                              00000004
 EEPGD                             00000007
 ENDP0                             00000003
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE  8
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE  8
 
 
 SYMBOL TABLE
@@ -431,7 +433,7 @@ HLVDL1                            00000001
 HLVDL2                            00000002
 HLVDL3                            00000003
 I2C_DAT                           00000005
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE  9
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE  9
 
 
 SYMBOL TABLE
@@ -490,7 +492,7 @@ LATA3                             00000003
 LATA4                             00000004
 LATA5                             00000005
 LATA6                             00000006
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 10
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 10
 
 
 SYMBOL TABLE
@@ -549,7 +551,7 @@ NOT_PD                            00000002
 NOT_POR                           00000001
 NOT_RBPU                          00000007
 NOT_RI                            00000004
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 11
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 11
 
 
 SYMBOL TABLE
@@ -608,7 +610,7 @@ PLUSW1                            00000FE3
 PLUSW2                            00000FDB
 POR                               00000001
 PORTA                             00000F80
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 12
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 12
 
 
 SYMBOL TABLE
@@ -643,7 +645,7 @@ PSSBD0                            00000000
 PSSBD1                            00000001
 PWM                               00001034
 R                                 00000002
-R6                                00000012
+R6                                00000052
 RA0                               00000000
 RA1                               00000001
 RA2                               00000002
@@ -667,7 +669,7 @@ RC0                               00000000
 RC1                               00000001
 RC2                               00000002
 RC4                               00000004
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 13
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 13
 
 
 SYMBOL TABLE
@@ -704,13 +706,13 @@ RE3                               00000003
 READ_WRITE                        00000002
 RESET_VECTOR                      00000000
 RESUME                            00000002
-RH                                00000010
+RH                                00000050
 RI                                00000004
-RL                                00000011
+RL                                00000051
 RSEN                              00000001
-RTCON                             00000013
-RTH                               00000014
-RTL                               00000015
+RTCON                             00000053
+RTH                               00000054
+RTL                               00000055
 RX                                00000007
 RX9                               00000006
 RX9D                              00000000
@@ -726,7 +728,7 @@ SE0                               00000005
 SEN                               00000000
 SENDB                             00000003
 SMP                               00000007
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 14
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 14
 
 
 SYMBOL TABLE
@@ -785,7 +787,7 @@ STKUNF                            00000006
 SUSPND                            00000001
 SWDTE                             00000000
 SWDTEN                            00000000
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 15
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 15
 
 
 SYMBOL TABLE
@@ -844,7 +846,7 @@ TMR1H                             00000FCF
 TMR1IE                            00000000
 TMR1IF                            00000000
 TMR1IP                            00000000
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 16
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 16
 
 
 SYMBOL TABLE
@@ -903,7 +905,7 @@ TRISD0                            00000000
 TRISD1                            00000001
 TRISD2                            00000002
 TRISD3                            00000003
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 17
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 17
 
 
 SYMBOL TABLE
@@ -962,7 +964,7 @@ UERRIF                            00000001
 UFRM                              00000F66
 UFRMH                             00000F67
 UFRML                             00000F66
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 18
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 18
 
 
 SYMBOL TABLE
@@ -1021,7 +1023,7 @@ _CONFIG5L                         00300008
 _CONFIG6H                         0030000B
 _CONFIG6L                         0030000A
 _CONFIG7H                         0030000D
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 19
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 19
 
 
 SYMBOL TABLE
@@ -1080,7 +1082,7 @@ _IDLOC2                           00200002
 _IDLOC3                           00200003
 _IDLOC4                           00200004
 _IDLOC5                           00200005
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 20
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 20
 
 
 SYMBOL TABLE
@@ -1139,7 +1141,7 @@ _WRT1_ON_6L                       000000FD
 _WRT2_OFF_6L                      000000FF
 _WRT2_ON_6L                       000000FB
 _WRT3_OFF_6L                      000000FF
-MPASM  5.51                    06 - MOTOR.ASM   1-18-2023  19:54:45         PAGE 21
+MPASM  5.51                    06 - MOTOR.ASM   1-19-2023  10:30:41         PAGE 21
 
 
 SYMBOL TABLE
@@ -1158,7 +1160,7 @@ __18F4550                         00000001
 __DEBUG                           1
 etq1                              0000102E
 etq2                              0000104E
-etq3                              0000106C
+etq3                              0000106E
 etqI                              00001004
 
 Errors   :     0
