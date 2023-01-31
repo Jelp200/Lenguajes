@@ -8,7 +8,7 @@
 **                      Jelp 200
 **  Descripcion     :
 **                      Realizar un programa que visualize la siguiente
-**                      informacion en consola a travez de firentes funciones.
+**                      informacion en consola a travez de diferentes funciones.
 **                      [Usuario] [Edad] [Pais]
 ** #########################################################################################
 */
