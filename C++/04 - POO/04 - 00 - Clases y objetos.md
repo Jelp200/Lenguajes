@@ -1,4 +1,4 @@
-# POO "Programación orientada a objetos"    [:box:]
+# Programación orientada a objetos
 La programación otientada a objetos (POO) está compuesta o construida por la programación estructurada, por ello es
 necesario poder entender dicha programación primero, si no ha terminado de entender este tipo de programación visite las
 carpetas de <a href="../01 - Fundamentos">Fundamentos</a> e <a href="../02 - Intermedio">Intermedio</a> para una mejor 
@@ -15,7 +15,9 @@ Las clases constan de una propiedad muy importante la cual es el poder <i>oculta
 de una clase pueden saber cómo comunicarse entre si, a través de <i>interfaces</i> definidas de manera correcta, por lo general, a las
 clases no se les permite saber cómo se implementan otras clases; los detalles de implementación están ocultos dentro de las mismas clases.
 Una analogía perfecta es cuando jugamos un videojuego, con toda seguridad podemos manejar nuestro personaje y hacer misiones, todo esto
-sin necesidad de saber cómo funciona internamente el procesador y los componentes del dispositivo donde estemos jugando. 
+sin necesidad de saber cómo funciona internamente el procesador y los componentes del dispositivo donde estemos jugando.
+
+### C vs C++    :boxing_glove:
 L A T E R ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### ¿Qué es un objeto?
 En programación un objeto es aquel que contiene dos cosas muy importantes, dichas cosas son:
