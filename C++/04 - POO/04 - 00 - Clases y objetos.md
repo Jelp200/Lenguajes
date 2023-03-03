@@ -4,7 +4,7 @@ necesario poder entender dicha programación primero, si no ha terminado de ente
 carpetas de <a href="../01 - Fundamentos">Fundamentos</a> e <a href="../02 - Intermedio">Intermedio</a> para una mejor 
 visualización de los temas aqui abordados.
 
-### Conceptos clave     [:memo:]
+### Conceptos clave     :memo:
 La programación orientada a objetos (POO) es utilizada para poder <i>encapsular datos</i> (atributos) y funciones
 (comportamiento) en paquetes llamados <i>clases</i>; los atributos y comportamientos de una clase se encuentran íntimamente
 ligados entre si. Podemos visualizar una clase como un anteproyecto/plano. A partir de dicho anteproyecto/plano, un albañil
@@ -18,6 +18,30 @@ Una analogía perfecta es cuando jugamos un videojuego, con toda seguridad podem
 sin necesidad de saber cómo funciona internamente el procesador y los componentes del dispositivo donde estemos jugando.
 
 ### C vs C++    :boxing_glove:
+Mientras que en C y en otros <i>lenguajes de programación por procedimientos</i>, la programación tiende a ser <b><i>orientada a acciones</i></b>.
+En C++ el ideal es programar en <b><i>orientación a objetos</i></b>. En C la unidad fundamental de programación es la <i>función</i>. En C++, la
+unidad fundamental de programación es la <i>clase</i>, a partir de la cual podemos generar <i>instancias</i> de todos los objetos (creamos objetos).
+```txt
+╔══════════════════════════════════════╗══════════════════════════════════════╗
+║                   C                  ║                 C++                  ║
+╠══════════════════════════════════════╣══════════════════════════════════════╣
+║  Se concreta en escribir funciones   ║  Se concreta en escibir clases       ║
+║                                      ║                                      ║
+║  Los datos existen primordialmente   ║  A las clases tambien podemos llam_  ║
+║  para apoyar las acciones que real_  ║  arlas como "tipos definidos" por    ║
+║  izan las funciones.                 ║  el programador.                     ║
+╚══════════════════════════════════════╝══════════════════════════════════════╝
+```
+En C++ cada clase contiene datos, así como el conjunto de funciones que manipularan a dichos datos. Los datos que componen una clase llevan por
+nombre <i>datos miembro</i>, y las funciones que componen a una clase tienen el nombre de <i>funciones miembro</i> (o <i>métodos</i>, en otros
+lenguajes de programación orientado a objetos).
+
+El foco de atención en C++ ya hemos dicho que se encuentra en las clases, en lugar de las fucniones como lo es en C. Los <i>sustantivos</i> que
+se encuentran en la especificaciones de un sistema ayudan al programador en C++ a poder determinar el conjunto de clases que utilizará para crear
+los objetos que trabajarán juntos para implementar el sistema.
+
+Algo importante a denotar es que <b><i>las CLASES EN C++ son la EVOLUCIÓN natural DE la noción STRUCT EN C</i></b>.
+
 L A T E R ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### ¿Qué es un objeto?
 En programación un objeto es aquel que contiene dos cosas muy importantes, dichas cosas son:
