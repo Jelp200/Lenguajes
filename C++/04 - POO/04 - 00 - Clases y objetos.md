@@ -1,5 +1,5 @@
 # POO "Programación orientada a objetos" :box:
-La programación otientada a objetos (POO) está compuesta o construida por la programación estructurada, por ello que es
+La programación otientada a objetos (POO) está compuesta o construida por la programación estructurada, por ello es
 necesario poder entender dicha programación primero, si no ha terminado de entender este tipo de programación visite las
 carpetas de <a href="../01 - Fundamentos">Fundamentos</a> e <a href="../02 - Intermedio">Intermedio</a> para una mejor 
 visualización de los temas aqui abordados.
