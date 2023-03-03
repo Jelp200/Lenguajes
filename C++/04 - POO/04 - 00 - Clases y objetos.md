@@ -42,7 +42,13 @@ los objetos que trabajarán juntos para implementar el sistema.
 
 Algo importante a denotar es que <b><i>las CLASES EN C++ son la EVOLUCIÓN natural DE la noción STRUCT EN C</i></b>.
 
-L A T E R ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Si desea indagar más en los conceptos puede visualizar:
+<ul>
+    <li><a href="">¿Qué es una clase?</a></li>
+    <li><a href="">¿Qué es un objeto?</a></li>
+</ul>
+
+L A T E R --------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### ¿Qué es un objeto?
 En programación un objeto es aquel que contiene dos cosas muy importantes, dichas cosas son:
     - Atributos (características)
