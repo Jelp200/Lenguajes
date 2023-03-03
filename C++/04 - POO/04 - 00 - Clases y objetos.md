@@ -1,15 +1,21 @@
-# POO "Programación orientada a objetos" [:box:]
+# POO "Programación orientada a objetos"    [:box:]
 La programación otientada a objetos (POO) está compuesta o construida por la programación estructurada, por ello es
 necesario poder entender dicha programación primero, si no ha terminado de entender este tipo de programación visite las
 carpetas de <a href="../01 - Fundamentos">Fundamentos</a> e <a href="../02 - Intermedio">Intermedio</a> para una mejor 
 visualización de los temas aqui abordados.
 
-### Conceptos clave [:memo]
+### Conceptos clave     [:memo:]
 La programación orientada a objetos (POO) es utilizada para poder <i>encapsular datos</i> (atributos) y funciones
 (comportamiento) en paquetes llamados <i>clases</i>; los atributos y comportamientos de una clase se encuentran íntimamente
 ligados entre si. Podemos visualizar una clase como un anteproyecto/plano. A partir de dicho anteproyecto/plano, un albañil
 puede contruir una casa o edificio. <b><i>A partir de una clase, un programador puede crear un objeto. Una clase se puede reutilizar
 muchas veces para hacer muchos objetos de la misma clase.</i></b>
+
+Las clases constan de una propiedad muy importante la cual es el poder <i>ocultar información</i>; significa que aunque los objetos
+de una clase pueden saber cómo comunicarse entre si, a través de <i>interfaces</i> definidas de manera correcta, por lo general, a las
+clases no se les permite saber cómo se implementan otras clases; los detalles de implementación están ocultos dentro de las mismas clases.
+Una analogía perfecta es cuando jugamos un videojuego, con toda seguridad podemos manejar nuestro personaje y hacer misiones, todo esto
+sin necesidad de saber cómo funciona internamente el procesador y los componentes del dispositivo donde estemos jugando. 
 L A T E R ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### ¿Qué es un objeto?
 En programación un objeto es aquel que contiene dos cosas muy importantes, dichas cosas son:
