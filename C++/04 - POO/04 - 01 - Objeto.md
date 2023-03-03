@@ -6,7 +6,7 @@ En programación un objeto es aquel que contiene dos cosas muy importantes, dich
 </ul>
 
 Para poder visualizar de mejor manera dichos atributos y métodos realicemos un pequeño ejemplo.
-Digamos que yo tengo un coche al cual llamare "miCoche1", dicho coche tiene los siguientes atributos y caracteristicas:<br>
+Digamos que yo tengo un coche al cual llamare "miCoche1", dicho coche tiene los siguientes atributos y caracteristicas:<br><br>
     miCoche1<br>
     Atributos (características):<br>
     <ul>
@@ -21,7 +21,7 @@ Digamos que yo tengo un coche al cual llamare "miCoche1", dicho coche tiene los 
         <li>Frenar</li>
     </ul>
 
-Ahora digamos que tengo una fraccón igual a 5/3, entonces:<br>
+Ahora digamos que tengo una fraccón igual a 5/3, entonces:<br><br>
     fraccion1<br>
     Atributos (características):<br>
     <ul>
