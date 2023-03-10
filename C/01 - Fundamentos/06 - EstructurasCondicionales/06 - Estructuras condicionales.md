@@ -18,11 +18,11 @@ if(condicion){
 ``` 
 En este apartado podrán encontrar los siguientes temas:
 <ul>
-    <li><a href="../06 - EstructurasCondicionales/Codigos/06 - 01 - If.c">If simple</a></li>.
-    <li><a href="../06 - EstructurasCondicionales/Codigos/06 - 02 - If'sAnidados.c">If's anidados</a></li>.
-    <li><a href="../06 - EstructurasCondicionales/Codigos/06 - 03 - IfElse.c">If else</a></li>.
-    <li><a href="../06 - EstructurasCondicionales/Codigos/06 - 04 - IfElseIf.c">If else if</a></li>.
-    <li><a href="../06 - EstructurasCondicionales/Codigos/06 - 05 - OperadorQ.c">Operador "?"</a></li>.
+    <li><a href="../06 - EstructurasCondicionales/Codigos/06 - 01 - If.c">If simple</a></li>
+    <li><a href="../06 - EstructurasCondicionales/Codigos/06 - 02 - If'sAnidados.c">If's anidados</a></li>
+    <li><a href="../06 - EstructurasCondicionales/Codigos/06 - 03 - IfElse.c">If else</a></li>
+    <li><a href="../06 - EstructurasCondicionales/Codigos/06 - 04 - IfElseIf.c">If else if</a></li>
+    <li><a href="../06 - EstructurasCondicionales/Codigos/06 - 05 - OperadorQ.c">Operador "?"</a></li>
 </ul>
 
 De igual manera podremos visualizar su estructura en diagrama de flujo dando <a hrer="../06 - EstructurasCondicionales/IMG">click aquí</a>.
