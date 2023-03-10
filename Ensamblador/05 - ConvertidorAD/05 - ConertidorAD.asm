@@ -126,7 +126,7 @@ CDAC
 
 ; Leemos los 8 bits del registro ADRESH
 LEER
-    ; Si el bit en ADCON0 es 0 este seguira, sino se repetira hasta que sea 0. 
+    ; Si el bit en ADCON0 es 0 este seguira, sino se repetira hasta que sea diferente de 0. 
     etqL:	btfsc   ADCON0, 1
 		    goto    etqL
 		    movf    ADRESH, 0
@@ -140,12 +140,12 @@ LEER
 DIVISION
     clrf    R0
     clrf    Rcc
-    etqD:   movf   Rdvr, 0
+    etqD:   movf	Rdvr, 0
             addwf   R0, 0
             movwf   R0
 
             cpfsgt  Rdd
-			;RETURN
+			RETURN
 
             movf    Rcc, 0
             addlw   0x01

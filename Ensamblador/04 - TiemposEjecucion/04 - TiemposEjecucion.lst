@@ -1,4 +1,4 @@
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE  1
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -7,22 +7,21 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00001 ;#####################################################################################
                       00002 ;    Archivo:       04 - TiemposEjecucion                                                           
                       00003 ;    SO:            Windows 10                                                           
-                      00004 ;    Version:       1.0                                                                  
+                      00004 ;    Version:       1.1                                                                  
                       00005 ;    Herramientas:  Visual Studio Code                                               
                       00006 ;                   Mplab
                       00007 ;    Autor:         Jorge Peña
                       00008 ;    Notas:
-                      00009 ;                   Elaborar un programa en ASM de una rutina que despliegue una cnta
-                      00010 ;                   ascendente en el display de 7 egmentos en el PORTD con intervalo
-                      00011 ;                   de 7 segundos.                                             
-                      00012 ;#####################################################################################
+                      00009 ;                   Calcular los tiempos de ejecución de un programa.                                  
+                                       
+                      00010 ;#####################################################################################
+                      00011 ;                                                                                    
+                      00012 ;    Archivos requeridos: P18F4550.INC                                               
                       00013 ;                                                                                    
-                      00014 ;    Archivos requeridos: P18F4550.INC                                               
-                      00015 ;                                                                                    
-                      00016 ;#####################################################################################
-                      00017 
-                      00018     LIST P = 18F4550, F = INHX32        ; Directiva para definir el procesador.
-                      00019         #include <P18F4550.INC>             ; Definición de variables especificas del procesador.
+                      00014 ;#####################################################################################
+                      00015 
+                      00016     LIST P = 18F4550, F = INHX32        ; Directiva para definir el procesador.
+                      00017         #include <P18F4550.INC>             ; Definición de variables especificas del procesador.
                       00001         LIST
                       00002 
                       00003 ;==========================================================================
@@ -32,148 +31,146 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00007 ;==========================================================================
                       00008 
                       01764         LIST
-                      00020 
-                      00021 ;-------------------------------------------------------------------------------------
-                      00022 ;   CONFIGURACION DE LOS BITS
-                      00023 
-                      00024         CONFIG PLLDIV   = 5             ; (20 MHz crystal en PICDEM FS USB board)
-                      00025     CONFIG CPUDIV   = OSC1_PLL2 
-                      00026     CONFIG USBDIV   = 2             ; Fuente del reloj a 96MHz PLL/2
-                      00027     CONFIG FOSC     = HSPLL_HS
-                      00028     CONFIG FCMEN    = OFF
-                      00029     CONFIG IESO     = OFF
-                      00030     CONFIG PWRT     = OFF
-                      00031     CONFIG BOR      = ON
-                      00032     CONFIG BORV     = 3
-                      00033     CONFIG VREGEN   = ON                    ; Regulador de voltaje USB
-                      00034     config WDT      = OFF
-                      00035     config WDTPS    = 32768
-                      00036     config MCLRE    = ON
-                      00037     config LPT1OSC  = OFF
-                      00038     config PBADEN   = OFF                   ;NOTE: Modificar este valor aquí no tendra ninfun efecto en
-                      00039                                                                 ; la aplicación. Vea la parte duperior 
+                      00018 
+                      00019 ;-------------------------------------------------------------------------------------
+                      00020 ;   CONFIGURACION DE LOS BITS
+                      00021 
+                      00022         CONFIG PLLDIV   = 5             ; (20 MHz crystal en PICDEM FS USB board)
+                      00023     CONFIG CPUDIV   = OSC1_PLL2 
+                      00024     CONFIG USBDIV   = 2             ; Fuente del reloj a 96MHz PLL/2
+                      00025     CONFIG FOSC     = HSPLL_HS
+                      00026     CONFIG FCMEN    = OFF
+                      00027     CONFIG IESO     = OFF
+                      00028     CONFIG PWRT     = OFF
+                      00029     CONFIG BOR      = ON
+                      00030     CONFIG BORV     = 3
+                      00031     CONFIG VREGEN   = ON                    ; Regulador de voltaje USB
+                      00032     config WDT      = OFF
+                      00033     config WDTPS    = 32768
+                      00034     config MCLRE    = ON
+                      00035     config LPT1OSC  = OFF
+                      00036     config PBADEN   = OFF                   ;NOTE: Modificar este valor aquí no tendra ninfun efecto en
+                      00037                                                                 ; la aplicación. Vea la parte duperior 
                             de la funcion main().
-                      00040                                                                 ; Por default el RB4 I/O pin es usado pa
+                      00038                                                                 ; Por default el RB4 I/O pin es usado pa
                             ra detectar si el
-                      00041                                                                 ; firmware debe ingresar en el gestor de
+                      00039                                                                 ; firmware debe ingresar en el gestor de
                              arranque o la aplicación main
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE  2
+                      00040                                                                 ; despues de reset. Para hacer esto, nec
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-                      00042                                                                 ; despues de reset. Para hacer esto, nec
                             esitamos configurar RB4 como
-                      00043                                                                 ; una entrada digital, cambiandolo así 
+                      00041                                                                 ; una entrada digital, cambiandolo así 
                             de el valor de reset acorde a
-                      00044                                                                 ; esta configuracion del bit.
-                      00045     config CCP2MX   = ON
-                      00046     config STVREN   = ON
-                      00047     config LVP      = OFF
-                      00048     config ICPRT    = OFF           ; Dedicated In-Circuit Debug/Programming
-                      00049     config XINST    = OFF           ; Set extendido de instrucciones
-                      00050     config CP0      = OFF
-                      00051     config CP1      = OFF
-                      00052     config CP2      = OFF
-                      00053     config CP3      = OFF
-                      00054     config CPB      = OFF
-                      00055     config CPD      = OFF
-                      00056     config WRT0     = OFF
-                      00057     config WRT1     = OFF
-                      00058     config WRT2     = OFF
-                      00059     config WRT3     = OFF
-                      00060     config WRTB     = OFF           ; Boot Block Write Protection
-                      00061     config WRTC     = OFF
-                      00062     config WRTD     = OFF
-                      00063     config EBTR0    = OFF
-                      00064     config EBTR1    = OFF
-                      00065     config EBTR2    = OFF
-                      00066     config EBTR3    = OFF
-                      00067     config EBTRB    = OFF
-                      00068 ;-------------------------------------------------------------------------------------
-                      00069 ; DEFINICION DE VARIABLES
-                      00070 
-                      00071 
-                      00072 
-                      00073 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+                      00042                                                                 ; esta configuracion del bit.
+                      00043     config CCP2MX   = ON
+                      00044     config STVREN   = ON
+                      00045     config LVP      = OFF
+                      00046     config ICPRT    = OFF           ; Dedicated In-Circuit Debug/Programming
+                      00047     config XINST    = OFF           ; Set extendido de instrucciones
+                      00048     config CP0      = OFF
+                      00049     config CP1      = OFF
+                      00050     config CP2      = OFF
+                      00051     config CP3      = OFF
+                      00052     config CPB      = OFF
+                      00053     config CPD      = OFF
+                      00054     config WRT0     = OFF
+                      00055     config WRT1     = OFF
+                      00056     config WRT2     = OFF
+                      00057     config WRT3     = OFF
+                      00058     config WRTB     = OFF           ; Boot Block Write Protection
+                      00059     config WRTC     = OFF
+                      00060     config WRTD     = OFF
+                      00061     config EBTR0    = OFF
+                      00062     config EBTR1    = OFF
+                      00063     config EBTR2    = OFF
+                      00064     config EBTR3    = OFF
+                      00065     config EBTRB    = OFF
+                      00066 ;-------------------------------------------------------------------------------------
+                      00067 ; DEFINICION DE VARIABLES
+                      00068 
+                      00069 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-                      00074 ; Reset vector
-                      00075 ; Esta sección se ejecutara cuando ocurra un RESET.
+                      00070 ; Reset vector
+                      00071 ; Esta sección se ejecutara cuando ocurra un RESET.
+                      00072 
+                      00073 RESET_VECTOR    ORG             0
+                      00074 
+000000 EF?? F???      00075                 goto    INICIO                  ; Salta a la funcion principal
                       00076 
-                      00077 RESET_VECTOR    ORG             0
-                      00078 
-000000 EF?? F???      00079                 goto    INICIO                  ; Salta a la funcion principal
-                      00080 
-                      00081 ;______________________________________________________________________________________
-                      00082 ;   MAIN FUNCTION
-                      00083         ORG             0x1000
-001000                00084 INICIO
-001000 EC?? F???      00085     call    CPUERTOS
+                      00077 ;______________________________________________________________________________________
+                      00078 ;   MAIN FUNCTION
+                      00079         ORG             0x1000
+001000                00080 INICIO
+001000 EC?? F???      00081     call    CPUERTOS
 Warning[207]: Found label after column 1. (etqI)
-001004 5083           00086     etqI:   movf    PORTD, 0
-001006 0F01           00087             addlw   0x01                ; w <- PORTD + 1
-001008 0007           00088             daw                                                 ; Ajuste de decimales en 'w' (BCD)
-00100A 6E83           00089             movwf   PORTD
-00100C EC?? F???      00090             call    T500
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE  3
+001004 5083           00082     etqI:   movf    PORTD, 0
+001006 0F01           00083             addlw   0x01                ; w <- PORTD + 1
+001008 0007           00084             daw                                                 ; Ajuste de decimales en 'w' (BCD)
+00100A 6E83           00085             movwf   PORTD
+00100C EC?? F???      00086             call    T500
+001010 EF?? F???      00087             goto etqI
+                      00088 
+                      00089 ;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-001010 EF?? F???      00091             goto etqI
-                      00092 
-                      00093 ;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                      00094 ;   SUB-RUTINAS
-                      00095 
-                      00096 ; Configuracion del puerto D
-001014                00097 CPUERTOS
-001014 0E0F           00098     movlw   0x0F                        ; w <- 0x0F
-001016 6EC1           00099     movwf   ADCON1                      ; ADCON1 <- w
-001018 0E00           00100         movlw   0x00                            ; w <- 0x00
-00101A 6E95           00101     movwf   TRISD                               ; TRISD <- w (PORT-OUT)
-00101C 6E83           00102     movwf   PORTD                               ; PORTD <- w
-00101E 0012           00103     RETURN
-                      00104     ;NOTA: Solo configuraremos el PORTD debido a que no ingresaremos algún dato de forma
-                      00105     ;analogica en el PORTB.
-                      00106 
-001020                00107 T500
-                      00108         ; DECLARACION DE VARIABLES
-                      00109     ;[Nvar] EQU [Expresión]
+                      00090 ;   SUB-RUTINAS
+                      00091 
+                      00092 ; Configuracion del puerto D
+001014                00093 CPUERTOS
+001014 0E0F           00094     movlw   0x0F                        ; w <- 0x0F
+001016 6EC1           00095     movwf   ADCON1                      ; ADCON1 <- w
+001018 0E00           00096         movlw   0x00                            ; w <- 0x00
+00101A 6E95           00097     movwf   TRISD                               ; TRISD <- w (PORT-OUT)
+00101C 6E83           00098     movwf   PORTD                               ; PORTD <- w
+00101E 0012           00099     RETURN
+                      00100     ;NOTA: Solo configuraremos el PORTD debido a que no ingresaremos algún dato de forma
+                      00101     ;analogica en el PORTB.
+                      00102 
+001020                00103 T500
+                      00104         ; DECLARACION DE VARIABLES
+                      00105     ;[Nvar] EQU [Expresión]
 Warning[207]: Found label after column 1. (R0)
-  00000000            00110     R0  EQU 0x00
+  00000000            00106     R0  EQU 0x00
 Warning[207]: Found label after column 1. (R1)
-  00000001            00111     R1  EQU 0x01
+  00000001            00107     R1  EQU 0x01
 Warning[207]: Found label after column 1. (R2)
-  00000002            00112     R2  EQU 0x02
-                      00113 
-                      00114         ; CALCULO DE TIEMPOS
-                      00115         ;       R0 con 01 = 16.3432 mSeg
-                      00116         ;       R0 con 16 = 506.59      mSeg
-                      00117         ;       R0 con 40 = 1.04        Seg
-                      00118         ;       R0 con 87 =     2.2             Seg
-001020 0E3D           00119         movlw   0x3D                                            ; w <- 0x1F (0x40 para 1seg)
-                      00120         ; R0 sirve para el tiempo de despliegue
-001022 6E00           00121         movwf   R0                                                      ; R0 <- w
+  00000002            00108     R2  EQU 0x02
+                      00109 
+                      00110         ; CALCULO DE TIEMPOS
+                      00111         ;       R0 con 01 = 16.3432 mSeg
+                      00112         ;       R0 con 1F = 506.59      mSeg
+                      00113         ;       R0 con 3D = 996.83      mSeg
+                      00114         ;       R0 con 7A =     1.99    Seg
+001020 0E3D           00115         movlw   0x3D
+                      00116         ; R0 sirve para el tiempo de despliegue
+001022 6E00           00117         movwf   R0                                                      ; R0 <- w
 Warning[207]: Found label after column 1. (etq1)
-001024 0EFF           00122     etq1:   movlw   0xFF                ; w <- 0xFF
-001026 6E01           00123             movwf   R1                  ; R1 <- w
+001024 0EFF           00118     etq1:   movlw   0xFF                ; w <- 0xFF
+001026 6E01           00119             movwf   R1                  ; R1 <- w
 Warning[207]: Found label after column 1. (etq2)
-001028 0EFF           00124     etq2:   movlw   0xFF                ; w <- 0xFF
-00102A 6E02           00125             movwf   R2                  ; R2 <- 0xFF
+001028 0EFF           00120     etq2:   movlw   0xFF                ; w <- 0xFF
+00102A 6E02           00121             movwf   R2                  ; R2 <- 0xFF
 Warning[207]: Found label after column 1. (etqR)
-00102C 0602           00126     etqR:   decf    R2, 1               ; R2 <- R2 - 1
-00102E E1??           00127             bnz     etqR                ; ¿R1 = 0?
-001030 0601           00128             decf    R1, 1               ; R1 <- R1 - 1
-001032 E1??           00129             bnz     etq2                ; ¿R2 = 0?
-001034 0600           00130             decf    R0, 1               ; R0 <- R0 - 1
-001036 E1??           00131             bnz     etq1                ; ¿R2 = 0?
-001038 0012           00132     RETURN
-                      00133             
+00102C 0602           00122     etqR:   decf    R2, 1               ; R2 <- R2 - 1
+00102E E1??           00123             bnz     etqR                ; ¿R1 = 0?
+001030 0601           00124             decf    R1, 1               ; R1 <- R1 - 1
+001032 E1??           00125             bnz     etq2                ; ¿R2 = 0?
+001034 0600           00126             decf    R0, 1               ; R0 <- R0 - 1
+001036 E1??           00127             bnz     etq1                ; ¿R2 = 0?
+001038 0012           00128     RETURN
+                      00129             
 Warning[205]: Found directive in column 1. (END)
-                      00134 END
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE  4
+                      00130 END
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE  4
 
 
 SYMBOL TABLE
@@ -232,7 +229,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE  5
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE  5
 
 
 SYMBOL TABLE
@@ -291,7 +288,7 @@ CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
 CMIF                              00000006
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE  6
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE  6
 
 
 SYMBOL TABLE
@@ -350,7 +347,7 @@ EEIF                              00000004
 EEIP                              00000004
 EEPGD                             00000007
 ENDP0                             00000003
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE  7
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE  7
 
 
 SYMBOL TABLE
@@ -409,7 +406,7 @@ HLVDL2                            00000002
 HLVDL3                            00000003
 I2C_DAT                           00000005
 I2C_READ                          00000002
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE  8
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE  8
 
 
 SYMBOL TABLE
@@ -468,7 +465,7 @@ LATA4                             00000004
 LATA5                             00000005
 LATA6                             00000006
 LATB                              00000F8A
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE  9
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE  9
 
 
 SYMBOL TABLE
@@ -527,7 +524,7 @@ NOT_RBPU                          00000007
 NOT_RI                            00000004
 NOT_T1SYNC                        00000002
 NOT_T3SYNC                        00000002
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 10
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 10
 
 
 SYMBOL TABLE
@@ -586,7 +583,7 @@ POR                               00000001
 PORTA                             00000F80
 PORTB                             00000F81
 PORTC                             00000F82
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 11
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 11
 
 
 SYMBOL TABLE
@@ -645,7 +642,7 @@ RC1                               00000001
 RC2                               00000002
 RC4                               00000004
 RC5                               00000005
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 12
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 12
 
 
 SYMBOL TABLE
@@ -704,7 +701,7 @@ SPBRG                             00000FAF
 SPBRGH                            00000FB0
 SPEN                              00000007
 SPP0                              00000000
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 13
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 13
 
 
 SYMBOL TABLE
@@ -763,7 +760,7 @@ T0CKI                             00000004
 T0CON                             00000FD5
 T0CS                              00000005
 T0IE                              00000005
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 14
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 14
 
 
 SYMBOL TABLE
@@ -822,7 +819,7 @@ TMR1ON                            00000000
 TMR2                              00000FCC
 TMR2IE                            00000001
 TMR2IF                            00000001
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 15
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 15
 
 
 SYMBOL TABLE
@@ -881,7 +878,7 @@ TRISD6                            00000006
 TRISD7                            00000007
 TRISE                             00000F96
 TRISE0                            00000000
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 16
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 16
 
 
 SYMBOL TABLE
@@ -940,7 +937,7 @@ UOEMON                            00000006
 UPUEN                             00000004
 URSTIE                            00000000
 URSTIF                            00000000
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 17
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 17
 
 
 SYMBOL TABLE
@@ -999,7 +996,7 @@ _CP0_ON_5L                        000000FE
 _CP1_OFF_5L                       000000FF
 _CP1_ON_5L                        000000FD
 _CP2_OFF_5L                       000000FF
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 18
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 18
 
 
 SYMBOL TABLE
@@ -1058,7 +1055,7 @@ _IESO_OFF_1H                      0000007F
 _IESO_ON_1H                       000000FF
 _LPT1OSC_OFF_3H                   000000FB
 _LPT1OSC_ON_3H                    000000FF
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 19
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 19
 
 
 SYMBOL TABLE
@@ -1117,7 +1114,7 @@ _WRTB_ON_6H                       000000BF
 _WRTC_OFF_6H                      000000FF
 _WRTC_ON_6H                       000000DF
 _WRTD_OFF_6H                      000000FF
-MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   1-11-2023  13:00:01         PAGE 20
+MPASM  5.51         04 - TIEMPOSEJECUCION.ASM   2-5-2023  18:37:29         PAGE 20
 
 
 SYMBOL TABLE

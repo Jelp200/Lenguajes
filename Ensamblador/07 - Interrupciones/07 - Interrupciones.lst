@@ -1,4 +1,4 @@
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE  1
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                             ra detectar si el
                       00041                                                                 ; firmware debe ingresar en el gestor de
                              arranque o la aplicación main
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE  2
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -93,166 +93,165 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00067     config EBTRB    = OFF
                       00068 ;-------------------------------------------------------------------------------------
                       00069 ; DEFINICION DE VARIABLES
-  00000000            00070 RH      EQU     0x00                    ; Registros para la funcion PWM
-  00000001            00071 RL          EQU     0x01
-  00000002            00072 R6      EQU     0x02
-  00000003            00073 RTCON   EQU     0x03                    ; Registros para TMR0
-  00000004            00074 RTH         EQU     0x04
-  00000005            00075 RTL     EQU     0X05 
-  00000006            00076 RNV         EQU     0x06                        ; Registros para despliegue en BCD
-  00000007            00077 RDec    EQU     0x07
-                      00078 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+  00000005            00070 RH      EQU     0x05                    ; Registros para la funcion PWM
+  00000006            00071 RL          EQU     0x06
+  00000007            00072 R6      EQU     0x07
+  00000008            00073 RTCON   EQU     0x08                    ; Registros para TMR0
+  00000009            00074 RTH         EQU     0x09
+  0000000A            00075 RTL     EQU     0X0A 
+  0000000B            00076 RNV         EQU     0x0B                        ; Registros para despliegue en BCD
+                      00077 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-                      00079 RESET_VECTOR    ORG             0
-                      00080 
-000000 EF?? F???      00081                 goto    _Reset              ; Salta al inicio del programa de usuario
-                      00082 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+                      00078 RESET_VECTOR    ORG             0
+                      00079 
+000000 EF?? F???      00080                 goto    _Reset              ; Salta al inicio del programa de usuario
+                      00081 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-                      00083 HIGHPRIORITY_VECTOR     ORG     0x0008
-000008 EF?? F???      00084                 goto    HighPr_ISR              ; Salta al inicio de ISR
-                      00085 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+                      00082 HIGHPRIORITY_VECTOR     ORG     0x0008
+000008 EF?? F???      00083                 goto    HighPr_ISR              ; Salta al inicio de ISR
+                      00084 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-                      00086 LOWPRIORITY_VECTOR      ORG     0x0018
-000018 EF?? F???      00087                 goto    LowPr_ISR               ; Salta al inicio de ISR
-                      00088 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+                      00085 LOWPRIORITY_VECTOR      ORG     0x0018
+000018 EF?? F???      00086                 goto    LowPr_ISR               ; Salta al inicio de ISR
+                      00087 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE  3
+                      00088 ; INICIO DEL RESET EN BOOTlOADER.
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-                      00089 ; INICIO DEL RESET EN BOOTlOADER.
-                      00090 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+                      00089 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-                      00091                 ORG     0x1000
-001000 EF?? F???      00092 _Reset  goto    INICIO
-                      00093 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+                      00090                 ORG     0x1000
+001000 EF?? F???      00091 _Reset  goto    INICIO
+                      00092 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-                      00094 ; INICIO EN ALTA PRIORIDAD DE ISR
-                      00095 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+                      00093 ; INICIO EN ALTA PRIORIDAD DE ISR
+                      00094 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-                      00096                 ORG 0x1008
-001008                00097 HighPr_ISR
-001008 EF?? F???      00098                 goto CUENTA
-                      00099 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+                      00095                 ORG 0x1008
+001008                00096 HighPr_ISR
+001008 EF?? F???      00097                 goto CUENTA
+                      00098 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-                      00100 ; INICIO EN BAJA PRIORIDAD DE ISR
-                      00101 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+                      00099 ; INICIO EN BAJA PRIORIDAD DE ISR
+                      00100 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-                      00102 ;               ORG 0x1018
-00100C                00103 LowPr_ISR
-                      00104                 
-00100C 0010           00105                 retfie
-                      00106 ;______________________________________________________________________________________
-                      00107 ;   MAIN FUNCTION
-                      00108 
-00100E                00109 INICIO:
-00100E 0E00           00110     movlw   0x00                ; W <- 0x00
-001010 6E06           00111     movwf   RNV                 ; RNV <- W
-001012 EC?? F???      00112     call    CPUERTOS
-                      00113     ; Llamamos a la etiqueta LEER.
+                      00101 ;               ORG 0x1018
+00100C                00102 LowPr_ISR
+                      00103                 
+00100C 0010           00104                 retfie
+                      00105 ;______________________________________________________________________________________
+                      00106 ;   MAIN FUNCTION
+                      00107 
+00100E                00108 INICIO:
+00100E 0E00           00109     movlw   0x00                ; W <- 0x00
+001010 6E0B           00110     movwf   RNV                 ; RNV <- W
+001012 EC?? F???      00111     call    CPUERTOS
+                      00112     ; Llamamos a la etiqueta LEER.
 Warning[207]: Found label after column 1. (etqI)
-001016 EC?? F???      00114     etqI:   call    LEER
-00101A EC?? F???      00115             call    PWM
-00101E EF?? F???      00116             goto    etqI
-                      00117 ;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                      00118 ;   SUB-RUTINAS
-                      00119 
-                      00120 ; Configuracion de los puertos
-001022                00121 CPUERTOS:
-                      00122     ;Deshabilitamos el convertidor analogico/digital
-001022 0E0F           00123     movlw   0x0F                        ; W <- 0x0F
-001024 6EC1           00124     movwf   ADCON1                      ; ADCON1  <- W.
-                      00125 
-001026 6A92           00126         clrf    TRISA                           ; TRISA (PORT-OUT)
-001028 0EFF           00127     movlw   0xFF                ; W <- 0xFF
-00102A 6E93           00128     movwf   TRISB               ; TRISB <- W (PORT-IN)
-00102C 6A95           00129     clrf    TRISD
-00102E 0E90           00130     movlw   0x90                ; W <- 0x90
-001030 6EF2           00131     movwf   INTCON              ; INTCON <- 0x90
-001032 0012           00132     RETURN
-                      00133 
-                      00134 ; Leemos los 4 bits mas significativos de PORTB                 
-001034                00135 LEER:
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE  4
+001016 EC?? F???      00113     etqI:   call    LEER
+00101A EC?? F???      00114             call    PWM
+00101E EF?? F???      00115             goto    etqI
+                      00116 ;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                      00117 ;   SUB-RUTINAS
+                      00118 
+                      00119 ; Configuracion de los puertos
+001022                00120 CPUERTOS:
+                      00121     ;Deshabilitamos el convertidor analogico/digital
+001022 0E0F           00122     movlw   0x0F                        ; W <- 0x0F
+001024 6EC1           00123     movwf   ADCON1                      ; ADCON1  <- W.
+                      00124 
+001026 6A92           00125         clrf    TRISA                           ; TRISA (PORT-OUT)
+001028 0EFF           00126     movlw   0xFF                ; W <- 0xFF
+00102A 6E93           00127     movwf   TRISB               ; TRISB <- W (PORT-IN)
+00102C 6A95           00128     clrf    TRISD
+00102E 0E90           00129     movlw   0x90                ; W <- 0x90
+001030 6EF2           00130     movwf   INTCON              ; INTCON <- 0x90
+001032 0012           00131     RETURN
+                      00132 
+                      00133 ; Leemos los 4 bits mas significativos de PORTB                 
+001034                00134 LEER:
+001034 5081           00135     movf    PORTB, 0            ; W <- PORTB
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE  4
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-001034 5081           00136     movf    PORTB, 0            ; W <- PORTB
-001036 0BF0           00137         andlw   0xF0                ; Enmacaramiento (DATO xxxx)(1111 0000) = DATO 0000 -> W            
+001036 0BF0           00136         andlw   0xF0                ; Enmacaramiento (DATO xxxx)(1111 0000) = DATO 0000 -> W            
                                     
-001038 E0??           00138     bz      etq1                ; DATO = 0?
-00103A 6E00           00139     movwf   RH                  ; RH <- W
-00103C 3A00           00140     swapf   RH, 1                   ; Intercambio "H (DATO 0000)" to "L (0000 DATO)"
-00103E 5000           00141     movf    RH, 0               ; W <- RH
-001040 0810           00142     sublw   0x10                ; W <- (0x10 - W) "Siendo 0x10 = 16 binario"
-001042 6E01           00143     movwf   RL                  ; RL <- W
-001044 0012           00144     RETURN
-                      00145 
+001038 E0??           00137     bz      etq1                ; DATO = 0?
+00103A 6E05           00138     movwf   RH                  ; RH <- W
+00103C 3A05           00139     swapf   RH, 1                   ; Intercambio "H (DATO 0000)" to "L (0000 DATO)"
+00103E 5005           00140     movf    RH, 0               ; W <- RH
+001040 0810           00141     sublw   0x10                ; W <- (0x10 - W) "Siendo 0x10 = 16 binario"
+001042 6E06           00142     movwf   RL                  ; RL <- W
+001044 0012           00143     RETURN
+                      00144 
 Warning[207]: Found label after column 1. (etq1)
-001046 9280           00146     etq1:       bcf             PORTA, 1        ; Limpiamos el bit 1 del PORTA "0"
-001048 EF?? F???      00147             goto        LEER
-                      00148 
-                      00149 ; Generamos la modulación de ancho de pulso
-00104C                00150 PWM:
-00104C C000 F002      00151     movff   RH, R6              ; R6 <- RH "(Destino) <- (Fuente)"
-001050 8280           00152     bsf     PORTA, 1            ; Hacemos set en el bit 1 del PORTA "1"
-001052 EC?? F???      00153     call    GTIME
-001056 C001 F002      00154     movff   RL, R6              ; R6 <- RL "(Destino) <- (Fuente)"
-                      00155     ;       (Fuente), (Dentino)
-00105A 9280           00156     bcf     PORTA, 1            ; Limpiamos el bit 1 del PORTA "0"
-00105C EC?? F???      00157     call        GTIME
-001060 0012           00158     RETURN
-                      00159 
-                      00160 ;Configura TMR0 para un tiempo de un milisegundo y genera un ciclo de espera cuya duración depende del 
+001046 9280           00145     etq1:       bcf             PORTA, 1        ; Limpiamos el bit 1 del PORTA "0"
+001048 EF?? F???      00146             goto        LEER
+                      00147 
+                      00148 ; Generamos la modulación de ancho de pulso
+00104C                00149 PWM:
+00104C C005 F007      00150     movff   RH, R6              ; R6 <- RH "(Destino) <- (Fuente)"
+001050 8280           00151     bsf     PORTA, 1            ; Hacemos set en el bit 1 del PORTA "1"
+001052 EC?? F???      00152     call    GTIME
+001056 C006 F007      00153     movff   RL, R6              ; R6 <- RL "(Destino) <- (Fuente)"
+                      00154     ;       (Fuente), (Dentino)
+00105A 9280           00155     bcf     PORTA, 1            ; Limpiamos el bit 1 del PORTA "0"
+00105C EC?? F???      00156     call        GTIME
+001060 0012           00157     RETURN
+                      00158 
+                      00159 ;Configura TMR0 para un tiempo de un milisegundo y genera un ciclo de espera cuya duración depende del 
                             valor en R6
-001062                00161 GTIME:
-001062 0E08           00162     movlw   0x08                ; W <- 0x08
-001064 6E03           00163     movwf   RTCON               ; RTCON <- W
+001062                00160 GTIME:
+001062 0E08           00161     movlw   0x08                ; W <- 0x08
+001064 6E08           00162     movwf   RTCON               ; RTCON <- W
 Warning[207]: Found label after column 1. (etq2)
-001066 0ED1           00164     etq2:       movlw   0xD1        ; W <- 0xD1
-001068 6E04           00165             movwf   RTH         ; RTH <- W
-00106A 0E20           00166             movlw   0x20        ; W <- 0x20
-00106C 6E05           00167             movwf   RTL         ; RTL <- W
-00106E EC?? F???      00168             call    TMRO
-001072 0602           00169             decf    R6, 1       ; Decrementa en 1 a R6
-001074 E1??           00170             bnz     etq2        ; R6 = 0?
-001076 0012           00171     RETURN
-                      00172 
-                      00173 ; Recibe los parametros de config de los registros RTH, RTL y RTCON
-001078                00174 TMRO:
-001078 C004 FFD7      00175     movff   RTH, TMR0H          ; TMR0H <- RTH
-00107C C005 FFD6      00176     movff   RTL, TMR0L          ; TMR0L <- RTL
-001080 C003 FFD5      00177     movff   RTCON, T0CON        ; T0CON <- RTCON
-001084 8ED5           00178         bsf             T0CON, 7                ; TMR0ON <- 1
+001066 0ED1           00163     etq2:       movlw   0xD1        ; W <- 0xD1
+001068 6E09           00164             movwf   RTH         ; RTH <- W
+00106A 0E20           00165             movlw   0x20        ; W <- 0x20
+00106C 6E0A           00166             movwf   RTL         ; RTL <- W
+00106E EC?? F???      00167             call    TMRO
+001072 0607           00168             decf    R6, 1       ; Decrementa en 1 a R6
+001074 E1??           00169             bnz     etq2        ; R6 = 0?
+001076 0012           00170     RETURN
+                      00171 
+                      00172 ; Recibe los parametros de config de los registros RTH, RTL y RTCON
+001078                00173 TMRO:
+001078 C009 FFD7      00174     movff   RTH, TMR0H          ; TMR0H <- RTH
+00107C C00A FFD6      00175     movff   RTL, TMR0L          ; TMR0L <- RTL
+001080 C008 FFD5      00176     movff   RTCON, T0CON        ; T0CON <- RTCON
+001084 8ED5           00177         bsf             T0CON, 7                ; TMR0ON <- 1
 Warning[207]: Found label after column 1. (etq3)
-001086 A4F2           00179     etq3:   btfss   INTCON, 2
-001088 EF?? F???      00180             goto      etq3
-00108C 94F2           00181     bcf     INTCON, 2
-00108E 9ED5           00182     bcf     T0CON, 7
-001090 0012           00183     RETURN
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE  5
+001086 A4F2           00178     etq3:   btfss   INTCON, 2
+001088 EF?? F???      00179             goto      etq3
+00108C 94F2           00180     bcf     INTCON, 2
+00108E 9ED5           00181     bcf     T0CON, 7
+001090 0012           00182     RETURN
+                      00183 
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE  5
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-                      00184 
-                      00185 ; Rutina de servicio de interrupcion
-001092                00186 CUENTA:
-001092 2A06           00187     incf    RNV, 1              ; Incrementa en 1 a RNV
-001094 5006           00188     movf    RNV, 0              ; W <- RNV
-001096 6E06           00189         movwf   RNV
-001098 C006 FF83      00190     movff   RNV, PORTD          ; PORTD <- RNV "(Destino) <- (Fuente)"
-                      00191     ;       (Fuente), (Dentino)
-00109C 92F2           00192     bcf     INTCON, 1           ; INT0IF <- 0
-00109E 0010           00193         RETFIE
-                      00194 
-                      00195         END
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE  6
+                      00184 ; Rutina de servicio de interrupcion
+001092                00185 CUENTA:
+001092 280B           00186     incf    RNV, 0              ; Incrementa en 1 a RNV
+001094 0F00           00187     addlw   0x00
+001096 0007           00188     daw
+001098 6E0B           00189         movwf   RNV
+00109A 6E83           00190     movwf   PORTD               ; PORTD <- RNV "(Destino) <- (Fuente)"
+00109C 92F2           00191     bcf     INTCON, 1           ; INT0IF <- 0
+00109E 0010           00192         RETFIE
+                      00193 
+                      00194         END
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE  6
 
 
 SYMBOL TABLE
@@ -311,7 +310,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE  7
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE  7
 
 
 SYMBOL TABLE
@@ -370,7 +369,7 @@ CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
 CMIF                              00000006
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE  8
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE  8
 
 
 SYMBOL TABLE
@@ -429,7 +428,7 @@ EEIE                              00000004
 EEIF                              00000004
 EEIP                              00000004
 EEPGD                             00000007
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE  9
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE  9
 
 
 SYMBOL TABLE
@@ -488,7 +487,7 @@ HLVDIP                            00000002
 HLVDL0                            00000000
 HLVDL1                            00000001
 HLVDL2                            00000002
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 10
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 10
 
 
 SYMBOL TABLE
@@ -547,7 +546,7 @@ LATA0                             00000000
 LATA1                             00000001
 LATA2                             00000002
 LATA3                             00000003
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 11
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 11
 
 
 SYMBOL TABLE
@@ -606,7 +605,7 @@ NOT_A                             00000005
 NOT_ADDRESS                       00000005
 NOT_BOR                           00000000
 NOT_DONE                          00000001
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 12
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 12
 
 
 SYMBOL TABLE
@@ -665,7 +664,7 @@ PIE2                              00000FA0
 PIR1                              00000F9E
 PIR2                              00000FA1
 PKTDIS                            00000004
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 13
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 13
 
 
 SYMBOL TABLE
@@ -705,7 +704,7 @@ PSSBD0                            00000000
 PSSBD1                            00000001
 PWM                               0000104C
 R                                 00000002
-R6                                00000002
+R6                                00000007
 RA0                               00000000
 RA1                               00000001
 RA2                               00000002
@@ -724,7 +723,7 @@ RB7                               00000007
 RBIE                              00000003
 RBIF                              00000000
 RBIP                              00000000
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 14
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 14
 
 
 SYMBOL TABLE
@@ -759,7 +758,6 @@ RD6                               00000006
 RD7                               00000007
 RDPU                              00000007
 RDSPP                             00000007
-RDec                              00000007
 RE0                               00000000
 RE1                               00000001
 RE2                               00000002
@@ -767,14 +765,14 @@ RE3                               00000003
 READ_WRITE                        00000002
 RESET_VECTOR                      00000000
 RESUME                            00000002
-RH                                00000000
+RH                                00000005
 RI                                00000004
-RL                                00000001
-RNV                               00000006
+RL                                00000006
+RNV                               0000000B
 RSEN                              00000001
-RTCON                             00000003
-RTH                               00000004
-RTL                               00000005
+RTCON                             00000008
+RTH                               00000009
+RTL                               0000000A
 RX                                00000007
 RX9                               00000006
 RX9D                              00000000
@@ -783,13 +781,13 @@ R_NOT_W                           00000002
 R_W                               00000002
 S                                 00000003
 SBOREN                            00000006
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 15
+SCKP                              00000004
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 15
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-SCKP                              00000004
 SCS0                              00000000
 SCS1                              00000001
 SE0                               00000005
@@ -842,13 +840,13 @@ STKOVF                            00000007
 STKPTR                            00000FFC
 STKPTR0                           00000000
 STKPTR1                           00000001
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 16
+STKPTR2                           00000002
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 16
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-STKPTR2                           00000002
 STKPTR3                           00000003
 STKPTR4                           00000004
 STKUNF                            00000006
@@ -901,13 +899,13 @@ TMR0IE                            00000005
 TMR0IF                            00000002
 TMR0IP                            00000002
 TMR0L                             00000FD6
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 17
+TMR0ON                            00000007
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 17
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-TMR0ON                            00000007
 TMR1                              00000FCE
 TMR1CS                            00000001
 TMR1H                             00000FCF
@@ -960,13 +958,13 @@ TRISC                             00000F94
 TRISC0                            00000000
 TRISC1                            00000001
 TRISC2                            00000002
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 18
+TRISC6                            00000006
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 18
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-TRISC6                            00000006
 TRISC7                            00000007
 TRISD                             00000F95
 TRISD0                            00000000
@@ -1019,13 +1017,13 @@ UEP4                              00000F74
 UEP5                              00000F75
 UEP6                              00000F76
 UEP7                              00000F77
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 19
+UEP8                              00000F78
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 19
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-UEP8                              00000F78
 UEP9                              00000F79
 UERRIE                            00000001
 UERRIF                            00000001
@@ -1078,13 +1076,13 @@ _CONFIG1H                         00300001
 _CONFIG1L                         00300000
 _CONFIG2H                         00300003
 _CONFIG2L                         00300002
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 20
+_CONFIG3H                         00300005
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 20
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-_CONFIG3H                         00300005
 _CONFIG4L                         00300006
 _CONFIG5H                         00300009
 _CONFIG5L                         00300008
@@ -1137,13 +1135,13 @@ _FOSC_INTOSC_XT_1H                000000FA
 _FOSC_XTPLL_XT_1H                 000000F2
 _FOSC_XT_XT_1H                    000000F0
 _ICPRT_OFF_4L                     000000DF
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 21
+_ICPRT_ON_4L                      000000FF
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 21
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-_ICPRT_ON_4L                      000000FF
 _IDLOC0                           00200000
 _IDLOC1                           00200001
 _IDLOC2                           00200002
@@ -1196,13 +1194,13 @@ _WDTPS_64_2H                      000000ED
 _WDTPS_8192_2H                    000000FB
 _WDTPS_8_2H                       000000E7
 _WDT_OFF_2H                       000000FE
-MPASM  5.51           07 - INTERRUPCIONES.ASM   1-25-2023  15:39:37         PAGE 22
+_WDT_ON_2H                        000000FF
+MPASM  5.51           07 - INTERRUPCIONES.ASM   1-31-2023  21:32:39         PAGE 22
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-_WDT_ON_2H                        000000FF
 _WRT0_OFF_6L                      000000FF
 _WRT0_ON_6L                       000000FE
 _WRT1_OFF_6L                      000000FF

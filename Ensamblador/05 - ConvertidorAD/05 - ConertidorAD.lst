@@ -1,4 +1,4 @@
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE  1
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -7,7 +7,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00001 ;#####################################################################################
                       00002 ;    Archivo:       05 - ConvertidorAD                                                           
                       00003 ;    SO:            Windows 10                                                           
-                      00004 ;    Version:       1.1                                                                  
+                      00004 ;    Version:       1.2                                                                  
                       00005 ;    Herramientas:  Visual Studio Code                                               
                       00006 ;                   Mplab
                       00007 ;    Autor:         Jorge Peña
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00039                                                                 ; firmware debe ingresar en el gestor de
                              arranque o la aplicación main
                       00040                                                                 ; despues de reset. Para hacer esto, nec
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE  2
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -92,79 +92,76 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00065     config EBTRB    = OFF
                       00066 ;-------------------------------------------------------------------------------------
                       00067 ; DEFINICION DE VARIABLES
-                      00068 
-                      00069 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
+  00000050            00068 Rdd         EQU         0x50
+  00000051            00069 Rdvr        EQU         0x51
+  00000052            00070 Rcc         EQU         0x52
+  00000053            00071 R0          EQU         0x53
+                      00072 ;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°�
                             �°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-                      00070 ; RESET VECTOR
-                      00071 ; Esta sección se ejecutara cuando ocurra un RESET.
-                      00072 
-                      00073 RESET_VECTOR    ORG             0
-                      00074 
-000000 EF?? F???      00075                 goto    INICIO                  ; Salta a la funcion principal
-                      00076 ;______________________________________________________________________________________
-                      00077 ;   MAIN FUNCTION
-                      00078         ORG             0x1000
-001000                00079 INICIO
-001000 EC?? F???      00080     call    CPUERTOS
-001004 EC?? F???      00081     call    CDAC
-                      00082     ; BSF pone a 1 un bit de un registro.
+                      00073 ; RESET VECTOR
+                      00074 ; Esta sección se ejecutara cuando ocurra un RESET.
+                      00075 
+                      00076 RESET_VECTOR    ORG             0
+                      00077 
+000000 EF?? F???      00078                 goto    INICIO                  ; Salta a la funcion principal
+                      00079 ;______________________________________________________________________________________
+                      00080 ;   MAIN FUNCTION
+                      00081         ORG             0x1000
+001000                00082 INICIO
+001000 EC?? F???      00083     call    CPUERTOS
+001004 EC?? F???      00084     call    CDAC
+                      00085     ; BSF pone a 1 un bit de un registro.
 Warning[207]: Found label after column 1. (etqM)
-001008 82C2           00083     etqM:   bsf     ADCON0, 1           ; 0000 0000 -> 0000 0001 (Configuramos el converitdor)
-00100A EC?? F???      00084             call    LEER
-00100E EC?? F???      00085             call    DISP
-001012 EF?? F???      00086             goto    etqM
-                      00087 
-                      00088 ;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                      00089 ;   SUB-RUTINAS
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE  3
+001008 82C2           00086     etqM:   bsf     ADCON0, 1           ; 0000 0000 -> 0000 0001 (Configuramos el converitdor)
+00100A EC?? F???      00087             call    LEER
+00100E EC?? F???      00088             call    DISP
+001012 EF?? F???      00089             goto    etqM
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
                       00090 
-                      00091 ; Configuracion de los puertos
-001016                00092 CPUERTOS
-001016 0E01           00093     movlw   0x01                ; W <- 0x01
-001018 6E92           00094     movwf   TRISA               ; TRISA <- W (PORT-IN)
-00101A 0E00           00095         movlw   0x00            ; W <- 0x00
-00101C 6E95           00096     movwf   TRISD               ; TRISD <- W (PORT-OUT)
-00101E 6E83           00097     movwf   PORTD               ; PORTD <- W (0000 0000)
-001020 0012           00098     RETURN
-                      00099 
-                      00100 ; Configuracion del modulo de conversiÃ³n analÃ³gico/digital
-001022                00101 CDAC
-001022 0E01           00102     movlw   0x01        ; W <- 0x01
-001024 6EC2           00103     movwf   ADCON0      ; ADCON0 <- W (Encendemos el convertidor) "REGISTRO DE CONTROL 0"
-001026 0E0E           00104     movlw   0x0E        ; W <- 0x0E
-                      00105     ; Tendremos en ADCON1 los iguiente - - 0 0   1 1 1 0
-                      00106     ; Lo cual significa que:
-                      00107     ;       bit 7 - 6 no tendrmeos uso
-                      00108     ;       bit 5 (0) el voltaje de referencia bajo es tierra.
-                      00109     ;       bit 4 (0) el voltaje de referencia alto es Vcc (5V)
-                      00110     ;       bit 3 - 0 (1) Configuracion de los puertos de control los cuales seran:
-                      00111     ;           D   D   D   D   D   D   D   D   D   D   D   D   A
-                      00112     ;           (Solo AN0 sera analogica y de AN1 a AN12 seran digitales)
-001028 6EC1           00113     movwf   ADCON1
-00102A 0E0C           00114     movlw   0x0C
-                      00115     ; Tendremos en ADCON2 los iguiente 0 - 0 0   1 1 0 0
-                      00116     ; Lo cual significa que:
-                      00117     ;       bit 7 (0) justifica la posicion del resultado a la izquierda.
-                      00118     ;       bit 6 no tendra uso
-                      00119     ;       bit 5 - 3 (001) indica los tiempos de adquisicion los cuales seran 2 Tad.
-                      00120     ;       bit 2 - 0 (100) indica la frecuencia de muestreo.
-00102C 6EC0           00121     movwf   ADCON2
-00102E 0012           00122     RETURN
-                      00123 
-                      00124 ; Leemos los 8 bits del registro ADRESH
-001030                00125 LEER
-Warning[207]: Found label after column 1. (Rdd)
-  00000050            00126         Rdd         EQU         0x50
-Warning[207]: Found label after column 1. (Rdvr)
-  00000051            00127         Rdvr        EQU         0x51
-Warning[207]: Found label after column 1. (Rcc)
-  00000052            00128         Rcc         EQU         0x52
-                      00129     ; Si el bit en ADCON0 es 0 este seguira, sino se repetira hasta que sea 0. 
+                      00091 ;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                      00092 ;   SUB-RUTINAS
+                      00093 
+                      00094 ; Configuracion de los puertos
+001016                00095 CPUERTOS
+001016 0E01           00096     movlw   0x01                ; W <- 0x01
+001018 6E92           00097     movwf   TRISA               ; TRISA <- W (PORT-IN)
+00101A 0E00           00098         movlw   0x00            ; W <- 0x00
+00101C 6E95           00099     movwf   TRISD               ; TRISD <- W (PORT-OUT)
+00101E 6E83           00100     movwf   PORTD               ; PORTD <- W (0000 0000)
+001020 0012           00101     RETURN
+                      00102 
+                      00103 ; Configuracion del modulo de conversiÃ³n analÃ³gico/digital
+001022                00104 CDAC
+001022 0E01           00105     movlw   0x01        ; W <- 0x01
+001024 6EC2           00106     movwf   ADCON0      ; ADCON0 <- W (Encendemos el convertidor) "REGISTRO DE CONTROL 0"
+001026 0E0E           00107     movlw   0x0E        ; W <- 0x0E
+                      00108     ; Tendremos en ADCON1 los iguiente - - 0 0   1 1 1 0
+                      00109     ; Lo cual significa que:
+                      00110     ;       bit 7 - 6 no tendrmeos uso
+                      00111     ;       bit 5 (0) el voltaje de referencia bajo es tierra.
+                      00112     ;       bit 4 (0) el voltaje de referencia alto es Vcc (5V)
+                      00113     ;       bit 3 - 0 (1) Configuracion de los puertos de control los cuales seran:
+                      00114     ;           D   D   D   D   D   D   D   D   D   D   D   D   A
+                      00115     ;           (Solo AN0 sera analogica y de AN1 a AN12 seran digitales)
+001028 6EC1           00116     movwf   ADCON1
+00102A 0E0C           00117     movlw   0x0C
+                      00118     ; Tendremos en ADCON2 los iguiente 0 - 0 0   1 1 0 0
+                      00119     ; Lo cual significa que:
+                      00120     ;       bit 7 (0) justifica la posicion del resultado a la izquierda.
+                      00121     ;       bit 6 no tendra uso
+                      00122     ;       bit 5 - 3 (001) indica los tiempos de adquisicion los cuales seran 2 Tad.
+                      00123     ;       bit 2 - 0 (100) indica la frecuencia de muestreo.
+00102C 6EC0           00124     movwf   ADCON2
+00102E 0012           00125     RETURN
+                      00126 
+                      00127 ; Leemos los 8 bits del registro ADRESH
+001030                00128 LEER
+                      00129     ; Si el bit en ADCON0 es 0 este seguira, sino se repetira hasta que sea diferente de 0. 
 Warning[207]: Found label after column 1. (etqL)
 001030 B2C2           00130     etqL:       btfsc   ADCON0, 1
 001032 EF?? F???      00131                     goto    etqL
@@ -175,40 +172,38 @@ Warning[207]: Found label after column 1. (etqL)
 00103E EC?? F???      00136                     call    DIVISION
 001042 5052           00137                     movf    Rcc, 0
 001044 0012           00138                     RETURN
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE  4
+                      00139 
+001046                00140 DIVISION
+001046 6A53           00141     clrf    R0
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE  4
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-                      00139 
-001046                00140 DIVISION
-Warning[207]: Found label after column 1. (R0)
-  00000053            00141         R0          EQU         0x53
-001046 6A53           00142     clrf    R0
-001048 6A52           00143     clrf    Rcc
+001048 6A52           00142     clrf    Rcc
 Warning[207]: Found label after column 1. (etqD)
-00104A 5051           00144     etqD:   movf   Rdvr, 0
-00104C 2453           00145             addwf   R0, 0
-00104E 6E53           00146             movwf   R0
-                      00147 
-001050 6450           00148             cpfsgt  Rdd
-                      00149                         ;RETURN
-                      00150 
-001052 5052           00151             movf    Rcc, 0
-001054 0F01           00152             addlw   0x01
-001056 0007           00153             daw
-001058 6E52           00154             movwf   Rcc
-00105A EF?? F???      00155             goto    etqD
-00105E 0012           00156     RETURN
-                      00157 
-001060                00158 DISP
-001060 6E83           00159     movwf   PORTD
-001062 0012           00160     RETURN
-                      00161 
+00104A 5051           00143     etqD:   movf        Rdvr, 0
+00104C 2453           00144             addwf   R0, 0
+00104E 6E53           00145             movwf   R0
+                      00146 
+001050 6450           00147             cpfsgt  Rdd
+001052 0012           00148                         RETURN
+                      00149 
+001054 5052           00150             movf    Rcc, 0
+001056 0F01           00151             addlw   0x01
+001058 0007           00152             daw
+00105A 6E52           00153             movwf   Rcc
+00105C EF?? F???      00154             goto    etqD
+001060 0012           00155     RETURN
+                      00156 
+001062                00157 DISP
+001062 6E83           00158     movwf   PORTD
+001064 0012           00159     RETURN
+                      00160 
 Warning[205]: Found directive in column 1. (END)
-                      00162 END
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE  5
+                      00161 END
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE  5
 
 
 SYMBOL TABLE
@@ -267,7 +262,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000FE0
 BTOEE                             00000004
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE  6
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE  6
 
 
 SYMBOL TABLE
@@ -326,7 +321,7 @@ CM1                               00000001
 CM2                               00000002
 CMCON                             00000FB4
 CMIE                              00000006
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE  7
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE  7
 
 
 SYMBOL TABLE
@@ -367,7 +362,7 @@ DDRE                              TRISE
 DFN8EE                            00000003
 DFN8EF                            00000003
 DIR                               00000002
-DISP                              00001060
+DISP                              00001062
 DIVISION                          00001046
 DONE                              00000001
 D_A                               00000005
@@ -385,7 +380,7 @@ EECON2                            00000FA7
 EEDATA                            00000FA8
 EEIE                              00000004
 EEIF                              00000004
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE  8
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE  8
 
 
 SYMBOL TABLE
@@ -444,7 +439,7 @@ HLVDIP                            00000002
 HLVDL0                            00000000
 HLVDL1                            00000001
 HLVDL2                            00000002
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE  9
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE  9
 
 
 SYMBOL TABLE
@@ -503,7 +498,7 @@ LATA1                             00000001
 LATA2                             00000002
 LATA3                             00000003
 LATA4                             00000004
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 10
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 10
 
 
 SYMBOL TABLE
@@ -562,7 +557,7 @@ NOT_DONE                          00000001
 NOT_IPEN                          00000007
 NOT_PD                            00000002
 NOT_POR                           00000001
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 11
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 11
 
 
 SYMBOL TABLE
@@ -621,7 +616,7 @@ PKTDIS                            00000004
 PLUSW0                            00000FEB
 PLUSW1                            00000FE3
 PLUSW2                            00000FDB
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 12
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 12
 
 
 SYMBOL TABLE
@@ -680,7 +675,7 @@ RBPU                              00000007
 RC0                               00000000
 RC1                               00000001
 RC2                               00000002
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 13
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 13
 
 
 SYMBOL TABLE
@@ -739,7 +734,7 @@ SEN                               00000000
 SENDB                             00000003
 SMP                               00000007
 SOFIE                             00000006
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 14
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 14
 
 
 SYMBOL TABLE
@@ -798,7 +793,7 @@ SUSPND                            00000001
 SWDTE                             00000000
 SWDTEN                            00000000
 SYNC                              00000004
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 15
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 15
 
 
 SYMBOL TABLE
@@ -857,7 +852,7 @@ TMR1IE                            00000000
 TMR1IF                            00000000
 TMR1IP                            00000000
 TMR1L                             00000FCE
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 16
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 16
 
 
 SYMBOL TABLE
@@ -916,7 +911,7 @@ TRISD2                            00000002
 TRISD3                            00000003
 TRISD4                            00000004
 TRISD5                            00000005
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 17
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 17
 
 
 SYMBOL TABLE
@@ -975,7 +970,7 @@ UFRMH                             00000F67
 UFRML                             00000F66
 UIE                               00000F69
 UIR                               00000F68
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 18
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 18
 
 
 SYMBOL TABLE
@@ -1034,7 +1029,7 @@ _CONFIG6L                         0030000A
 _CONFIG7H                         0030000D
 _CONFIG7L                         0030000C
 _CP0_OFF_5L                       000000FF
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 19
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 19
 
 
 SYMBOL TABLE
@@ -1093,7 +1088,7 @@ _IDLOC4                           00200004
 _IDLOC5                           00200005
 _IDLOC6                           00200006
 _IDLOC7                           00200007
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 20
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 20
 
 
 SYMBOL TABLE
@@ -1152,7 +1147,7 @@ _WRT2_ON_6L                       000000FB
 _WRT3_OFF_6L                      000000FF
 _WRT3_ON_6L                       000000F7
 _WRTB_OFF_6H                      000000FF
-MPASM  5.51             05 - CONERTIDORAD.ASM   1-12-2023  10:11:12         PAGE 21
+MPASM  5.51             05 - CONERTIDORAD.ASM   2-5-2023  21:19:03         PAGE 21
 
 
 SYMBOL TABLE
@@ -1172,7 +1167,7 @@ etqL                              00001030
 etqM                              00001008
 
 Errors   :     0
-Warnings :     8 reported,     0 suppressed
+Warnings :     4 reported,     0 suppressed
 Messages :     0 reported,     0 suppressed
 
 

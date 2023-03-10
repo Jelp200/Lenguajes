@@ -109,10 +109,10 @@ T500
 
 	; CALCULO DE TIEMPOS
 	;	R0 con 01 = 16.3432 mSeg
-	;	R0 con 16 = 506.59	mSeg
-	;	R0 con 3D = 336.83.82u	Seg
-	; 	R0 con 87 =	2.2		Seg
-	movlw	0x3D						; w <- 0x1F (0x40 para 1seg)
+	;	R0 con 1F = 506.59	mSeg
+	;	R0 con 3D = 996.83	mSeg
+	; 	R0 con 7A =	1.99	Seg
+	movlw	0x3D
 	; R0 sirve para el tiempo de despliegue
 	movwf	R0							; R0 <- w
     etq1:   movlw   0xFF                ; w <- 0xFF

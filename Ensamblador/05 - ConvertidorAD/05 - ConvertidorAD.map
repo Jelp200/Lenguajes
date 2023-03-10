@@ -1,12 +1,12 @@
 MPLINK 4.49, Linker
-Linker Map File - Created Thu Jan 12 10:11:14 2023
+Linker Map File - Created Sun Feb 05 21:19:05 2023
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                    .org_0       code   0x000000    program   0x000004
                    .cinit    romdata   0x000004    program   0x000002
-                   .org_1       code   0x001000    program   0x000064
+                   .org_1       code   0x001000    program   0x000066
 .config_300000_05 - CONERTIDORAD.O    romdata   0x300000    program   0x000001
 .config_300001_05 - CONERTIDORAD.O    romdata   0x300001    program   0x000001
 .config_300002_05 - CONERTIDORAD.O    romdata   0x300002    program   0x000001
@@ -26,11 +26,11 @@ Linker Map File - Created Thu Jan 12 10:11:14 2023
                                Start         End      
                            ---------   ---------      
                             0x000000    0x000005      
-                            0x001000    0x001063      
+                            0x001000    0x001065      
                             0x300000    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            118 out of 33048 program addresses used, program memory utilization is 0%
+            120 out of 33048 program addresses used, program memory utilization is 0%
 
 
 
@@ -39,7 +39,7 @@ Linker Map File - Created Thu Jan 12 10:11:14 2023
                 ---------  ---------  ---------  --------- ---------                
                      CDAC   0x001022    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
                  CPUERTOS   0x001016    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
-                     DISP   0x001060    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
+                     DISP   0x001062    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
                  DIVISION   0x001046    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
                    INICIO   0x001000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
                      LEER   0x001030    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
@@ -62,6 +62,6 @@ Linker Map File - Created Thu Jan 12 10:11:14 2023
                      etqL   0x001030    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
                  DIVISION   0x001046    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
                      etqD   0x00104a    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
-                     DISP   0x001060    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
+                     DISP   0x001062    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\05 - ConvertidorAD\05 - ConertidorAD.asm
 
 
