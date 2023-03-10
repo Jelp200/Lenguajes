@@ -28,6 +28,5 @@ int main(void){
     printf("\n\t2 * 2 = 4");
     printf("\n\t2 / 2 = 1\n");
 
-    system("pause");
     return 0;
 }

@@ -25,9 +25,8 @@ int main(void){
 
     printf("\n\t[America]");
     printf("\n\t[Mexico]");
-    printf("\n\t[CDMX]");
-    printf("\n\t[Benito Juarez]\n");
+    printf("\n\t[Mexico]");
+    printf("\n\t[Nezahualcoyotl]\n");
 
-    system("pause");
     return 0;
 }
