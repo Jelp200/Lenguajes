@@ -18,13 +18,11 @@ int main(){
 
     puts("\t\t\tUSO DEL BREAK");
     printf("De el número donde se rompera la cuenta: "); scanf("%i", &n);
-    for (i = 0; i < 100; i++){
-        if (i == n){
+    for(i = 0; i < 100; i++){
+        if(i == n)
             break;
-        }
         printf("%i.\n", i);
     }
-    
 
     return 0;
 }

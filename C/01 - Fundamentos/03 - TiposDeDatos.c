@@ -29,3 +29,14 @@ int main(void){
 
     return 0;
 }
+
+/*
+De igual manera tenemos:
+    %d  ->  Dato de convierte a entero deciaml
+    %o  ->  Dato entero se convierte a octal
+    %x  ->  Dato entero se convierte a hexadecimal
+    %u  ->  Dato entero se convierte a entero sin signo
+    %e  ->  El dato de considera tipo flotante (Notacion cientifica de la forma {-} n.mmmmmmE {+/-} dd)
+    %g  ->  El dato de considera tipo float (Se convierte según el código %e o %f dependiendo de la representación más corta)
+    %lf ->  El dato se considera tipo double
+*/

@@ -18,10 +18,9 @@ int main(){
     puts("\t\t\tUSO DEL CONTINUE");
     printf("De el número a ignorar: "); scanf("%i", &n);
 
-    for (i = 0; i <= 20; i++){
-        if (i == n){
+    for(i = 0; i <= 20; i++){
+        if(i == n)
             continue;
-        }
         printf("%i.\n", i);
     }
 
