@@ -20,8 +20,8 @@ int main(){
     
     printf("\tEscriba un numero: "); scanf("%i", &n);
 
-    for (int  i = 0; i <= n; i++){
-        printf("%li\n", factorial(n));
+    for (int i = 0; i <= n; i++){
+        printf("%li\n", factorial(i));
     }
     
 
