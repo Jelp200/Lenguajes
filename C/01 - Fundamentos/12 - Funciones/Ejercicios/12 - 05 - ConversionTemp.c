@@ -5,7 +5,7 @@
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
 **      Notas:
-**              Realizar un programa que pueda a raiz de funciones recursivas realizar la
+**              Realizar un programa que pueda a raiz de funciones con retorno realice la
 **              conversion de temperatura de Celsius a Kelvin y Farenheit.
 **
 **              °K = 275 + °C

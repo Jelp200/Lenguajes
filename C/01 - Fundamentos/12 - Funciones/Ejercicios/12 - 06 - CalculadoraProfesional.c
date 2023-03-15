@@ -5,7 +5,7 @@
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
 **      Notas:
-**              Realizar un programa que a travez de funciones recursivas pueda realizar
+**              Realizar un programa que a travez de funciones con retorno pueda realizar
 **              operaciones básicas y avanzadas.
 ** #########################################################################################
 */

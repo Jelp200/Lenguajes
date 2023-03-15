@@ -5,7 +5,7 @@
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
 **      Notas:
-**              Realizar un programa que pueda a raiz de funciones recursivas verificar si
+**              Realizar un programa que pueda a raiz de funciones con retorno verifique si
 **              un numero es par o no.
 ** #########################################################################################
 */
