@@ -20,7 +20,7 @@ int main(){
 
     printf("De cuantos elementos es su suma: ");  scanf("%i", &ele);
 
-    for(int i = 0; i <= n; i++){
+    for(int i = 0; i <= ele; i++){
         printf("\nDe el %i elemento: ", i + 1); scanf("%i", &n);
         S += n;
     }
