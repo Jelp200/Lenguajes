@@ -14,5 +14,5 @@ Para poder clonar el repositorio escriben el siguiente comando en git bash.
 $ git clone https://github.com/Jelp200/Lenguajes.git
 ```
 <div>
-  ![zacatenco - ice](https://user-images.githubusercontent.com/66091809/231024378-3362413c-59b3-47bc-9c76-f81d38e9a999.png)
+  <img height="80em" src="https://user-images.githubusercontent.com/66091809/231024378-3362413c-59b3-47bc-9c76-f81d38e9a999.png"/>
 </div>
