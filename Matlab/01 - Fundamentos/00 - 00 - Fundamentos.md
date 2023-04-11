@@ -15,10 +15,14 @@ En este apartado podrán encontrar los siguientes temas:
     <li><a href="./00 - DeclaracionDeVariables.m">Declaración de variables</a></li>
     <li><a href="./01 - Vectores.m">Vectores</a></li>
     <li><a href="./02 - Matrices.m">Matrices</a></li>
-    <li><a href="./03 - Scripts&Funciones">Scripts y funciones</a></li>
+    <li><a href="./03 - Scripts&Funciones.md">Scripts y funciones</a></li>
     <li><a href="./04 - Funciones.m">Funciones</a></li>
     <li><a href="./05 - Matrices celda">Matrices celda</a></li>
     <li><a href="./06 - HolaMundo.m">Hola mundo</a></li>
+    <li><a href="./07 - TiposDeDatos.m">Tipos de datos</a></li>
+    <li><a href="./08 - Entradas&Salidas.md">Entradas y salidas en archivos</a></li>
+    <li><a href="./09 - InicializacionMatrices&Arreglos.m">Inicialización de matrices</a></li>
+    <li><a href="./10 - EstructurasCondicionales">Esctructuras condicionales</a></li>
     
 </ul>
 
