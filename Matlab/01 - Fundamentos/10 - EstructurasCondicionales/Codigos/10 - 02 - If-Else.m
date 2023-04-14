@@ -8,11 +8,11 @@
 **      Notas:
 **          if condicion
 **              ...
-**              Código en si se cumple la condición
+**              Código si se cumple la condición
 **              ...
 **          else
 **              ...
-**              Código en si no se cumple la condición
+**              Código si no se cumple la condición
 **              ...
 **          end
 ** #################################################################################################################
