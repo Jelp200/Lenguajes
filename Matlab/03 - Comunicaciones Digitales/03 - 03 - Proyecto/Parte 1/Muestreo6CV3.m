@@ -7,6 +7,7 @@
 **
 **      Autores:
 **          Peña P. Jorge E.
+**          Zárate Méndez Cristopher Geovani
 **
 **      Institución:
 **          Instituto Politécnico Nacional
