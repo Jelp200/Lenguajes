@@ -6,7 +6,10 @@ adentrarnos más en sus diferentes usos en las materias ya antes mencionadas.
 
 En este apartado podran encontrar lo siguiente:
 <ul>
-    <li><a href="/home/kaliadmin/Escritorio/Lenguajes/Bash/01 - EmpezandoConBash/Codigos/00 - Notas.md">Notas</a></li>
-    <li><a href="../Codigos/01-HolaMundo.sh">Hola mundo</a></li>
-    <li><a href="../02-HolaMundoVar.sh">Hola mundo</a></li>
+    <li>Notas</li>
+    <li>Hola mundo</li>
+    <li>Hola mundo utilizando variables</li>
+    <li>Hola mundo con input</li>
+    <li>Encomillado</li>
+    <li>Hola mundo en modo dedepuración</li>
 </ul>
