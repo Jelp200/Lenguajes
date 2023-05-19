@@ -8,7 +8,7 @@ A continuación se presentan los programas y conceptos básicos e intermedios vi
 
 Los temas a abordar en esta carpeta son los siguientes:
 <ul>
-    <li><a href="../Bash/01 - EmpezandoConBash">Empezando con bash</a></li>
+    <li><a href="../Bash/01 - EmpezandoConBash/01 - EmpezandoConBash.md">Empezando con bash</a></li>
     <li><a href="">Scripts</a></li>
     <li><a href="">Directorios de navegación</a></li>
     <li><a href="">Listado de archivos</a></li>
