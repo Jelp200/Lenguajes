@@ -1,20 +1,14 @@
 #** -------------------------------------------------------------------------------------------------------------
-#**	Archivo: 02-ESIMEZVar.sh
+#**	Archivo: 02-HolaMundoVar.sh
 #**	S0: Kali linux
 #**	Herramienta: GNU nano 7.2
-#**
+#**              Visual Studio Code
 #**	Notas:
-#**		En este archivo visualizaremos un "Hola mundo" con variables establecidas, para poder ejecutar el archivo
-#**     hacemos lo siguiente:
-#**
-#**			chmod +x 02-ESIMEZ.sh
-#**			./02-ESIMEZ.sh
+#**		En este archivo visualizaremos un "Hola mundo" con variables establecidas.
 #** -------------------------------------------------------------------------------------------------------------
 
 #! Variable(s)
-# [nombreVar]=valor
-variable="Zacatenco"                            # !OJO¡ Es importante no dejar espacios en la asignación de las
-                                                # variables que utilicemos.
+variable="Zacatenco"
 
 #! Visualizacion
-printf "ESIME %s" "$variable"                   # Utilizamos "printf para imprimir los datos de manera correcta"
+printf "ESIME %s" "$variable"
