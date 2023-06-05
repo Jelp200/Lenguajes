@@ -7,7 +7,6 @@
 **
 **      Autores:
 **          Peña Paz Jorge Eduardo
-**          Zárate Méndez Cristopher Geovani
 **
 **      Institución:
 **          Instituto Politécnico Nacional
@@ -67,11 +66,34 @@ for b = 1 : k
 end
 
 nMen = MsjNuevo;                                                                    % EL CONTENIDO DE "MsjNuevo" SE COPIA EN "nMen"
+kCalc = 2 .^ k;
 
 % GUARDAMOS EN UN ARCHIVO DE TEXTO
 nArchivo = 'nuevoMensaje.txt';
 fileID = fopen(nArchivo, 'w');
-fprintf(fileID, '%d', nMen);
+fprintf(fileID, '\n\t\t⠀⠀⠀⠀⠀⣀⣠⠤⠶⠶⣖⡛⠛⠿⠿⠯⠭⠍⠉⣉⠛⠚⠛⠲⣄            ESIME UNIDAD ZACATENCO      | IPN | 2023');
+fprintf(fileID, '\n\t\t⠀⠀⢀⡴⠋⠁⠀⡉⠁⢐⣒⠒⠈⠁⠀⠀⠀⠈⠁⢂⢅⡂⠀⠀⠘⣧           COMUNICACIONES DIGITALES    | 6CV3');
+fprintf(fileID, '\n\t\t⠀⠀⣼⠀⠀⠀⠁⠀⠀⠀⠂⠀⠀⠀⠀⢀⣀⣤⣤⣄⡈⠈⠀⠀⠀⠘⣇           AUTOR: Jorge Peña');
+fprintf(fileID, '\n\t\t⢠⡾⠡⠄⠀⠀⠾⠿⠿⣷⣦⣤⠀⠀⣾⣋⡤⠿⠿⠿⠿⠆⠠⢀⣀⡒⠼⢷⣄⠀');
+fprintf(fileID, '\n\t\t⣿⠊⠊⠶⠶⢦⣄⡄⠀⢀⣿⠀⠀⠀⠈⠁⠀⠀⠙⠳⠦⠶⠞⢋⣍⠉⢳⡄⠈⣧');
+fprintf(fileID, '\n\t\t⢹⣆⡂⢀⣿⠀⠀⡀⢴⣟⠁⠀⢀⣠⣘⢳⡖⠀⠀⣀⣠⡴⠞⠋⣽⠷⢠⠇⠀⣼');
+fprintf(fileID, '\n\t\t⠀⢻⡀⢸⣿⣷⢦⣄⣀⣈⣳⣆⣀⣀⣤⣭⣴⠚⠛⠉⣹⣧⡴⣾⠋⠀⠀⣘⡼⠃');
+fprintf(fileID, '\n\t\t⠀⢸⡇⢸⣷⣿⣤⣏⣉⣙⣏⣉⣹⣁⣀⣠⣼⣶⡾⠟⢻⣇⡼⠁⠀⠀⣰⠋⠀⠀');
+fprintf(fileID, '\n\t\t⠀⢸⡇⠸⣿⡿⣿⢿⡿⢿⣿⠿⠿⣿⠛⠉⠉⢧⠀⣠⡴⠋⠀⠀⠀⣠⠇⠀⠀⠀');
+fprintf(fileID, '\n\t\t⠀⢸⠀⠀⠹⢯⣽⣆⣷⣀⣻⣀⣀⣿⣄⣤⣴⠾⢛⡉⢄⡢⢔⣠⠞⠁⠀⠀⠀⠀');
+fprintf(fileID, '\n\t\t⠀⢸⠀⠀⠀⠢⣀⠀⠈⠉⠉⠉⠉⣉⣀⠠⣐⠦⠑⣊⡥⠞⠋⠀⠀⠀⠀⠀⠀⠀');
+fprintf(fileID, '\n\t\t⠀⢸⡀⠀⠁⠂⠀⠀⠀⠀⠀⠀⠒⠈⠁⣀⡤⠞⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀');
+fprintf(fileID, '\n\t\t⠀⠀⠙⠶⢤⣤⣤⣤⣤⡤⠴⠖⠚⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀');
+fprintf(fileID, '\n\nEl codigo es: ');
+fprintf(fileID, '%d ', nMen);                                                        % ESCRIBE BIT POR BIT EN EL ARCHIVO DE TEXTO
+fprintf(fileID, '\n\nEl número de bits por simbolo es: %d', k);
+fprintf(fileID, '\n\nLa tabla de valores es:');
+
+for i = 0 : kCalc - 1
+    kB = dec2bin(i, k);
+    fprintf(fileID, ['\n\tDecimal: ', num2str(i), ', Binario: ', kB]);
+end
+
 fclose(fileID);
 
 disp(['El vector nMen se ha guardado en el archivo: ', nArchivo]);
