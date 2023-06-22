@@ -6,10 +6,10 @@ adentrarnos más en sus diferentes usos en las materias ya antes mencionadas.
 
 En este apartado podran encontrar lo siguiente:
 <ul>
-    <li>Notas</li>
-    <li>Hola mundo</li>
-    <li>Hola mundo utilizando variables</li>
-    <li>Hola mundo con input</li>
-    <li>Encomillado</li>
-    <li>Hola mundo en modo dedepuración</li>
+    <li><a href = "../01 - EmpezandoConBash/Codigos/00 - Notas.md">Notas</a></li>
+    <li><a href = "../01 - EmpezandoConBash/Codigos/01-HolaMundo.sh">Hola mundo</a></li>
+    <li><a href = "../01 - EmpezandoConBash/Codigos/02-HolaMundoVar.sh">Hola mundo utilizando variables</a></li>
+    <li><a href = "../01 - EmpezandoConBash/Codigos/03-HolaMundoUsrInput.sh">Hola mundo con input</a></li>
+    <li><a href = "../01 - EmpezandoConBash/Codigos/}">Encomillado</a></li>
+    <li><a href = "../01 - EmpezandoConBash/Codigos/05-HolaMundoDebugMode.sh">Hola mundo en modo dedepuración</a></li>
 </ul>
