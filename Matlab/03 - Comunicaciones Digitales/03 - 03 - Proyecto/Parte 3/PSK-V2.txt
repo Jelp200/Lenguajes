@@ -1,0 +1,13 @@
+
+
+Tabla PSK es:
+	P0 = 0 -> #bits por signo: 000
+	P1 = 45 -> #bits por signo: 001
+	P2 = 90 -> #bits por signo: 010
+	P3 = 135 -> #bits por signo: 011
+	P4 = 180 -> #bits por signo: 100
+	P5 = 225 -> #bits por signo: 101
+	P6 = 270 -> #bits por signo: 110
+	P7 = 315 -> #bits por signo: 111
+
+Código binario: 0 1 0 0 0 0 1 1 0 1 1 0 1 0 0 0 0 1 1 0 0 0 0 1 0 1 1 0 1 1 0 1 0 1 1 0 0 0 1 0 0 1 1 0 0 1 0 1 0 1 0 0 0 0 0 1 0 1 1 0 1 1 1 0 0 1 1 0 0 1 0 0 0 1 1 0 1 1 1 1 
