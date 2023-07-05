@@ -18,7 +18,7 @@ clc
 Fs = 128;                               % Declaramos las cntes
 T = 1 / Fs;
 A = 5;
-fport = 15;
+fport = 13;
 Amen = 2;
 fmen = 1;
 
