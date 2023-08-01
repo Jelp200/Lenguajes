@@ -7,6 +7,7 @@ Este repositorio contiene los lenguajes de programación que he aprendido a lo l
 ### :yellow_circle: Lenguaje Python [:snake:]
 ### :yellow_circle: Lenguaje ensamblador [:shield:]
 ### :red_circle: Bash [:technologist:]
+### :red_circle: Desarrollo Web [:spider_web:]
 
 
 ### Clonar el repositorio :octocat:
