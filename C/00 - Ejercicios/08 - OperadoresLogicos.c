@@ -34,6 +34,7 @@ int main(){
     menu();
     return 0;
 }
+
 // FUNCIONES
 void clear(){
     system("cls || clear");

@@ -15,3 +15,21 @@
 #include <stdlib.h>
 
 // PROTOTIPO(S) DE FUNCION(ES)
+void clear();
+
+// FUNCIÓN PRINCIPAL
+int main(){
+    int opc = 0;
+    clear();
+    printf("\n\t\t\tMENU");
+    printf("\n\t\t0. Limpiar");
+    printf("\n\t\t1. Salir");
+    printf("\n\n\t\tDe una opcion: "); scanf("%i", &opc);
+    (opc == 0) ? (clear()) : ((opc == 1) ? (printf("\n\t\tHasta la proxima...")) : (main()));
+    return 0;
+}
+
+// FUNCIONES
+void clear(){
+    system("cls || clear");
+}
