@@ -94,9 +94,7 @@ void menu(){
     }else if(opc == 4){
         clear();
         puts("\n\t\tHasta la proxima");
-        goto ETQ4;
     }else{
         puts("\n\t\tDe una opcion correcta...");
     }
-    ETQ4:
 }
