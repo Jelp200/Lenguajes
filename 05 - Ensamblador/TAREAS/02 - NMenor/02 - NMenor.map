@@ -1,0 +1,71 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Thu Jan 05 13:28:34 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                   .org_1       code   0x001000    program   0x000066
+.config_300000_02 - NMENOR.O    romdata   0x300000    program   0x000001
+.config_300001_02 - NMENOR.O    romdata   0x300001    program   0x000001
+.config_300002_02 - NMENOR.O    romdata   0x300002    program   0x000001
+.config_300003_02 - NMENOR.O    romdata   0x300003    program   0x000001
+.config_300005_02 - NMENOR.O    romdata   0x300005    program   0x000001
+.config_300006_02 - NMENOR.O    romdata   0x300006    program   0x000001
+.config_300008_02 - NMENOR.O    romdata   0x300008    program   0x000001
+.config_300009_02 - NMENOR.O    romdata   0x300009    program   0x000001
+.config_30000A_02 - NMENOR.O    romdata   0x30000a    program   0x000001
+.config_30000B_02 - NMENOR.O    romdata   0x30000b    program   0x000001
+.config_30000C_02 - NMENOR.O    romdata   0x30000c    program   0x000001
+.config_30000D_02 - NMENOR.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x001000    0x001065      
+                            0x300000    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            120 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    COMP1   0x00103e    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                    COMP2   0x00104e    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+              COMPARATIVA   0x00103e    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                 CPUERTOS   0x001014    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                   ETQAux   0x001044    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                    ETQF1   0x001058    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                    ETQF2   0x00105c    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                    ETQF3   0x001060    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                   INICIO   0x001000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                     LEER   0x001024    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+             RESET_VECTOR   0x000000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                     etqI   0x001004    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             RESET_VECTOR   0x000000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                   INICIO   0x001000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                     etqI   0x001004    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                 CPUERTOS   0x001014    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                     LEER   0x001024    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                    COMP1   0x00103e    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+              COMPARATIVA   0x00103e    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                   ETQAux   0x001044    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                    COMP2   0x00104e    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                    ETQF1   0x001058    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                    ETQF2   0x00105c    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+                    ETQF3   0x001060    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\TAREAS\02 - NMenor\02 - NMenor.asm
+
+

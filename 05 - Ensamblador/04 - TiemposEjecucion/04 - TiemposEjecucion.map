@@ -1,0 +1,63 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Sun Feb 05 18:37:31 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                   .org_1       code   0x001000    program   0x00003a
+.config_300000_04 - TIEMPOSEJECUCION.O    romdata   0x300000    program   0x000001
+.config_300001_04 - TIEMPOSEJECUCION.O    romdata   0x300001    program   0x000001
+.config_300002_04 - TIEMPOSEJECUCION.O    romdata   0x300002    program   0x000001
+.config_300003_04 - TIEMPOSEJECUCION.O    romdata   0x300003    program   0x000001
+.config_300005_04 - TIEMPOSEJECUCION.O    romdata   0x300005    program   0x000001
+.config_300006_04 - TIEMPOSEJECUCION.O    romdata   0x300006    program   0x000001
+.config_300008_04 - TIEMPOSEJECUCION.O    romdata   0x300008    program   0x000001
+.config_300009_04 - TIEMPOSEJECUCION.O    romdata   0x300009    program   0x000001
+.config_30000A_04 - TIEMPOSEJECUCION.O    romdata   0x30000a    program   0x000001
+.config_30000B_04 - TIEMPOSEJECUCION.O    romdata   0x30000b    program   0x000001
+.config_30000C_04 - TIEMPOSEJECUCION.O    romdata   0x30000c    program   0x000001
+.config_30000D_04 - TIEMPOSEJECUCION.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x001000    0x001039      
+                            0x300000    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            76 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 CPUERTOS   0x001014    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                   INICIO   0x001000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+             RESET_VECTOR   0x000000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                     T500   0x001020    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                     etq1   0x001024    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                     etq2   0x001028    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                     etqI   0x001004    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                     etqR   0x00102c    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             RESET_VECTOR   0x000000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                   INICIO   0x001000    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                     etqI   0x001004    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                 CPUERTOS   0x001014    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                     T500   0x001020    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                     etq1   0x001024    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                     etq2   0x001028    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+                     etqR   0x00102c    program     static C:\Users\Jorge\Desktop\Lenguajes\Ensamblador\04 - TiemposEjecucion\04 - TiemposEjecucion.asm
+
+

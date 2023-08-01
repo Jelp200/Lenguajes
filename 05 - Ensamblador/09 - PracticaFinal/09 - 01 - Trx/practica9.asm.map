@@ -1,0 +1,85 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Fri Feb 03 11:52:58 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                   .org_1       code   0x000008    program   0x000004
+                   .org_2       code   0x000018    program   0x000004
+                   .org_3       code   0x001000    program   0x000004
+                   .org_4       code   0x001008    program   0x000064
+.config_300000_PRACTICA9.O    romdata   0x300000    program   0x000001
+.config_300001_PRACTICA9.O    romdata   0x300001    program   0x000001
+.config_300002_PRACTICA9.O    romdata   0x300002    program   0x000001
+.config_300003_PRACTICA9.O    romdata   0x300003    program   0x000001
+.config_300005_PRACTICA9.O    romdata   0x300005    program   0x000001
+.config_300006_PRACTICA9.O    romdata   0x300006    program   0x000001
+.config_300008_PRACTICA9.O    romdata   0x300008    program   0x000001
+.config_300009_PRACTICA9.O    romdata   0x300009    program   0x000001
+.config_30000A_PRACTICA9.O    romdata   0x30000a    program   0x000001
+.config_30000B_PRACTICA9.O    romdata   0x30000b    program   0x000001
+.config_30000C_PRACTICA9.O    romdata   0x30000c    program   0x000001
+.config_30000D_PRACTICA9.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x000008    0x00000b      
+                            0x000018    0x00001b      
+                            0x001000    0x001003      
+                            0x001008    0x00106b      
+                            0x300000    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            130 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 CPuertos   0x001022    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                   CUENTA   0x00106a    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                   Cusart   0x001038    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                    Gtime   0x001066    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+      HIGHPRIORITY_VECTOR   0x000008    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+               HighPr_ISR   0x001008    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                   INICIO   0x00100e    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                     LEER   0x001036    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+       LOWPRIORITY_VECTOR   0x000018    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                LowPr_ISR   0x00100c    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                      PWM   0x001064    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+             RESET_VECTOR   0x000000    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                     TMRO   0x001068    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                      Tx#   0x001016    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                   Txbyte   0x001058    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                   _Reset   0x001000    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             RESET_VECTOR   0x000000    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+      HIGHPRIORITY_VECTOR   0x000008    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+       LOWPRIORITY_VECTOR   0x000018    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                   _Reset   0x001000    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+               HighPr_ISR   0x001008    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                LowPr_ISR   0x00100c    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                   INICIO   0x00100e    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                      Tx#   0x001016    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                 CPuertos   0x001022    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                     LEER   0x001036    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                   Cusart   0x001038    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                   Txbyte   0x001058    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                      PWM   0x001064    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                    Gtime   0x001066    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                     TMRO   0x001068    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+                   CUENTA   0x00106a    program     static C:\Users\Jorge\Desktop\Practica 9 Tx\practica9.asm
+
+
