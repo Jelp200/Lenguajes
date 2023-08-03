@@ -122,7 +122,7 @@ A parte del <b><i>href</b></i>, tenemos otros atributos tales como <b><i>target<
 <a href="#" title="Enlace a una página interna">Información emergente</a>
 
 <!-- DOWNLOAD -->
-<a href="rutaDelArchivo.extencion" dowload>Descargar archivo</a>
+<a href="rutaDelArchivo.extencion" download>Descargar archivo</a>
 
 <!-- REL -->
 <link rel="stylesheet" href="estilos.css">
@@ -179,4 +179,20 @@ siguiente manera:
   <path d="M7 13h.01" />
   <path d="M17 13h.01" />
 </svg>
+```
+
+## Formularios :floppy_disk:
+En HTML tenemos una parte muy importante, esta parte o partes importantes son los formularios, para poder aplcar estos formularios en HTML tenemos una 
+etiqueta la cual es:
+```html
+<form> </form> <!-- = Etiqueta de formulario -->
+```
+Dado que los formularios en HTML son datos los cuales el usuario o cliente ingresara, es posible configurar estos formularos para hacer que envien esa
+información a un servidor, al igual que en las imagenes y links, los formularios tienen atributos, loc más comunes con los que se trabajan son:
+- ACTION 
+Es un atributo obligatorio que especifica la URL o ruta del servidor al que se enviarán los datos del formulario cuando se envíe.
+```html
+<form action="/procesarFormulario.php">
+    <!-- Datos del formulario -->
+</form>
 ```
