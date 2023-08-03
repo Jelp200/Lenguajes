@@ -91,13 +91,15 @@ Cuando tenemos una sección de navegación de un solo nivel tenemos lo siguiente
 ```
 Cuando tenemos barras de navegación de multinivel se declaran los enlaces de la siguiente manera:
 ```html
-<ul>
-    <li><a> <a/></li> <!-- Enlace 1 -->
-    <li><a> <a/></li> <!-- Enlace 2 -->
-    <li><a> <a/></li> <!-- Enlace 3 -->
-    ...
-    <!-- Enlace n -->
-</ul>
+<nav>
+    <ul>
+        <li><a> <a/></li> <!-- Enlace 1 -->
+        <li><a> <a/></li> <!-- Enlace 2 -->
+        <li><a> <a/></li> <!-- Enlace 3 -->
+        ...
+        <!-- Enlace n -->
+    </ul>
+</nav>
 ```
 Hemos dicho que estos enlaces tienen atributos, el más importante y obligatorio de estos es el <b><i>href</b></i>, esto debido a que con el definimos la URL o drección
 a la cual deseamos acceder:
@@ -108,3 +110,86 @@ a la cual deseamos acceder:
 <a href="rutaDelArchivo.extencion" dowload>Descargar archivo</a> <!-- Enlace de descarga -->
 <a href="#" title="Enlace a una página interna">Información emergente</a> <!-- Enlace con informacón emergente -->
 ```
+A parte del <b><i>href</b></i>, tenemos otros atributos tales como <b><i>target</b></i>, <b><i>title</b></i>, <b><i>download</b></i>, <b><i>rel</b></i>, <b><i>type</b></i>, <b><i>tabindex</b></i> y <b><i>accesskey</b></i>, a continuación veremos como utilzarlos:
+```html
+<!-- TARGET -->
+<a href="http://www.ejemplo.com" target="_blank">Abrir enlace en una nueva ventana</a>
+<a href="http://www.ejemplo.com" target="_self">Abrir enlace en la misma ventana (predeterminado)</a>
+<a href="http://www.ejemplo.com" target="_parent">Abrir enlace en el marco principal</a>
+<a href="http://www.ejemplo.com" target="_top">Abrir enlace en la ventana principal del navegador</a>
+
+<!-- TITLE -->
+<a href="#" title="Enlace a una página interna">Información emergente</a>
+
+<!-- DOWNLOAD -->
+<a href="rutaDelArchivo.extencion" dowload>Descargar archivo</a>
+
+<!-- REL -->
+<link rel="stylesheet" href="estilos.css">
+<a href="https://www.ejemplo.com" rel="nofollow">Enlace sin seguimiento</a>
+
+<!-- TYPE -->
+<a href="documento.pdf" type="application/pdf">Descargar PDF</a>
+<a href="mailto:ejemplo@dominio.com" type="text/plain">Enviar correo</a>
+
+<!-- TABINDEX -->
+<a href="#" tabindex="1">Primer enlace</a>
+<a href="#" tabindex="2">Segundo enlace</a>
+<input type="text" tabindex="3">
+
+<!-- ACCESSKEY -->
+<a href="#" accesskey="b">Ir a Blog</a>
+<input type="text" accesskey="s">
+```
+
+## Imagenes :framed_picture:
+Dentro de HTML podemos agregar imagenes las cuales pueden ser desde archivos locales o links que hagan referencia a imagenes almacenadas en páginas web, lo
+que nosotros haremos será utlizar un servicio denominado <a href="https://tablericons.com/">tabler icons</a> para utilizar iconos de tipo SVG (scalable vector graphic).
+Para poder mostrar imagenes utilizamos la siguiente etiqueta:
+```html
+<img> <!-- Esta etiqueta no tiene cierre -->
+```
+Y al igual que los enlaces, esta etiqueta tiene atributos los cuales son:
+```html
+<!-- SRC -->
+<img src="rutaDeLaImagen.jpg"> <!-- Atributo obligatorio -->
+
+<!-- ALT -->
+<img src="rutaDeLaImagen.jpg" alt="descripciónDeLaImagen"> <!-- Se muestra si la imagen no carga -->
+
+<!-- WIDTH Y HEIGHT -->
+<img src="rutaDeLaImagen.jpg" width="ancho" height="alto"> <!-- Esecifian el ancho y alto de la imagen (cm, px, etc) -->
+
+<!-- TITLE -->
+<img src="rutaDeLaImagen.jpg" title="informaciónDeLaImagen">
+
+<!-- LOADING -->
+<img src="rutaDeLaImagen.jpg" loading="lazy"> <!-- Controla cómo se carga la imagen (lazy/eager) -->
+```
+Si deseamos utilizar SVG's lo único que tenemos que hacer es copiar y pegar el link que nos proporciona la aplicación o página dentro del código de la
+siguiente manera:
+```html
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ufo" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M16.95 9.01c3.02 .739 5.05 2.123 5.05 3.714c0 2.367 -4.48 4.276 -10 4.276s-10 -1.909 -10 -4.276c0 -1.59 2.04 -2.985 5.07 -3.724" />
+  <path d="M7 9c0 1.105 2.239 2 5 2s5 -.895 5 -2v-.035c0 -2.742 -2.239 -4.965 -5 -4.965s-5 2.223 -5 4.965v.035" />
+  <path d="M15 17l2 3" />
+  <path d="M8.5 17l-1.5 3" />
+  <path d="M12 14h.01" />
+  <path d="M7 13h.01" />
+  <path d="M17 13h.01" />
+</svg>
+```
+Y se puede observar de la siguiente manera:
+<p>
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ufo" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M16.95 9.01c3.02 .739 5.05 2.123 5.05 3.714c0 2.367 -4.48 4.276 -10 4.276s-10 -1.909 -10 -4.276c0 -1.59 2.04 -2.985 5.07 -3.724" />
+    <path d="M7 9c0 1.105 2.239 2 5 2s5 -.895 5 -2v-.035c0 -2.742 -2.239 -4.965 -5 -4.965s-5 2.223 -5 4.965v.035" />
+    <path d="M15 17l2 3" />
+    <path d="M8.5 17l-1.5 3" />
+    <path d="M12 14h.01" />
+    <path d="M7 13h.01" />
+    <path d="M17 13h.01" />
+    </svg>
+</p>
