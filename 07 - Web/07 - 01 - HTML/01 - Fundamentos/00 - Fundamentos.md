@@ -189,9 +189,18 @@ etiqueta la cual es:
 ```
 Dado que los formularios en HTML son datos los cuales el usuario o cliente ingresara, es posible configurar estos formularos para hacer que envien esa
 información a un servidor, al igual que en las imagenes y links, los formularios tienen atributos, loc más comunes con los que se trabajan son:
-- ACTION: Es un atributo obligatorio que especifica la URL o ruta del servidor al que se enviarán los datos del formulario cuando se envíe.
+- <b>ACTION</b>. Es un atributo obligatorio que especifica la URL o ruta del servidor al que se enviarán los datos del formulario cuando se envíe.
 ```html
 <form action="/procesarFormulario.php">
+    <!-- Datos del formulario -->
+</form>
+```
+- <b>METHOD</b>. Especifica el metodo de envió del formulario. Los dos valores principales son <i>get</i> y <i>post</i>. Al utilizar <i>get</i> los datos
+del formulario se envían a traves de la URL (es por ello que action y method van de la mano), lo que permite que los datos sean visibles en la barra de
+direcciones del navegador. Cuando utilizamos <i>post</i>, los datos se envían de manera más segura en el cuerpo de la solicitud HTTP, y no son visibles en
+la barra de direcciones.
+```html
+<form action="/procesarFormulario.php" method="post">
     <!-- Datos del formulario -->
 </form>
 ```
