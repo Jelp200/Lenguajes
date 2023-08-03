@@ -189,8 +189,7 @@ etiqueta la cual es:
 ```
 Dado que los formularios en HTML son datos los cuales el usuario o cliente ingresara, es posible configurar estos formularos para hacer que envien esa
 información a un servidor, al igual que en las imagenes y links, los formularios tienen atributos, loc más comunes con los que se trabajan son:
-- ACTION 
-Es un atributo obligatorio que especifica la URL o ruta del servidor al que se enviarán los datos del formulario cuando se envíe.
+- ACTION: Es un atributo obligatorio que especifica la URL o ruta del servidor al que se enviarán los datos del formulario cuando se envíe.
 ```html
 <form action="/procesarFormulario.php">
     <!-- Datos del formulario -->
