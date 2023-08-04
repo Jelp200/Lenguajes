@@ -204,3 +204,35 @@ la barra de direcciones.
     <!-- Datos del formulario -->
 </form>
 ```
+- <b>TARGET</b>. Especifica el destino donde se mostrará la respuesta del envió del formulario. Los valores más comunes son <i>_self (Muestra la respuesta en
+la misma ventana)</i> y <i>_blank (Muestra la espuesta en una nueva ventana o pensataña)</i>.
+```html
+<form action="/procesarFormulario.php" method="post" target="_blank">
+    <!-- Datos del formulario -->
+</form>
+```
+- <b>ENCTYPE</b>. Especfica el como se codificarán los datos del formulario antes de enviarlos al servidor. Es relevante cuando el formulario contiene
+elementos del tipo archivo (<b><i>input type="file"</i></b>). Los valores más comunes son <i>application/x-www-form-urlencoded (Predeterminado)</i> y
+<i>multipart/form-data (Utilizado para enviar archivos)</i>.
+```html
+<form action="/procesarFormulario.php" method="post" enctype="multipart/form-data">
+    <!-- Datos del formulario -->
+</form>
+```
+- <b>AUTOCOMPLETE</b>. Se utiliza para habilitar o deshabilitar la función de autocompletar del navegador en los campos del formulario. Los valores son:
+```html
+<form action="/procesarFormulario.php" method="post" autocomplete="on">
+    <!-- Datos del formulario -->
+</form>
+
+<form action="/procesarFormulario.php" method="post" autocomplete="off">
+    <!-- Datos del formulario -->
+</form>
+```
+- <b>NOVALIDATE</b>. Deshabilita la validación de campos requeridos y restricciones de formato del navegador. Es útil cuando se realiza la validación
+del formulario con JS:
+```html
+<form action="/procesarFormulario.php" method="post" novalidate>
+    <!-- Datos del formulario -->
+</form>
+```
