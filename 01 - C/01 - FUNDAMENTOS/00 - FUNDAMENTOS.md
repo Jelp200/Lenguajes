@@ -1,5 +1,5 @@
 # FUNDAMENTOS DE PROGRAMACIÓN EN C :checkered_flag:
-###INTRODUCCIÓN
+### INTRODUCCIÓN
 La programación es uno de los saberes más importantes que debe tener un ingeniero o estudiante en ingenieria, por ello he decidido realizar este "curso"
 en github para aquellos estudiantes o ingenieros ya sea de cualquier carrera pero con especial enfasis en ingenieros o estudiantes de la carrera de
 ingenieria en comunicaciones y electronica puedan aprender o reafirmar sus conocimientos en este bello lenguaje que es C.
