@@ -19,7 +19,7 @@ if(condicion){
 Pero no solo tenemos condicionales simples como la anterior, sino tambien condicionales multiples, anidadas y un operador "?" el cual denominamos
 como operador ternario, veamos cada una de ellas.
 
-###<a href="07 - 01 - Codigos/07 - 01 - 01 - if.c">Condicional simple.</a>
+### <a href="07 - 01 - Codigos/07 - 01 - 01 - if.c">Condicional simple.</a>
 Una condicional simple es aquella la cual nos permite preguntar una sola vez y si no se cumple dicha condicional el programa sigue su curso sin
 problema alguno.
 ```C
@@ -31,7 +31,7 @@ if(condicion){
 ```
 Su diagrama de flujo sería el siguiente: <a href="07 - 02 - DiagramasDeFLujo/07 - 02 - 01 - if.png">diagrama de flujo</a>.
 
-###Condicional multiple.
+### Condicional multiple.
 Una condicional multiple es aquella la cual nos permite preguntar una sola vez y si no se cumple dicha condicional el programa sigue su curso sin
 problema alguno, esto hasta que se encuentre otra condicional la cual esta en el mismo bloque de código.
 ```C
@@ -51,7 +51,7 @@ if(condicionN){
     */
 }
 ```
-###<a href="07 - 01 - Codigos/07 - 01 - 02 - ifAnidados.c">Condicionales anidadas.</a>
+### <a href="07 - 01 - Codigos/07 - 01 - 02 - ifAnidados.c">Condicionales anidadas.</a>
 La condicionales anidadas son aquellas que se encuentran dentro de otra condicional, esto quiere decir que si se cumple la cóndición entra en ella
 y dentro de dicha condicón se encuentran multiples condicionales o más condicionales anidadas.
 ```C
@@ -81,7 +81,7 @@ if(condicion1){
 ```
 Su diagrama de flujo sería el siguiente: <a href="07 - 02 - DiagramasDeFLujo/07 - 02 - 02 - ifAnidados.png">diagrama de flujo</a>.
 
-###<a href="07 - 01 - Codigos/07 - 01 - 03 - ifElse.c">Condicionales sino.</a>
+### <a href="07 - 01 - Codigos/07 - 01 - 03 - ifElse.c">Condicionales sino.</a>
 La condicionales sino son aquellas las cuales nos permiten realizar una condicional y si esta no se cumple entra a otro bloque de código el cual
 realiza una acción si no se cumple dicha condicional.
 ```C
@@ -97,7 +97,7 @@ if(condicion1){
 ```
 Su diagrama de flujo sería el siguiente: <a href="07 - 02 - DiagramasDeFLujo/07 - 02 - 03 - ifElse.png">diagrama de flujo</a>.
 
-###<a href="07 - 01 - Codigos/07 - 01 - 04 - ifElseIf.c">Condicionales sino si.</a>
+### <a href="07 - 01 - Codigos/07 - 01 - 04 - ifElseIf.c">Condicionales sino si.</a>
 La condicionales sino si son aquellas las cuales nos permiten realizar una condicional y si esta no se cumple entra a otro bloque de código el cual
 realiza una acción si no se cumple dicha condicional, este bloque condicional puede tener una segunda condicional.
 ```C
@@ -117,7 +117,7 @@ if(condicion1){
 ```
 Su diagrama de flujo sería el siguiente: <a href="">diagrama de flujo</a>.
 
-###<a href="07 - 01 - Codigos/07 - 01 - 05 - OperadorT.c">Operador ternario.</a>
+### <a href="07 - 01 - Codigos/07 - 01 - 05 - OperadorT.c">Operador ternario.</a>
 El operador ternario es otro tipo de condicional el cual nos permite evaluar pero de una manera diferente:
 ```C
 (Condicion) ? Expresión 1 : Expresión 2;
