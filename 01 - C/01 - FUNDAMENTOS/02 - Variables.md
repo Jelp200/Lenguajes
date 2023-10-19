@@ -3,11 +3,11 @@ En C como en cualquier otro lenguaje de programación las variables son una part
 valores en ellas, para poder declarar variables de manera correcta es necesario no incluir simbolos tales como "!", "?", "#", etc., para ello veamos como
 poder declarar variables de con una sintaxis correcta.
 
-###Declaración de variables.
+### Declaración de variables.
 - Manera correcta: "miVariable", "Mi_Variable2", "miVariable3", "MiVariable4".
 - Manera incorrecta: "m!Variabl3", "Mi Variable2", "M1_Variabl 3", "#M1Variab13".
 
-###Tipos de variables.
+### Tipos de variables.
 En C como en C++ tenemos tres tipos de declaración de variables, estas son:
 - Defines: Estos defines nos permiten tener definir una variable la cual no cambiara su valor en el transcurso del programa.
 - Variables globales: Dichas variables globales nos permitiran asignarles valores en cualquier parte del programa.

@@ -2,7 +2,7 @@
 Los operadores en C son aquellos los cuales nos permiten como su nombre nos dice operar variables y funciones entre si, tenemos diferentes tipos de
 operadores, estos son:
 
-###Operadores aritmeticos
+### Operadores aritmeticos
 ```txt
 |  SIMBOLO  |  SIGNIFICADO   |           USO           |
 |     +     | Adición        | Suma                    |
@@ -14,7 +14,7 @@ operadores, estos son:
 |    - -    | Decremento     | Resta                   |
 ```
 
-###Operadores de asignación
+### Operadores de asignación
 ```txt
 |  SIMBOLO  |  SIGNIFICADO   |           USO           |
 |     =     | Igual          | Significado             |
@@ -25,7 +25,7 @@ operadores, estos son:
 |    % =    | Módulo         | Moúlo y asignación      |
 ```
 
-###Operadores lógicos
+### Operadores lógicos
 ```txt
 |  SIMBOLO  |  SIGNIFICADO   |    USO    |
 |     !     |     NOT        | Inversión |
