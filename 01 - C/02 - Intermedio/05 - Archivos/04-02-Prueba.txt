@@ -1,1 +1,0 @@
-Texto escrito: Hola mundo desde archivo.
