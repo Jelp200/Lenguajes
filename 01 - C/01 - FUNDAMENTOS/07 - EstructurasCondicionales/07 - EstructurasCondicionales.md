@@ -126,4 +126,3 @@ Este se puede ver de la siguiente manera:
 ```C
 (Condición) if (Valida, ejecuta esté código) else (Falsa, ejecuta esté código);
 ```
-Su diagrama de flujo sería el siguiente: <a href="">diagrama de flujo</a>.
