@@ -5,6 +5,7 @@ en github para aquellos estudiantes o ingenieros ya sea de cualquier carrera per
 ingenieria en comunicaciones y electronica puedan aprender o reafirmar sus conocimientos en este bello lenguaje que es C.
 
 En este apartado podrán encontrar los siguientes temas:
+
 <ul>
     <li><a href="01 - EstructuraGeneral.md"></a>Estructura general de un programa en C</li>
     <li><a href="02 - Variables.md"></a>Variables</li>
