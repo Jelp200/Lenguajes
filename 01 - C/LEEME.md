@@ -21,5 +21,5 @@ void Saludo(){
 Sean bienvenidos al curso de progrmación en C, en esta parte podran visualizar desde los temas más básicos hasta los más avanazados para poder comenzar
 a programar en C. Los temas abordados en esta carpeta son los siguientes:
 <ul>
-    <li><a href="01 - FUNDAMENTOS/00 - FUNDAMENTOS.md">01 - FUNDAMENTOS</a></li>
+    <li><a href="/01 - C/01 - FUNDAMENTOS/00 - FUNDAMENTOS.md">01 - FUNDAMENTOS</a></li>
 </ul>
