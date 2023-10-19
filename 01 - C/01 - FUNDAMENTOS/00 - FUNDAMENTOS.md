@@ -7,11 +7,11 @@ ingenieria en comunicaciones y electronica puedan aprender o reafirmar sus conoc
 En este apartado podrán encontrar los siguientes temas:
 
 <ul>
-    <li><a href="/01 - C/01 - FUNDAMENTOS/01 - EstructuraGeneral.md"></a>Estructura general de un programa en C</li>
-    <li><a href="02 - Variables.md"></a>Variables</li>
-    <li><a href="03 - TiposDeDatos.md"></a>Tipos de datos en C</li>
-    <li><a href="04 - EntradaSalida.md"></a>Entradas y salidas</li>
-    <li><a href="05 - Operadores.md"></a>Operdores</li>
-    <li><a href="06 - HolaMundo.c"></a>Hola mundo</li>
-    <li><a href="07 - EstructurasCondicionales/07 - EstructurasCondicionales.md"></a>Estructuras condicionales</li>
+    <li><a href="01 - EstructuraGeneral.md">Estructura general de un programa en C</a></li>
+    <li><a href="02 - Variables.md">Variables</a></li>
+    <li><a href="03 - TiposDeDatos.md">Tipos de datos en C</a></li>
+    <li><a href="04 - EntradaSalida.md">Entradas y salidas</a></li>
+    <li><a href="05 - Operadores.md">Operdores</a></li>
+    <li><a href="06 - HolaMundo.c">Hola mundo</a></li>
+    <li><a href="07 - EstructurasCondicionales/07 - EstructurasCondicionales.md">Estructuras condicionales</a></li>
 </ul>
