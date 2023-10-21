@@ -14,4 +14,7 @@ En este apartado podrán encontrar los siguientes temas:
     <li><a href="05 - Operadores.md">Operdores</a></li>
     <li><a href="06 - HolaMundo.c">Hola mundo</a></li>
     <li><a href="07 - EstructurasCondicionales/07 - EstructurasCondicionales.md">Estructuras condicionales</a></li>
+    <li><a href="08 - EstructurasDeSeleccion/08 - EstructurasDeSeleccion.md">Estructuras de selección</a></li>
+    <li><a href="09 - Post&PreIncremento/Post&PreIncremento.md">Post y pre incremento</a></li>
+    <li><a href="10 - EstructurasDeControl/10 - EstructurasDeControl.md">Estructuras de control</a></li>
 </ul>
