@@ -6,7 +6,6 @@ ingenieria en comunicaciones y electronica puedan aprender o reafirmar sus conoc
 
 En este apartado podrán encontrar los siguientes temas:
 
-#### FUNDAMENTOS DE PROGRAMACIÓN
 <ul>
     <li><a href="01 - EstructuraGeneral.md">Estructura general de un programa en C</a></li>
     <li><a href="02 - Variables.md">Variables</a></li>
