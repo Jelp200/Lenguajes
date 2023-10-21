@@ -17,4 +17,6 @@ En este apartado podrán encontrar los siguientes temas:
     <li><a href="08 - EstructurasDeSeleccion/08 - EstructurasDeSeleccion.md">Estructuras de selección</a></li>
     <li><a href="09 - Post&PreIncremento/Post&PreIncremento.md">Post y pre incremento</a></li>
     <li><a href="10 - EstructurasDeControl/10 - EstructurasDeControl.md">Estructuras de control</a></li>
+    <li><a href="11 - TiposDeFunciones/11 - Funciones.md">Tipos de funciones</a></li>
+    <li><a href="12 - FuncionesDeTrabajo/12 - FuncionesDeTrabajo.md">Funciones de trabajo (Strin, Math y Time)</a></li>
 </ul>
