@@ -20,3 +20,5 @@ En este apartado podrán encontrar los siguientes temas:
     <li><a href="11 - TiposDeFunciones/11 - Funciones.md">Tipos de funciones</a></li>
     <li><a href="12 - FuncionesDeTrabajo/12 - FuncionesDeTrabajo.md">Funciones de trabajo (Strin, Math y Time)</a></li>
 </ul>
+
+Regrear al apartado anterior: <a href="../LEEME.md">Click aquí</a>.
