@@ -8,4 +8,4 @@ programar nuestro uControlador, veremos desde aplicaciones con C, hasta aplicaci
 </ul>
 
 ### STM32F103 PINOUT
-<img src="01 - 00 - Extras/PINOUT_DIAGRAMA.png">
+<img src="../01 - 00 - Extras/PINOUT_DIAGRAMA.png">
