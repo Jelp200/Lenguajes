@@ -19,3 +19,12 @@ Ya sea que tengamos un display de siete segmentos de cátodo o ánodo común sus
 <div>
     <img src="/IMGS/uControladores/D7Spin.png">
 </div>
+
+### Funcionamiento
+El funcionamiento del display de 7 segmetos va de la mano con lo que queramos mostrar en el, por ejemplo si deseamos mostrar un 1 es necesario tener encendido el
+segmento "b" y "c", por lo cual tendremos un 1 lógico en dichos segmentos, entonces para poder mostrar todos los números es necesario hacer lo siguiente:
+<div>
+    <img src="/IMGS/uControladores/D7Stbl.JPG">
+</div>
+
+Conociendo todo lo anterior ya es posible realizar nuestro primer programa con el display de 7 segmentos y visualizar numeros.
