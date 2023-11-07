@@ -1,4 +1,4 @@
-# BLUEPILL :large_blue_circle:
+# MICROCONTROLADORES :large_blue_circle:
 <div>
     <img src="/IMGS/uControladores/STM32/BP.png">
 </div>
