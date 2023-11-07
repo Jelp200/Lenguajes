@@ -11,7 +11,7 @@ En esta carpeta veremos sus conceptos básicos, cómo leer su datasheet y como p
 Arduino.
 
 <ul>
-    <li><a href="#">Conceptos básicos</a></li>
+    <li><a href="00 - ConceptosBasicos.md">Conceptos básicos</a></li>
     <li><a href="#">Aplicaciones con Arduino</a></li>
     <li><a href="#">Aplicaciones con Python</a></li>
 </ul>
