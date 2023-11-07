@@ -1,7 +1,4 @@
 # Conceptos básicos :robot:
-<div>
-    <img src="/IMGS/uControladores/STM32/BP.png">
-</div>
 La ESP32 es una placa de desarrollo la cual utiliza un procesador dual-core Xtensa LX6 de 32b por lo cual nos permite trabajar a velocidades de
 hasta 2M40[Hz] lo cual nos permite tener un rendimiento sólido en una amplia gama de aplicaciones.
 
