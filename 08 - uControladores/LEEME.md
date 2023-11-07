@@ -1,4 +1,4 @@
-# MICROCONTROLADORES :large_blue_circle:
+# MICROCONTROLADORES :ldesktop_computer:
 <div>
     <img src="/IMGS/uControladores/UCBNNER.png">
 </div>
