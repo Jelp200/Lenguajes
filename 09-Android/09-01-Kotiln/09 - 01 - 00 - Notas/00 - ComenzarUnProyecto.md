@@ -10,3 +10,10 @@ izquierda de nuestro IDE y cambiamos la vista de <b><i>project</i></b> a <b><i>a
 
 Una vez realizado el cambio lo que haremos será incorporar nuestro archivo de trabajo <b><i>.kt</i></b> dentro de nuestro espacio de trabajo, para ello
 realizamos lo siguiente:
+
+
+
+Una vez realizado lo anterior ya es posible que comencemos a ver los temas a mayor profundidad, dentro de esta carpeta tendremos:
+<ul>
+    <li><a href="01 - Variables.md"></a>Variables</li>
+</ul>
