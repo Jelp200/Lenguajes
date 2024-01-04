@@ -1,0 +1,31 @@
+%{
+** ######################################################################################################
+**      Archivo: 00 - CalculoCntes.m
+**      SO: Windows 10
+**      Herramienta: Visual Studio Code
+**                   MATLAB R2023a
+**
+**      Notas:
+**          En este programa se calcularan las constantes necesarias para poder realizar el proyecto
+**          final de pds.
+** ######################################################################################################
+%}
+
+clear all
+clc
+
+r1 = input('De el valor de r1: '); ang1 = input('De su angulo: ');
+r2 = input('De el valor de r2: '); ang2 = input('De su angulo: ');
+r3 = input('De el valor de r3: '); ang3 = input('De su angulo: ');
+r4 = input('De el valor de r4: '); ang4 = input('De su angulo: ');
+z = input('De el valor de z: '); w = input('De el valor de w: ');
+
+a = r1 * exp(-1i * ang1);
+b = r2 * exp(1i * ang2);
+e = r3 * exp(-1i * ang3);
+f = r4 * exp(1i * ang4);
+
+C1 = (z / a) - ((b / a) * ((a * w) - (e * z)) / ((a * f)));
+
+
+

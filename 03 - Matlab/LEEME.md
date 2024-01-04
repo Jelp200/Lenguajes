@@ -4,19 +4,7 @@
 </div>
 
 ```M
-#include <stdio.h>
-#include <stdlib.h>
-
-void Saludo();
-
-int main(){
-    Saludo();
-    return EXIT_SUCCESS;
-}
-
-void Saludo(){
-    puts("Bienvenido a \"PROGRAMACIÓN EN C\"");
-}
+disp('Bienvenido a programacion en MATLAB');
 ```
 Bienvenidos a la carpeta de programación en MatLab, esta carpeta contiene códigos y proyectos de la carrera de ingenieria en comunicaciones y electronica del IPN.
 A continuación podrán visualizar los temas/materias de su interes con sus códigos de MatLab.
