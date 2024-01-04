@@ -13,3 +13,9 @@ programar nuestro uControlador, veremos desde aplicaciones con C, hasta aplicaci
 
 ### STM32F103 PINOUT
 <img src="01 - 00 - Extras/PINOUT_DIAGRAMA.png">
+
+### STM32F103 DOCUMENTACIÓN IMPORTANTE
+<ul>
+    <li><a href="01 - 00 - Extras/stm32f103c8.pdf">Hoja de datos</a></li>
+    <li><a href="01 - 00 - Extras/STM32F103xx ManualDeReferancia.pdf">Manual de referencia</a></li>
+</ul>
