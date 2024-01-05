@@ -94,6 +94,7 @@ void funciones(int parametrosFunciones){
     */
 }
 ```
-### Recomendaciones.
+
+### RECOMENDACIONES.
 Es recomendable que anes de comenzar a programar tener un diagrama de flujo y un diagrama electrico (si es necesario) para poder dar solucion a nuestro
 problema.
