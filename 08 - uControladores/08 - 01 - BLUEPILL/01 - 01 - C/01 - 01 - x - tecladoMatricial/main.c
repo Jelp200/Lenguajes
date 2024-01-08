@@ -18,12 +18,12 @@
 ......................................................................................... */
 //* PINES DEL TECLADO MATRICIAL
 #define ROWS_GPIO GPIOB
-#define COLS_GPIO GPIOA
+#define COLS_GPIO GPIOB
 #define ROWS_PIN_MASK 0x00F0
 #define COLS_PIN_MASK 0x000F
 
 //* PINES DEL DISPLAY DE 7 SEGMENTOS
-#define SEGMENTS_GPIO GPIOC
+#define SEGMENTS_GPIO GPIOA
 #define DIGITS_GPIO GPIOA
 #define SEGMENTS_PIN_MASK 0xFF00
 #define DIGITS_PIN_MASK 0x000F
@@ -69,8 +69,8 @@ void delay_ms(uint32_t ms) {
 
 //* FUNCION PARA CONFIGURAR EL TECLADO MATRICIAL
 void config_teclado(void) {
-    // Habilitar el reloj para los puertos A y B
-    RCC->APB2ENR |= RCC_APB2ENR_IOPAEN | RCC_APB2ENR_IOPBEN;
+    // Habilitar el reloj para los puertos B
+    RCC->APB2ENR |= RCC_APB2ENR_IOPBEN;
 
     // Configurar filas como salidas y columnas como entradas con pull-up
     ROWS_GPIO->CRL &= ~ROWS_PIN_MASK;
@@ -107,25 +107,26 @@ char leer_tecla(void) {
         ROWS_GPIO->BSRR = 1 << (row + 4);
     }
 
-    return '\0'; // Ninguna tecla presionada
+    return '\0';				// Ninguna tecla presionada
 }
 
 //* FUNCION PARA CONFIGURAR EL DISPLAY DE 7 SEGMENTOS
 void config_D7S(void) {
-    // Habilitar el reloj para los puertos A y B
-    RCC->APB2ENR |= RCC_APB2ENR_IOPAEN | RCC_APB2ENR_IOPBEN;
+    // Habilitar el reloj para los puertos A
+    RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
 
     // Configurar pines de segmentos como salidas
     SEGMENTS_GPIO->CRL &= ~SEGMENTS_PIN_MASK;
     SEGMENTS_GPIO->CRL |= 0x22220000;
 
     // Configurar pines de dígitos como salidas
-    DIGITS_GPIO->CRH &= ~DIGITS_PIN_MASK;
-    DIGITS_GPIO->CRH |= 0x22220000;
+    DIGITS_GPIO->CRL &= ~DIGITS_PIN_MASK;
+    DIGITS_GPIO->CRL |= 0x22220000;
 }
 
+//* FUNCION PARA MOSTRAR EL DIGITO EN EL DISPLAY DE 7 SEGMENTOS
 void display_digito(uint8_t digit) {
-    // Mapa de segmentos para numeros hexadecimales
+    // Mapa de segmentos para números hexadecimales
     uint8_t segmentMap[16] = {0xFC, 0x60, 0xDA, 0xF2, 0x66, 0xB6, 0xBE, 0xE0,
                               0xFE, 0xF6, 0xEE, 0x3E, 0x9C, 0x7A, 0x9E, 0x8E};
 
@@ -133,5 +134,5 @@ void display_digito(uint8_t digit) {
     SEGMENTS_GPIO->ODR = segmentMap[digit & 0x0F];
 
     // Seleccionar el dígito activo (de 0 a 3)
-    DIGITS_GPIO->ODR = (1 << (digit >> 4)) << 8;
+    DIGITS_GPIO->ODR = (1 << (digit >> 4));
 }
