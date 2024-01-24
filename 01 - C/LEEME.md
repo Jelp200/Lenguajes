@@ -23,4 +23,5 @@ a programar en C. Los temas abordados en esta carpeta son los siguientes:
 <ul>
     <li><a href="00 - EJERCICIOS/00 - Ejercicios.md">00 - EJERCICIOS</a></li>
     <li><a href="01 - FUNDAMENTOS/00 - FUNDAMENTOS.md">01 - FUNDAMENTOS</a></li>
+    <li><a href="02 - INTERMEDIO/00 - INTERMEDIO.md">02 - INTERMEDIO</a></li>
 </ul>
