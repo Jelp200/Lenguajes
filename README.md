@@ -7,11 +7,11 @@ comunicaciones y electronica.
 ### :green_circle: <a href="01 - C/LEEME.md">Lenguaje C</a> [ :croissant: ]
 ### :green_circle: <a href="02 - C++/LEEME.md">Lenguaje C++</a> [ :croissant:++ ]
 ### :green_circle: <a href="03 - Matlab/LEEME.md">Matlab</a> [ :man_scientist: ]
+### :yellow_circle: <a href="#">uControladores</a> [ :computer: ]
 ### :yellow_circle: <a href="04 - Python/LEEME.md">Lenguaje Python</a> [ :snake: ]
 ### :yellow_circle: Lenguaje ensamblador (Proximamente en uControladores) [ :shield: ]
 ### :red_circle: <a href="06 - Bash/LEEME.md">Bash</a> [ :technologist: ]
 ### :red_circle: <a href="07 - Web/LEEME.md">Desarrollo Web</a> [ :spider_web: ]
-### :red_circle: <a href="#">uControladores</a> [ :computer: ]
 
 
 ## Clonar el repositorio :octocat:
