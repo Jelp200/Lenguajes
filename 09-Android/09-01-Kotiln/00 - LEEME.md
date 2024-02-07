@@ -1,19 +1,29 @@
-# PROGRAMACIÓN CON KOTLIN :checkered_flag:
-Una vez realizada la configuración de nuestro proyecto es necesario comenzar a trabajar en nuestro proyecto, para ello necesitamos crear o incorporar un
-archivo con el cual podamos trabajar. Para poder incorporar dicho archivo nos vamos a la sección llamada project la cual podemos encontrar en la parte
-izquierda de nuestro IDE y cambiamos la vista de <b><i>project</i></b> a <b><i>android</i></b>.
-
+# PROGRAMACIÓN CON KOTLIN :dependabot:
 <div>
-    <img src="/09-Android/IMG/Fundamentos/Comienzo1.JPG">
-    <img src="/09-Android/IMG/Fundamentos/Comienzo1.JPG">
+    <img src="../IMG/bannerK.png">
 </div>
 
-Una vez realizado el cambio lo que haremos será incorporar nuestro archivo de trabajo <b><i>.kt</i></b> dentro de nuestro espacio de trabajo, para ello
-realizamos lo siguiente:
+Sean bienvenidos a la carpeta de programación en android con Kotlin, aquí se podrán visualizar los temas más básicos hasta los más avanzados para poder
+desarrollar aplicaciones moviles. Los temas a abarcar en esta carpeta son:
 
-
-
-Una vez realizado lo anterior ya es posible que comencemos a ver los temas a mayor profundidad, dentro de esta carpeta tendremos:
 <ul>
-    <li><a href="01 - Variables.md"></a>Variables</li>
+    <li><a href="01 - Variables.md"></a>Fundamentos</li>
 </ul>
+
+### PUNTOS A FAVOR :heavy_check_mark:
+- <b>Interoperabilidad con Java.</b> Es posible utilizar bibliotecas de Java existentes en proyectos de Kotli.
+- <b>Sintaxis.</b> Kotlin ofrece sintaxis más concisa y expresiva en comparación con Java.
+- <b>Seguridad de tipo.</b> Al ser una hermanienta muy utilizada en el mundo de la electrónica, la BluePill es respaldada y tiene amplios recursos.
+- <b>Soporte oficial de Google.</b> Kotlin es respaldado oficialmente por Google como un lenguaje de programación para Android.
+
+### PUNTOS EN CONTRA :x:
+- <b>Curva de aprendizaje.</b>
+- <b>Menos recursos de aprendizaje.</b> Al no ser todavía un lenguaje estableico es dificil encontrar recursos.
+- <b>Tamaño del archivo de compilación.</b> Los archivos de compilación de Kotlin tienden a ser un poco más grandes debido a las características adicionales que ofrece el lenguaje.
+
+### APLICACIONES :factory:
+- Trello.
+- Evertone.
+- Basecamp 3.
+- Slack.
+- Pinterest.
