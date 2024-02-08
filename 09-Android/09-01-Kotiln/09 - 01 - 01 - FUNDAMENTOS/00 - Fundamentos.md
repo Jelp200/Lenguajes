@@ -11,8 +11,10 @@ En este apartado podrán encontrar los siguientes temas:
 
 <ul>
     <li><a href="01 - EstructuraGeneral.kt">Estructura general de un programa en Kotlin</a></li>
-    <li><a href="02 - Variables.md"></a>Variables</li>
-    <li><a href=""></a>Tipos de datos</li>
+    <li><a href="02 - Variables.md">Variables</a></li>
+    <li><a href="03 - TiposDeDatos.md">Tipos de datos</a></li>
+    <li><a href="04 - Operadores.md">Operadores</a></li>
+    <li><a href="05 - EntradasSalidas.kt">Entradas y salidas en consola</a></li>
 </ul>
 
 Regrear al apartado anterior: <a href="../LEEME.md">Click aquí</a>.

@@ -24,8 +24,8 @@ Los tipos de dato caracter o "char" son aquellos los cuales nos permiten trabaja
 ### Booleanos.
 Los tipos de dato bool representan valores booleanos verdaderos o falsos:
 ```kt
-val esPolitecnico: Boolean = True
-val esUniversitario: Boolean = False
+val esPolitecnico: Boolean = true
+val esUniversitario: Boolean = false
 ```
 
 ### Nulos.
