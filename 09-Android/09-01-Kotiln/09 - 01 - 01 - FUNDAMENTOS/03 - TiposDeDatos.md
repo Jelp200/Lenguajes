@@ -50,4 +50,4 @@ fun lanzarExcepcion(): Nothing {
 ```
 
 <b>NOTA.</b>Es necesario conocer los requerimientos de nuestros programas ya que si utilizamos algún dato de manera erronea podemos desbordar la memoria y
-tener problemas con nuestro programa y hasta podemos dañar nuestra PC.
+tener problemas con nuestro programa y hasta podemos dañar nuestra PC o dispositivo móvil.
