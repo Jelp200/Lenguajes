@@ -7,7 +7,7 @@ Sean bienvenidos a la carpeta de programación en android con Kotlin, aquí se p
 desarrollar aplicaciones moviles. Los temas a abarcar en esta carpeta son:
 
 <ul>
-    <li><a href="01 - Variables.md"></a>Fundamentos</li>
+    <li><a href="09 - 01 - 01 - FUNDAMENTOS/00 - Fundamentos.md"></a>Fundamentos</li>
 </ul>
 
 ### PUNTOS A FAVOR :heavy_check_mark:
