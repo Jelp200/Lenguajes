@@ -1,4 +1,4 @@
-# OPERADORES EN C :dependabot:
+# OPERADORES EN KOTLIN :dependabot:
 Los operadores en Kotlin son aquellos los cuales nos permiten como su nombre nos dice operar variables y funciones entre si, tenemos diferentes tipos
 de operadores, estos son:
 
