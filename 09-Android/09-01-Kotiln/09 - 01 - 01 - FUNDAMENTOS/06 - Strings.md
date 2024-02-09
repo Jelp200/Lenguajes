@@ -101,7 +101,7 @@ println(cadena1 === cadena3)             // ¿La cadena 1 es igual estructuralme
 //! Imprime true
 ```
 
-### String literals
+### String literals.
 Se refieren a la forma de representar cadenas de texto de forma literal, es decir, directamente desde el cpodigo fuente, en Kotlin tenemos dos tipos de
 string literals:
 - <b>Escaped string.</b> Los escaped string maneja caracteres especiales, estos escapes se hacen con una barra invertida, las secuencias de escape son:
@@ -126,4 +126,14 @@ Si deseamos representar cualquier otro carácter utilizamos el Unicode de la sig
             for(c in "foo")
                 print(c)
     """
+```
+
+### Elementos de un string.
+Al saber que los elementos de un string son caracteres, podemos accesar a estos elementos a traves de una operación.
+```kt
+    val cadena = "ESIME ZACATENCO, ICE"
+    
+    //* Accedemos a sus elementos
+    println(cadena[6])
+    //! Imprime la Z
 ```
