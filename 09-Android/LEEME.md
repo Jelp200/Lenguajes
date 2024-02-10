@@ -6,7 +6,7 @@
 Bienvenidos al curso de android, en esta carpeta se veran los temas más básicos para comenzar a trabajar con plataformas las cuales incorporen android en
 su OS. Trabajaremos con:
 <ul>
-    <li><a href="09-01-Kotiln/09 - 01 - 00 - Notas/00 - ComenzarUnProyecto.md">Kotlin</a></li>
+    <li><a href="09-01-Kotiln/00 - LEEME.md">Kotlin</a></li>
     <li><a href="#">Java</a></li>
 </ul>
 

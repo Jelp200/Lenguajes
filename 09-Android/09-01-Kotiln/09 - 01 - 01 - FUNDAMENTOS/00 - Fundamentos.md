@@ -15,6 +15,9 @@ En este apartado podrán encontrar los siguientes temas:
     <li><a href="03 - TiposDeDatos.md">Tipos de datos</a></li>
     <li><a href="04 - Operadores.md">Operadores</a></li>
     <li><a href="05 - EntradasSalidas.kt">Entradas y salidas en consola</a></li>
+    <li><a href="06 - Strings.md">Strings</a></li>
+    <li><a href="07 - Arreglos/07 - Arreglos.md">Arreglos</a></li>
+    <li><a href="08 - Colecciones/08 - Colecciones.md">Colecciones</a></li>
 </ul>
 
-Regrear al apartado anterior: <a href="../LEEME.md">Click aquí</a>.
+Regrear al apartado anterior: <a href="../00 - LEEME.md">Click aquí</a>.
