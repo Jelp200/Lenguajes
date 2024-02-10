@@ -15,10 +15,10 @@ Para poder crear un arreglo vacio debemos utilizar la siguiente función:
 ```
 Para poder crear un arreglo que tenga un tamaño y valores iniciales, utilizamos un constructor.
 ```kt
-    //* Creamos un arreglo de cadenas con nuestro tamaño especifico y  asignamos su valor inicial
-    var strings = Array<String>(tamanho = 5, init = {indice -> "Item #${indice}"})
-    
-    print(Array.toString(a))
+    //* Creamos un arreglo de cadenas con nuestro tamaño especifico y asignamos su valor inicial
+    var strings = Array<String>(size = 5, init = {indice -> "Item #${indice}"})
+
+    print(Arrays.toString(a))
     //! Imprime "[Item #0, Item #1, Item #2, Item #3, Item #4]"
 
     print(a.size)

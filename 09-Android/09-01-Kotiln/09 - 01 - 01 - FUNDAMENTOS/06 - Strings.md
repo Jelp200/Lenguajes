@@ -14,7 +14,7 @@ En este cado el método <b><i>trimMargin()</i></b> elimina los caracteres de mar
 limpia y legible. Por defecto, | se utiliza como carácter de margen, pero puedes especificar un carácter de margen diferente como argumento del método
 <b><i>trimMargin()</i></b>. Por ejemplo:
 ```kt
-val cadena3 = "">String de varias líneas.
+val cadena3 = """>String de varias líneas.
                 >Puede contener saltos de línea y caracteres especiales.
                 >Está delimitado por triple comillas dobles""".trimMargin(">")
 ```
