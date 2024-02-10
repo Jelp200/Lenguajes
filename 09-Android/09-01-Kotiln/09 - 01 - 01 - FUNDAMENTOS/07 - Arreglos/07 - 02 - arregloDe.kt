@@ -2,7 +2,7 @@
 ** ##########################################################################################
 **  Archivo         :   07 - 02 - arregloDe.kt
 **  Proyecto        :   Android con Kotlin
-**  Herramienta(s)  :   VSCode
+**  Herramienta(s)  :   VS Code
 **                      Android Studio
 **  Autores         :
 **                      Jelp200

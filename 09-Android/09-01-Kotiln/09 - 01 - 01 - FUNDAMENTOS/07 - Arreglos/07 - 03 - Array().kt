@@ -7,8 +7,8 @@
 **  Autores         :
 **                      Jelp200
 **  Descripcion     :
-**                      En el siguiente programa utilizaremos la función "arrayOf()" para
-**                      declarar un arreglo.
+**                      En el siguiente programa utilizaremos la función "Array()" para
+**                      declarar varios arreglos.
 ** ##########################################################################################
 */
 
@@ -38,7 +38,6 @@ fun main() {
     println(numerosDouble.contentToString())
     println(numerosBool.contentToString())
     println(chars)
-
 }
 
 /* *******************************************************************************************

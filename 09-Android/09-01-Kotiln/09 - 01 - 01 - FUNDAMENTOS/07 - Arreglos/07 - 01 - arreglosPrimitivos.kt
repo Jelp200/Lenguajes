@@ -67,5 +67,4 @@ fun main() {
 
 -   Por el contrario si deseamos imprimir solo un elemento de nuestro arreglo no es necesario
     utilizar "contentToString()", solo hacemos referencia a la posición que deseamos obtener.
-
 */
