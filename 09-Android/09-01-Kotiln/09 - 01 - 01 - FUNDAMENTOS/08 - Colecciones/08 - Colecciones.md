@@ -11,6 +11,17 @@ Las listas son colecciones de datos ordenadas las cuales permiten duplicados. Po
     val listaMutable = mutableListOf("a", "b", "c")
     val listaInmutable = listOf(1, 2, 3)
 ```
+Para poder acceder a los elementos de la lista utilizamos el operador de acceso por índice "[]".
+```kt
+    val listaMutable = mutableListOf("a", "b", "c")
+    
+    //! IMPRIMIMOS EL ELEMENTO
+    println(listaMutable[0])
+
+    //! CAMBIAMOS EL VALOR DE NUESTROS ELEMENTOS Y VISUALIZAMOS SU ACTUALIZACIÓN
+    listaMutable[0] = "A"
+    println(listaMutable)
+```
 
 ### SET (CONJUNTOS)
 Un conjunto es una colección de datos que no permite duplicados y no mantiene un orden especifico de elementos.
@@ -20,6 +31,15 @@ Un conjunto es una colección de datos que no permite duplicados y no mantiene u
     
     //* CONJUNTOS INMUTABLES
     val setInmutable = setOf(1, 2, 3)
+```
+Debido a que como hemos dicho los conjuntos no mantienen un orden estos no pueden ser accedidos por un índice, para poder cambiar los
+valores, podemos agregar o eliminar elementos con las siguientes funciones:
+```kt
+    //* AÑADIR ELEMENTO
+    nombreConjunto.add(elemento)
+
+    //* ELIMINAR ELEMENTO
+    nombreConjunto.remove(elemento)
 ```
 
 ### MAPAS
