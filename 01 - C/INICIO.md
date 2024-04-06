@@ -14,8 +14,8 @@ int main(){
 Bienvenidos a la carpeta de <b><i>programación en C</i></b>, en esta capeta podrán visualizar desde los temas más básicos hasta los más avanzados de dicha programación. Las secciones abordadas en está carpeta son:
 <ul>
   <li><a href="00 - EJERCICIOS/EJERCICIOS.md">Ejercicios</a></li>
-  <li><a href="">Fundamentos de programación</a></li>
-  <li><a href="">Programación intermedia</a></li>
+  <li><a href="01 - FUNDAMENTOS/FUNDAMENTOS.md">Fundamentos de programación</a></li>
+  <li><a href="02 - INTERMEDIO/INTERMEDIO.md">Programación intermedia</a></li>
   <li><a href="">Programación avanzada</a></li>
 </ul>
 
