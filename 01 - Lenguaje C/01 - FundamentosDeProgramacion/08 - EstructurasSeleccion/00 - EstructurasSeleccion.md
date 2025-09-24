@@ -2,7 +2,7 @@
 
 Las estructuras de selección `switch – case` a diferencia se la estructura condicional `if`, son estructuras las cuales tener múltiples casos y de estos múltiples casos poder seleccionar uno que cumpla la condición de dicho caso, una analogía muy utilizada en las estructuras de selección es la de un menú, su diagrama de flujo y declaración están dados de la siguiente manera:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/08 - EstructurasDeSeleccion/01 - switchCase.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/08 - EstructurasDeSeleccion/01 - switchCase.png"> </div>
 
 ```C
 // DIRECTIVAS DE PREPROCESADOR

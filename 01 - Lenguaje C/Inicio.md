@@ -1,5 +1,5 @@
 <div>
-  <img src="../imgs/01 - Lenguaje C/Header_C.png"/>
+  <img src="../IMGS/01 - Lenguaje C/Header_C.png"/>
 </div>
 
 ```C

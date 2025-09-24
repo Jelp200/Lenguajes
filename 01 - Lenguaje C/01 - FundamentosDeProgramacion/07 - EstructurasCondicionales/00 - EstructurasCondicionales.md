@@ -6,7 +6,7 @@ Dentro de los lenguajes de programación en necesario tomar en cuenta las estruc
 
 La estructura condicional `if` (si) es la estructura condicional principal, esta estructura tiene como significado que, si cumple la condición establecida, el bloque de código o proceso dentro de ella se ejecutara, su diagrama de flujo y declaración están dados de la siguiente manera:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/07 - EstructurasCondicionales/01 - if.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/07 - EstructurasCondicionales/01 - if.png"> </div>
 
 ```C
 // DIRECTIVAS DE PREPROCESADOR
@@ -25,7 +25,7 @@ int main(){
 
 Un punto versátil que tiene la estructura condicional `if` es que se puede tener anidadas múltiples condiciones entre sí, esto quiere decir que se ejecutará la condición siguiente si se tiene una condición anterior a ella que se haya cumplido, su diagrama de flujo y declaración están dados de la siguiente manera:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/07 - EstructurasCondicionales/02 - ifA.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/07 - EstructurasCondicionales/02 - ifA.png"> </div>
 
 ```C
 // DIRECTIVAS DE PREPROCESADOR
@@ -49,7 +49,7 @@ int main(){
 
 Está estructura se caracteriza por que al momento de no cumplirse la condición declarada está entrara a un segundo bloque de código que se ejecutara, dicho "sino" ejecutara una instrucción declarada por el programador, su diagrama de flujo y declaración están dados de la siguiente manera:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/07 - EstructurasCondicionales/03 - ifElse.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/07 - EstructurasCondicionales/03 - ifElse.png"> </div>
 
 ```C
 // DIRECTIVAS DE PREPROCESADOR
@@ -70,7 +70,7 @@ int main(){
 
 Las estructuras condicionales `if-else-if` o **_"sino si"_**, son aquellas las cuales permiten realizar una condicional y si esta no se cumple entra a otro bloque de código el cual realiza una acción si no se cumple dicha condicional puede tener una segunda condicional, su diagrama de flujo y declaración están dados de la siguiente manera:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/07 - EstructurasCondicionales/04 - ifElseIf.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/07 - EstructurasCondicionales/04 - ifElseIf.png"> </div>
 
 ```C
 // DIRECTIVAS DE PREPROCESADOR

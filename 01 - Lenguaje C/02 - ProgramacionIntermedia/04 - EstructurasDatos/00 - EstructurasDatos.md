@@ -6,7 +6,7 @@ Pero **_¿Qué es una estructura de datos?_** Una estructura de datos es un alma
 
 ## Clasificación de las Estructuras de Datos
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/TED.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/TED.png"></div>
 
 - **_Estructuras de Datos Lineales._** La estructura de datos en la que los elementos de datos están dispuestos de forma secuencial o lineal, donde cada elemento está unido a sus elementos adyacentes anterior y siguiente, se denomina estructura de datos lineal (Arreglos, Pilas, Colas, Listas Enlazadas, etc.).
 - **_Estructuras de Datos Estaticas._** La estructura de datos estática tiene un tamaño de memoria fijo. Es más fácil acceder a los elementos de una estructura de datos estática (Arreglos).
@@ -64,7 +64,7 @@ A continucación los siguientes ejemplos permiten comprender de mejor forma el p
 
 #### Representación Gráfica de una Pila
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/STCK.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/STCK.png"></div>
 
 #### Tipos de pilas
 
@@ -87,7 +87,7 @@ Para implementar la pila, necesitamos mantener la referencia al elemento superio
 
 La operación `push()` permite ingresar o insertar un elemento en la pila. Si la pila está llena, se ingresa a una condición de desbordamiento. El argoritmo de la `push()` operación es:
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK.png"></div>
 
 Esto puede verse como:
 
@@ -100,7 +100,7 @@ Esto puede verse como:
 
 La operación `pop()` permite eliminar un elemento en la pila. Los elementos son expulsados en el orden inverso del que se insertan o empujan. Si la pila esta vacía, se ingresa a una condición de desbordamiento:
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK_2.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK_2.png"></div>
 
 Esto puede verse como:
 
@@ -110,12 +110,12 @@ Esto puede verse como:
 
 Estas dos operaciones pueden verse gráficamente de la siguiente forma:
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK_3.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK_3.png"></div>
 
 ##### <a href="04 - 04 - Stack/04 - 04 - 04 - Top.c">Top o Peek en la pila.</a>
 La operación `top()` o `peek()` permite visualizar el elemento en la parse superior o en la cima de la pila:
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK_4.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK_4.png"></div>
 
 Siendo su algoritmo el siguiente:
 
@@ -126,7 +126,7 @@ Siendo su algoritmo el siguiente:
 ##### <a href="04 - 04 - Stack/04 - 04 - 05 - isEmpty.c">Pila Vacía.</a>
 La operación `isEmpty()` retorna `true` si la pila esta vacia, sino retorna `false`:
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK_5.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK_5.png"></div>
 
 Siendo su algoritmo el siguiente:
 
@@ -137,7 +137,7 @@ Siendo su algoritmo el siguiente:
 ##### <a href="04 - 04 - Stack/04 - 04 - 06 - isFull.c">Pila Llena.</a>
 La operación `isFull()` retorna `true` si la pila esta llena, sino retorna `false`:
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK_6.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/ASTCK_6.png"></div>
 
 Siendo su algoritmo el siguiente:
 
@@ -158,7 +158,7 @@ Las colas son estructuras de datos que sigues el principio **_FIFO (First-in, Fi
 
 El principio de FIFO dice que el primer elemento que ingresa dentro de la cola, es el primero que es eliminado en el proceos. Entonces, una cola, como su nombre lo dice, es como una líena de pago en un supermercado, el cajero atiende al primer cliente que ingresa a la cola del supermercado, y este mismo cliente sale como llego.
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/QUE.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/QUE.png"></div>
 
 #### Terminología Basica de las Colas
 
@@ -169,7 +169,7 @@ El principio de FIFO dice que el primer elemento que ingresa dentro de la cola, 
 
 #### Representación Gráfica de una Cola
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/QUE_2.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/QUE_2.png"></div>
 
 #### Tipos de colas
 
@@ -182,7 +182,7 @@ El principio de FIFO dice que el primer elemento que ingresa dentro de la cola, 
 -- Cola de prioridad ascendente: En la cola de prioridad ascendente, los elementos se organizan en orden creciente de sus valores de prioridad. El elemento con el valor de prioridad más bajo se elimina primero.
 -- Cola de prioridad descendente: En la cola de prioridad descendente, los elementos se organizan en orden decreciente de sus valores de prioridad. El elemento con la mayor prioridad se elimina primero.
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/QUE_5.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/QUE_5.png"></div>
 
 #### Operaciones Básicas en una Cola
 
@@ -194,7 +194,7 @@ La operación en cola, permite agregar o almacenar un elemento al final de la co
 - Si la cola no está llena, incrementa el puntero posterior a la siguiente posición disponible.
 - Inserta el elemento en la parte posterior.
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/QUE_3.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/QUE_3.png"></div>
 
 ##### <a href="04 - 05 - Queue/04 - 05 - 02 - Dequeue.c">Fuera de cola (Dequeue)</a>
 
@@ -220,7 +220,7 @@ Retorna un valor booleano el cual indica si la cola esta vacía o no.
 
 Retorna un valor booleano el cual indica si la cola esta llena o no.
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/QUE_4.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/04 - ED/QUE_4.png"></div>
 
 #### Aplicaciones de una Cola
 

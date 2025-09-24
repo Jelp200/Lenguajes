@@ -14,6 +14,6 @@ Código de ejemplo <a href="11 - 01 - breakContinue.c">click aquí</a>.
 
 Siendo el diagrama de flujo del código ejemplo el siguiente:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/11 - BreakContinue/01 - BreakContinue.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/11 - BreakContinue/01 - BreakContinue.png"> </div>
 
 Regresar al menú de fundamentos <a href="../../01 - FundamentosDeProgramacion/00 - Fundamentos.md">Click aquí</a>.

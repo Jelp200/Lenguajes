@@ -67,7 +67,7 @@ void msjFuncion(){
 
 Siendo su diagrama de flujo el siguiente:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/14 - Funciones/01 - voidF.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/14 - Funciones/01 - voidF.png"> </div>
 
 ## <a href="14 - 02 - FuncionesConRetorno.c">Funciones con retorno.</a>
 
@@ -119,6 +119,6 @@ int Sumar(int n1, int n2){
 
 Siendo su diagrama de flujo el siguiente:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/14 - Funciones/02 - returnF.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/14 - Funciones/02 - returnF.png"> </div>
 
 Regresar al menú de fundamentos <a href="../../01 - FundamentosDeProgramacion/00 - Fundamentos.md">Click aquí</a>.

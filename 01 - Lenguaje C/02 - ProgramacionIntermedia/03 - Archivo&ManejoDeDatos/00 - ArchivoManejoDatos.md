@@ -30,7 +30,7 @@ Un archivo de texto contiene datos en forma binaria, por lo general es utilizado
 - Son más seguros porque no son fáciles de leer.
 - Generalmente se almacenan con la extensión de archivo `.bin`.
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/TAC.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/TAC.png"></div>
 
 ### Operaciones con Archivos
 

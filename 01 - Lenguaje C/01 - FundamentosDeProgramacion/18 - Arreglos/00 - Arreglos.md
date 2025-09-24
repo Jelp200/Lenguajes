@@ -8,7 +8,7 @@ Los arreglos son una parte importante dentro del lenguaje de programación C deb
 
 Son conjuntos de datos individuales del mismo tipo bajo el mismo nombre y con el mismo tipo de almacenamiento; estos datos pueden ser caracteres, enteros, flotantes, etc. Cada dato del conjunto es accesible mediante un índice, esto puede verse cómo:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/18 - Arreglos/01 - RecorridoArreglo.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/18 - Arreglos/01 - RecorridoArreglo.png"> </div>
 
 Este conjunto de datos puede ser visualizado como un vector, la analogía entre el lenguaje C y el algebra lineal es la siguiente:
 
@@ -38,7 +38,7 @@ int main(){
 
 Es posible observar que el conteo de las posiciones del arreglo comienza desde la posición 0 o el índice 0, entonces, para poder visualizar o modificar los datos de un arreglo en necesario ser específico que índice se desea modificar.
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/18 - Arreglos/02 - RecorridoArreglo.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/18 - Arreglos/02 - RecorridoArreglo.png"> </div>
 
 Para ello se tienen tres formas básicas de modificación para los arreglos, estas son:
 
@@ -73,7 +73,7 @@ while(++indice < 10){
 
 El diagrama de flujo del fragmento de código anterior es el siguiente:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/18 - Arreglos/03 - DiagramaFlujoBucleParaModificacion.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/18 - Arreglos/03 - DiagramaFlujoBucleParaModificacion.png"> </div>
 
 ### <a href="18 - 02 - arregloBidimensional.c">Arreglos bidimensionales.</a>
 

@@ -1,5 +1,5 @@
 <div>
-  <img src="./imgs/Header_Readme.png"/>
+  <img src="./IMGS/Header_Readme.png"/>
 </div>
 <br>
 El siguiente repositorio es una compilación de los lenguajes de programación aprendidos a lo largo de la carrera de ingeniería en comunicaciones y electrónica (ICE) con especialidad de electrónica de la ESIME (Escuela Superior de Ingeniería Mecánica y Electrica) unidad Zacatenco del IPN.

@@ -46,11 +46,11 @@ long Factorial(int a){
 }
 ```
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/15 - FuncionesRecursivas/01 - factNumero.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/15 - FuncionesRecursivas/01 - factNumero.png"> </div>
 
 El proceso del código es el siguiente para **_`n = 3`_**:
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/15 - FuncionesRecursivas/02 - procesoFactNum.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/15 - FuncionesRecursivas/02 - procesoFactNum.png"> </div>
 
 Se puede observar que en primera instancia se llama a la función factorial de 3, se evalúa el valor dado por el usuario dentro de ella y el valor dado por el usuario se multiplica por la función factorial de **_`3 - 1`_**, ósea, la función factorial de 2, al hacer esto es necesario calcular el factorial de 2 y a su vez, el factorial de 1, una vez calculados el factorial de **_`n - 1`_** lo que se hace es multiplicar el resultado de cada factorial calculado por la función, siendo así que el factorial de 3 es igual a 6.
 Ahora bien, si se desea visualizar los resultados de los números que participan activamente en dicha factorial, se hace lo siguiente:
@@ -79,9 +79,9 @@ long Factorial(int a){
 }
 ```
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/15 - FuncionesRecursivas/03 - factNumeroCompleto.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/15 - FuncionesRecursivas/03 - factNumeroCompleto.png"> </div>
 
-<div> <img src="../../../imgs/01 - Lenguaje C/01 - FundamentosDeProgramacion/15 - FuncionesRecursivas/04 - procesoFactNumCompleto.png"> </div>
+<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/15 - FuncionesRecursivas/04 - procesoFactNumCompleto.png"> </div>
 
 Se puede observar que los códigos anteriormente vistos llaman a la función factorial y una vez hecho esto la misma función se llama a si misma para poder realizar las operaciones correspondientes dentro del programa.
 

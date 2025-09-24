@@ -58,7 +58,7 @@ int main(){
 
 Ilustrando el ejemplo anterior.
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/PunteroPuntero.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/PunteroPuntero.png"></div>
 
 ###### **_Nota 1._** El tamaño de la variable del apuntador doble siempre será igual a la de los apuntadores normales.
 
@@ -179,17 +179,17 @@ Existen varias operaciones las cuales pueden ser realizadas con apuntadores, dic
 
 - Incremento/Decremento de un apuntador. Cuando un apuntador se incrementa, este se incrementa por el tamaño del tipo de dato de la variable apuntador. De igual forma pasa lo mismo con el decremento, este se decrementa por el tañao del tipo de la variable apuntador.
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/IDPuntero.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/IDPuntero.png"></div>
 
 ###### **_Nota 2._** El tamaño de la variable del apuntador de la imagen de ejemplo es de 32b (4B), osea una variable apuntador flotante.
 
 - Suma de un entero a un apuntador. Cuando a un apuntador se le suma un tipo de dato entero, lo primero que pasa es que el valor del entero es multiplicado por el tamaño en Bytes del entero y consecuentemente se agrega al valor de la dirección de memoria de la variable apuntador.
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/SPuntero.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/SPuntero.png"></div>
 
 - Resta de un entero a un apuntador. Cuando a un apuntador se le resta un tipo de dato entero, lo primero que pasa es que el valor del entero es multiplicado por el tamaño en Bytes del entero y consecuentemente se quita al valor de la dirección de memoria de la variable apuntador.
 
-<div><img src="../../../imgs/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/RPuntero.png"></div>
+<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/RPuntero.png"></div>
 
 - Resta de dos apuntadores. La resta de dos apuntadores es posible solo cuando estos son del mismo tipo de dato. El resultado se da cuando se calcula la diferencia entre las direcciones de memoria de los dos apuntadores, y se calcula cuantos Bytes de datos existen de diferencia entre estos dos, por ejemplo:
 

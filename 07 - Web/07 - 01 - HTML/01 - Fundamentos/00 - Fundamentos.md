@@ -65,7 +65,7 @@ HTML nos proporciona una serie de etiquetas para poder estructurar nuestro conte
 ```
 Esto puede verse el nuestra página web de la siguiente manera:
 
-<img src="./imgs/Estructura.png" alt="Estructura del contenido">
+<img src="./IMGS/Estructura.png" alt="Estructura del contenido">
 
 Y en código puede verse de la siguiente manera: <a href="./02 - Mi primer pagina web/index.html">estructura del contenido</a>
 
