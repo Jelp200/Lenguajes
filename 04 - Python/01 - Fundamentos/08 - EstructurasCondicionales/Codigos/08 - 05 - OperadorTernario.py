@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 08 - 05 - IfElseIf.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **         [Expresión 1] if (Condición) else [Expresión 2]

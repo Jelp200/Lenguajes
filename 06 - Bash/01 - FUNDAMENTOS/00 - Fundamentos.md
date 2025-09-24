@@ -5,11 +5,11 @@ es un interprete de  comandos para SO tipo Unix (macOS y Linux). Bash en si es u
 con el SO ejecutando comandos.
 
 Bash dentro de la carrera de ICE nos permitira:
-- <b><i>Automatizar tareas</i></b>: Bash se utiliza para escribir scripts que automatizan tareas repetitivas o complejas. Estos scripts pueden incluir secuencias de comandos, estructuras de control y lógica de programación básica para realizar una variedad de tareas, como la gestión de archivos, la administración del sistema y la configuración del entorno.
-- <b><i>Administrar el sistema</i></b>: Los administradores de sistemas utilizan Bash para realizar tareas de administración del sistema, como la configuración de redes, la gestión de usuarios y grupos, el monitoreo del sistema y la automatización de procesos de mantenimiento.
-- <b><i>Personalización del entorno</i></b>: Los usuarios pueden personalizar su entorno de usuario utilizando scripts Bash para configurar variables de entorno, definir alias de comandos y crear funciones personalizadas.
-- <b><i>Procesamiento de datos de dispositivos</i></b>: En la electrónica, a menudo se trabaja con datos generados por dispositivos o instrumentos de medición. Bash puede ser utilizado para procesar y analizar estos datos, filtrando, transformando y agregando información relevante para su posterior análisis.
-- <b><i>Automatización de tareas de red</i></b>: En las redes de telecomunicaciones, hay una gran cantidad de tareas repetitivas que deben realizarse, como configurar dispositivos de red, monitorear el tráfico, generar informes de rendimiento, entre otras. Bash puede ser utilizado para automatizar estas tareas mediante la creación de scripts que ejecuten comandos de red y procesen los resultados.
+- **_Automatizar tareas_**: Bash se utiliza para escribir scripts que automatizan tareas repetitivas o complejas. Estos scripts pueden incluir secuencias de comandos, estructuras de control y lógica de programación básica para realizar una variedad de tareas, como la gestión de archivos, la administración del sistema y la configuración del entorno.
+- **_Administrar el sistema_**: Los administradores de sistemas utilizan Bash para realizar tareas de administración del sistema, como la configuración de redes, la gestión de usuarios y grupos, el monitoreo del sistema y la automatización de procesos de mantenimiento.
+- **_Personalización del entorno_**: Los usuarios pueden personalizar su entorno de usuario utilizando scripts Bash para configurar variables de entorno, definir alias de comandos y crear funciones personalizadas.
+- **_Procesamiento de datos de dispositivos_**: En la electrónica, a menudo se trabaja con datos generados por dispositivos o instrumentos de medición. Bash puede ser utilizado para procesar y analizar estos datos, filtrando, transformando y agregando información relevante para su posterior análisis.
+- **_Automatización de tareas de red_**: En las redes de telecomunicaciones, hay una gran cantidad de tareas repetitivas que deben realizarse, como configurar dispositivos de red, monitorear el tráfico, generar informes de rendimiento, entre otras. Bash puede ser utilizado para automatizar estas tareas mediante la creación de scripts que ejecuten comandos de red y procesen los resultados.
 
 Y muchos más...
 

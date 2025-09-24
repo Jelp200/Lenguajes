@@ -1,6 +1,6 @@
 ;#####################################################################################
 ;    Archivo:       07 - Interrupciones
-;    SO:            Windows 10                                                           
+;    SO:            Windows 11                                                           
 ;    Version:       1.1
 ;    Herramientas:  Visual Studio Code                                               
 ;                   Mplab

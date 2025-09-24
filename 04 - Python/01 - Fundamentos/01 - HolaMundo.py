@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 01-HolaMundo.c
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **          En este archivo realizaremos nuestro primer programa en PY.

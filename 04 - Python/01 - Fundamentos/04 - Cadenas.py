@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 04-Cadenas.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **          En este archivo veremos el como se manejan las cadenas.

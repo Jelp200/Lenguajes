@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 02-variables.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **          En este archivo veremos el uso de las variables en PY.

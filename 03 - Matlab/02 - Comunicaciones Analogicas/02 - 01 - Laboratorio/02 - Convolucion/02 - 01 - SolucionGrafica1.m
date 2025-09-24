@@ -1,7 +1,7 @@
 %{
 ** ######################################################################################################
 **      Archivo: 02 - 01 - SolucionGrafica.m
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **                   MATLAB R2023a
 **

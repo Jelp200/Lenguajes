@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 09 - 01 - While.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **         while(condicion/variable):

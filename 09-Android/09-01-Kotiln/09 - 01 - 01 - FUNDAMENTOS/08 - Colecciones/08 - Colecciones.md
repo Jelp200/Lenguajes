@@ -6,7 +6,7 @@ control preciso sobre cuándo exactamente se pueden editar las colecciones es ú
 Tenemos tres tipos de colecciones (recordemos que estas colecciones son de igual manera estructuras de datos básicas):
 ### LISTAS
 Las listas son colecciones de datos ordenadas las cuales permiten duplicados. Podemos acceder a los elementos de nuestras listas por su
-índice. Las listas son mutables (<b><i>mutableListOf</i></b>) o inmutables (<b><i>listOf</i></b>). Sus declaraciones son las siguientes:
+índice. Las listas son mutables (**_mutableListOf_**) o inmutables (**_listOf_**). Sus declaraciones son las siguientes:
 ```kt
     val listaMutable = mutableListOf("a", "b", "c")
     val listaInmutable = listOf(1, 2, 3)

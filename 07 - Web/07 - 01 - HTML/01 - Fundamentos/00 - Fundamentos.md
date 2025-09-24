@@ -30,7 +30,7 @@ La <a href="./01 - Estructura básica/index.html">estructura básica</a> de un d
     </body>
 </html>
 ```
-<b>NOTA.</b> Podemos generar la estructura básica en html escribiendo lo siguiente: <b><i>html:5</b></i>
+<b>NOTA.</b> Podemos generar la estructura básica en html escribiendo lo siguiente: **_html:5</b></i>
 
 ## Headings :headstone:
 Hemos dicho que dentro de HTML tenemos varías etiquetas, entre ellas estan las etiquetas de encabezado las cuales como su nombre lo dice, son etiquetas
@@ -44,9 +44,9 @@ para encabezados o titulos, estos headings se declaran de la siguiente manera:
 <h6> </h6>
 ```
 Estos headings le indican al navegador que lo que va dentro de ellos es lo más importante del sitio web, pueden ser logotipos o el nombre de sitio web.
-La importancia de estos headings van en cascada, siendo el <b><i>h1</b></i> el más importante, despues el <b><i>h2</b></i>, y así sucesivamente.
+La importancia de estos headings van en cascada, siendo el **_h1</b></i> el más importante, despues el **_h2</b></i>, y así sucesivamente.
 
-<b>NOTA.</b> Una regla es que solo podemos utilizar el <b><i>h1</b></i> una vez por archivo.
+<b>NOTA.</b> Una regla es que solo podemos utilizar el **_h1</b></i> una vez por archivo.
 
 ## Estructura del contenido :classical_building:
 El estructurar nuestro contenido en HTML significa etiquetar cada parte de nuestra página web en el lugar donde corresponde, algo importante a recalcar
@@ -69,9 +69,9 @@ Esto puede verse el nuestra página web de la siguiente manera:
 
 Y en código puede verse de la siguiente manera: <a href="./02 - Mi primer pagina web/index.html">estructura del contenido</a>
 
-Podemos observar que en el código utilizamos un <b><i>section</b></i>, para poder utilizar esta etiqueta debemos seguir la siguiente regla: si el elemento hijo (etiqueta
+Podemos observar que en el código utilizamos un **_section</b></i>, para poder utilizar esta etiqueta debemos seguir la siguiente regla: si el elemento hijo (etiqueta
 dentro del section) es un heading, siempre utilizaremos un section. A excepción de que si el elemento hijo es el contenido principal utilizaremos una
-etiqueta <b><i>main</b></i>.
+etiqueta **_main</b></i>.
 
 ## Enlaces y navegación :chains:
 Dentro de HTML podemos ingresar a diferentes partes, páginas o secciones, esto gracias a los enlaces de navegación que podemos utilizar, estos enlaces se
@@ -101,7 +101,7 @@ Cuando tenemos barras de navegación de multinivel se declaran los enlaces de la
     </ul>
 </nav>
 ```
-Hemos dicho que estos enlaces tienen atributos, el más importante y obligatorio de estos es el <b><i>href</b></i>, esto debido a que con el definimos la URL o drección
+Hemos dicho que estos enlaces tienen atributos, el más importante y obligatorio de estos es el **_href</b></i>, esto debido a que con el definimos la URL o drección
 a la cual deseamos acceder:
 ```html
 <a href="http://www.ejemplo.com">Visitar sitio web</a> <!-- Enlace a página web -->
@@ -110,7 +110,7 @@ a la cual deseamos acceder:
 <a href="rutaDelArchivo.extencion" dowload>Descargar archivo</a> <!-- Enlace de descarga -->
 <a href="#" title="Enlace a una página interna">Información emergente</a> <!-- Enlace con informacón emergente -->
 ```
-A parte del <b><i>href</b></i>, tenemos otros atributos tales como <b><i>target</b></i>, <b><i>title</b></i>, <b><i>download</b></i>, <b><i>rel</b></i>, <b><i>type</b></i>, <b><i>tabindex</b></i> y <b><i>accesskey</b></i>, a continuación veremos como utilzarlos:
+A parte del **_href</b></i>, tenemos otros atributos tales como **_target</b></i>, **_title</b></i>, **_download</b></i>, **_rel</b></i>, **_type</b></i>, **_tabindex</b></i> y **_accesskey</b></i>, a continuación veremos como utilzarlos:
 ```html
 <!-- TARGET -->
 <a href="http://www.ejemplo.com" target="_blank">Abrir enlace en una nueva ventana</a>
@@ -212,7 +212,7 @@ la misma ventana)</i> y <i>_blank (Muestra la espuesta en una nueva ventana o pe
 </form>
 ```
 - <b>ENCTYPE</b>. Especfica el como se codificarán los datos del formulario antes de enviarlos al servidor. Es relevante cuando el formulario contiene
-elementos del tipo archivo (<b><i>input type="file"</i></b>). Los valores más comunes son <i>application/x-www-form-urlencoded (Predeterminado)</i> y
+elementos del tipo archivo (**_input type="file"_**). Los valores más comunes son <i>application/x-www-form-urlencoded (Predeterminado)</i> y
 <i>multipart/form-data (Utilizado para enviar archivos)</i>.
 ```html
 <form action="/procesarFormulario.php" method="post" enctype="multipart/form-data">

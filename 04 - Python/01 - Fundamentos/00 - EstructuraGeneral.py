@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 00-EstructuraGeneral.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **          En este archivo veremos la estructura general de un programa en Python.

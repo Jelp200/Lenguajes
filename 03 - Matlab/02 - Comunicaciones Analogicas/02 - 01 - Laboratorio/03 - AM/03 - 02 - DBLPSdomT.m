@@ -1,7 +1,7 @@
 %{
 ** ######################################################################################################
 **      Archivo: 03 - 02 - DBLPSdomT.m
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **                   MATLAB R2023a
 **

@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 11 - 02 - CambioDeValores.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **          Podemos operar a nuestras listas de la siguiente manera:

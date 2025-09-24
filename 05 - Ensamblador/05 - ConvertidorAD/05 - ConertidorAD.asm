@@ -1,6 +1,6 @@
 ;#####################################################################################
 ;    Archivo:       05 - ConvertidorAD                                                           
-;    SO:            Windows 10                                                           
+;    SO:            Windows 11                                                           
 ;    Version:       1.2                                                                  
 ;    Herramientas:  Visual Studio Code                                               
 ;                   Mplab

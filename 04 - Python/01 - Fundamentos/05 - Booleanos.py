@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 05-Booleanos.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **          En este archivo veremos el manejo de los tipos de datos booleanos.

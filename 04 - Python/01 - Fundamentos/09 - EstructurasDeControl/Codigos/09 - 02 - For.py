@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 09 - 02 - For.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **         for 'elemento' in 'secuencia':

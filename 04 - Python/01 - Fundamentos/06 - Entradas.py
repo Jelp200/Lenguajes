@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 06-Entradas.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **          En este archivo veremos como poder ingresar datos dados por el usuario.

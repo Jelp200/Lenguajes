@@ -10,15 +10,15 @@ val cadena2 = """String de varias líneas.
                 |Puede contener saltos de línea y caracteres especiales.
                 |Está delimitado por triple comillas dobles""".trimMargin()
 ```
-En este cado el método <b><i>trimMargin()</i></b> elimina los caracteres de margen de cada línea de la cadena de texto, lo que hace que la cadena resultante sea más
+En este cado el método **_trimMargin()_** elimina los caracteres de margen de cada línea de la cadena de texto, lo que hace que la cadena resultante sea más
 limpia y legible. Por defecto, | se utiliza como carácter de margen, pero puedes especificar un carácter de margen diferente como argumento del método
-<b><i>trimMargin()</i></b>. Por ejemplo:
+**_trimMargin()_**. Por ejemplo:
 ```kt
 val cadena3 = """>String de varias líneas.
                 >Puede contener saltos de línea y caracteres especiales.
                 >Está delimitado por triple comillas dobles""".trimMargin(">")
 ```
-En este caso, > se utilizará como carácter de margen, y <b><i>trimMargin()</i></b> eliminará los caracteres > de cada línea de la cadena de texto.
+En este caso, > se utilizará como carácter de margen, y **_trimMargin()_** eliminará los caracteres > de cada línea de la cadena de texto.
 
 ### Concatenación de strings.
 Al igual que en PY, en Kotlin es posible concatenar (juntar) las cadenas de caracteres, esto se ve de la siguiente manera:

@@ -1,6 +1,6 @@
 ;#####################################################################################
 ;    Archivo:       01 - Practica1                                                           
-;    SO:            Windows 10                                                           
+;    SO:            Windows 11                                                           
 ;    Version:       1.1                                                                  
 ;    Herramientas:  Visual Studio Code                                               
 ;                   Mplab

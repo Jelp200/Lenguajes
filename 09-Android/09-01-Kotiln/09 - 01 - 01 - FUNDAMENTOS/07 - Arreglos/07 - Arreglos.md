@@ -74,7 +74,7 @@ Estos tipos de datos pueden ser creados utilizando las siguientes funciones:
 ### CREAR UN ARREGLO.
 Un arreglo en Kotlin puede crearse de cuatro maneras comunes.
 
-- <b>Utilizando la función <i>arrayOf()</i></b>.
+- <b>Utilizando la función <i>arrayOf()_**.
 Esta función nos permite crear un arreglo de objetos con los elementos proporcionados como argumentos.
 ```kt
 //* Crea un arreglo de tipo "Array<Int>"
@@ -90,14 +90,14 @@ val arregloBooleano = booleanArrayOf(true, false, true, true)
 val arregloCaracteres = charArrayOf('I', 'P', 'N')
 ```
 
-- <b>Utilizando la función <i>Array()</i></b>.
+- <b>Utilizando la función <i>Array()_**.
 Esta función nos permite crear un arreglo de un tamaño especifico y, opcionalmente, inicilizar cada elemento utilizando una función de inicilización.
 ```kt
 val numeros = Array(5) {i -> i * 2}
 //? Creamos un arreglo de tamaño 5 e inicializa cada elemento con el doble de su índice
 ```
 
-- <b>Utilizando la función <i>emptyArray()</i></b>.
+- <b>Utilizando la función <i>emptyArray()_**.
 Esta función nos permite crear un arreglo vacío de un tipo específico.
 ```kt
 val vacio:Array<Int> = emptyArray()

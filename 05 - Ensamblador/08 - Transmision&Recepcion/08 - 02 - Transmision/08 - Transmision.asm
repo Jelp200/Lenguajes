@@ -1,6 +1,6 @@
 ;#####################################################################################
 ;    Archivo:       08 - Transmision
-;    SO:            Windows 10                                                           
+;    SO:            Windows 11                                                           
 ;    Version:       1.0
 ;    Herramientas:  Visual Studio Code                                               
 ;                   Mplab

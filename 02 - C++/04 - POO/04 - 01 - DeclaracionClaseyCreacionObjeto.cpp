@@ -1,7 +1,7 @@
 /*
 ** #########################################################################################
 **      Archivo: 04 - 01 - Declaracion de una clase y creacion de un objeto
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **                   Code::Blocks
 ** #########################################################################################

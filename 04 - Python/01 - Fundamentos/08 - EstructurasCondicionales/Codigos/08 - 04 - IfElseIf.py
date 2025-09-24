@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 08 - 04 - IfElseIf.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **         if(condición):

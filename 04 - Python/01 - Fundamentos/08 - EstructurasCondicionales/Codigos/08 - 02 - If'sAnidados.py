@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 08 - 02 - If'sAnidados.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **         if(condición 1):

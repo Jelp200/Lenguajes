@@ -1,7 +1,7 @@
 """
 ** #########################################################################################
 **      Archivo: 03-TiposDatos.py
-**      SO: Windows 10
+**      SO: Windows 11
 **      Herramienta: Visual Studio Code
 **      Notas:
 **          En este archivo veremos los tipos de datos en Python.

@@ -1,6 +1,6 @@
 ;#####################################################################################
 ;    Archivo:       06 - Motor                                                           
-;    SO:            Windows 10                                                           
+;    SO:            Windows 11                                                           
 ;    Version:       1.4                                                                  
 ;    Herramientas:  Visual Studio Code                                               
 ;                   Mplab

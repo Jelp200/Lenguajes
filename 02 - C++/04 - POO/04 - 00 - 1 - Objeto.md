@@ -35,4 +35,4 @@ Ahora digamos que tengo una fraccón igual a 5/3, entonces:<br><br>
         <li>Resta de fracciones</li>
     </ul>
 
-Entonces vistos los ejemplos anteriores podemos decir que en programación un <b><i>objeto es aquel que contiene atributos y metodos</b></i>.
+Entonces vistos los ejemplos anteriores podemos decir que en programación un **_objeto es aquel que contiene atributos y metodos</b></i>.
