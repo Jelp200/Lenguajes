@@ -19,7 +19,7 @@ Las bases de datos relacionales estan compuestas por tres elementos importantes:
 | **...**  | ...            | ...            | ...     | ...            |
 | **n**    | Registro n : n | Registro 3 : 2 | ...     | Registro n : m |
 
-## Structured Query Language (SQL) :dolphine:
+## Structured Query Language (SQL) :dolphin:
 
 SQL o lenguaje estructurado de consultas, es es un lenguaje de programación el cual es utilizado para poder gestionar y manipular datos en bases de datos relacionales.
 
