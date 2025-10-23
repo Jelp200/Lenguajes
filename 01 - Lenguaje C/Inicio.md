@@ -1,26 +1,12 @@
-<div>
-  <img src="../IMGS/01 - Lenguaje C/Header_C.png"/>
-</div>
+# PROGRAMACIÓN C :croissant:
 
-```C
-#include <stdio.h>
-#include <stdlib.h>
+![HEADER](../imgs/01%20-%20Lenguaje%20C/Header_C.png)
 
-int main(){
-  puts("PROGRAMACIÓN EN C");
-  return EXIT_SUCCESS;
-}
-```
+Bienvenido a la carpeta de ***PROGRAMACIÓN EN C***, en esta carpeta se visualizarán desde los temas más básicos, hasta los más avanzados de dicho lenguaje de programación. La carpeta se divide en los siguientes modulos:
 
-Sea bienvenido a la carpeta de **_programación en C_**, en esta capeta se visualizará los temas aprendidos, comprendidos y estudiados los cuales hacen parte de el lenguaje de programación C, está carpeta se divide en:
+- [Ejercicios](./00%20-%20Ejercicios/)
+- [Fundamentos de programación](./01%20-%20FundamentosDeProgramacion/00%20-%20Fundamentos.md)
+- [Programación intermedia](./02%20-%20ProgramacionIntermedia/00%20-%20Intermedio.md)
+- [EjerciciosProgramación avanzada](./)
 
-<ul>
-  <li><a href="../01 - Lenguaje C/00 - Ejercicios/Ejercicios.md">Ejercicios</a></li>
-  <li><a href="../01 - Lenguaje C/01 - FundamentosDeProgramacion/00 - Fundamentos.md">Fundamentos de programación</a></li>
-  <li><a href="../01 - Lenguaje C/02 - ProgramacionIntermedia/00 - Intermedio.md">Programación intermedia</a></li>
-  <li><a href="">Programación avanzada</a></li>
-</ul>
-
-Regresar al menú de lenguajes <a href="../README.md">Click aquí</a>.
-
-###### <i>Nota. La programación vista en está carpeta sirve para conocer los aspectos básicos de la programación estructurada y no estructurada para poder así después aplicarlo en la industria.</i>
+Regresar al menú de lenguajes [click aquí](../README.md).

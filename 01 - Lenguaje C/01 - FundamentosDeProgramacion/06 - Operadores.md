@@ -8,13 +8,13 @@ Son operadores los cuales permiten realizar operaciones aritméticas dentro de l
 
 |  Símbolo | Significado |         Uso         |
 |:--------:|:-----------:|:-------------------:|
-| `**_+_**`| Adición     | Suma                |
-| `**_-_**`| Sustracción | Resta               |
-| `**_*_**`| Producto    | Multiplicación      |
-| `**_/_**`| Cociente    | División            |
-| `**_%_**`| Módulo      | Residuo de división |
-|`**_++_**`| Incremento  | Sumar               |
-| `**_-_**`| Decremento  | Restar              |
+| `+` | Adición     | Suma                |
+| `-` | Sustracción | Resta               |
+| `*` | Producto    | Multiplicación      |
+| `/` | Cociente    | División            |
+| `%` | Módulo      | Residuo de división |
+|`++` | Incremento  | Sumar               |
+| `-` | Decremento  | Restar              |
 
 ## Asignación
 
@@ -22,18 +22,18 @@ Son operadores los cuales permiten realizar asignaciones dentro de un programa.
 
 |  Símbolo |    Significado    |             Uso             |
 |:--------:|:-----------------:|:---------------------------:|
-| `**_=_**`| Igual a           | Significado                 |
-|`**_+=_**`| Adición           | Suma y asignación           |
-|`**_-=_**`| Sustracción       | Resta y asignación          |
-|`**_*=_**`| Producto          | Miltiplicación y asignación |
-|`**_/=_**`| Cociente          | División y asignación       |
-|`**_%=_**`| Módulo            | Módulo y asignación         |
-|`**_==_**`| Igual a           | Igualación                  |
-|`**_!=_**`| No igual a        | Desigualdad                 |
-|`**_>_**` | Mayor que         | Comparación                 |
-|`**_<_**` | Menor que         | Comparación                 |
-|`**_>=_**`| Mayor o igual que | Comparación                 |
-|`**_<=_**`| Menor o igual que | Comparación                 |
+| `=` | Igual a           | Significado                 |
+|`+=` | Adición           | Suma y asignación           |
+|`-=` | Sustracción       | Resta y asignación          |
+|`*=` | Producto          | Miltiplicación y asignación |
+|`/=` | Cociente          | División y asignación       |
+|`%=` | Módulo            | Módulo y asignación         |
+|`==` | Igual a           | Igualación                  |
+|`!=` | No igual a        | Desigualdad                 |
+|`>`  | Mayor que         | Comparación                 |
+|`<`  | Menor que         | Comparación                 |
+|`>=` | Mayor o igual que | Comparación                 |
+|`<=` | Menor o igual que | Comparación                 |
 
 ## Manejo de bits
 
@@ -46,12 +46,12 @@ Son operadores los cuales permiten realizar el manejo de bits y sólo pueden ser
 
 |  Símbolo  |     Significado      |
 |:---------:|:--------------------:|
-| `**_&_**` | AND de bits          |
-| `**_\|_**` | OR de bits           |
-| `**_^_**` | XOR de bits          |
-| `**_<<_**`| Corrimiento a la izq |
-| `**_>>_**`| Corrimiento a la der |
-| `**_~_**` | NOT                  |
+| `&`  | AND de bits          |
+| `\|`  | OR de bits           |
+| `^`  | XOR de bits          |
+| `<<` | Corrimiento a la izq |
+| `>>` | Corrimiento a la der |
+| `~`  | NOT                  |
 
 El operador `&` a menudo **_permite enmascarar algún conjunto de bits_**, por ejemplo:
 
@@ -100,9 +100,9 @@ Son operadores los cuales permiten al igual que los operadores aritméticos, rea
 
 |  Símbolo   | Significado |     Uso     |
 |:----------:|:-----------:|:-----------:|
-|  `**_!_**` | NOT         | Comparativa |
-| `**_&&_**` | AND         | Producto    |
-| `**_\|\|_**` | OR          | Suma       |
+|  `!` | NOT         | Comparativa |
+| `&&` | AND         | Producto    |
+| `\|\|` | OR          | Suma       |
 
 Es importante distinguir estos operadores lógicos de los operadores de manejo de bits, ya que los operadores lógicos implican una evaluación de izquierda a derecha de un valor de verdad. Por ejemplo, si `x` es uno y `y` es dos, entonces `x & y` es cero en tanto que `x && y` es uno.
 

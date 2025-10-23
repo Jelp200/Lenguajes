@@ -7,16 +7,23 @@ Programar en el lenguaje C es muy sencillo; para ello es importante saber el com
 ```C
 /*
 ** #########################################################################################
-**      Archivo: 01 - EstructuraGeneral.c
-**      SO: Windows 11
-**      Herramienta: Visual Studio Code
+**      Archivo: nombreDelArchivo.c
+**      SO: [Sistema operativo utilizado]
+**      Autor: [Autor del archivo o programa]
+**      Herramienta: [Herramienta o herramientas]
+**      Compilador: [Compilador utilizado]
+**      Descripcion: [Descripcion del programa]
 ** #########################################################################################
 */
 
-// DIRECTIVAS DE PREPROCESADOR
+// =================================
+// == DIRECTIVAS DE PREPROCESADOR ==
+// =================================
 #include <stdio.h>
 
-// FUNCION PRINCIPAL
+// =================================
+// ======= FUNCION PRINCIPAL =======
+// =================================
 int main(void){
     /*
         ...
@@ -29,7 +36,7 @@ int main(void){
 
 ### 1. Descripción del programa
 
-En esta parte del programa se tiene la oportunidad de describir el programa; nombre del archivo, sistema operativo, herramientas utilizadas y demás cosas importantes que se crea necesaria para que cualquier otro programador/ingeniero sepa de lo que va el código o programa.
+En esta parte del programa se tiene la oportunidad de describir el programa; nombre del archivo, sistema operativo, herramientas utilizadas y demás cosas importantes que se crean necesarias para que cualquier otro programador/ingeniero sepa de lo que va el código o programa.
 
 ### 2. Directivas de preprocesador
 
@@ -39,6 +46,8 @@ Las directivas de preprocesador tambien llamadas headers, librerias o archivos d
 
 La función principal es aquella en la cual se tendrá el bloque de código principal del programa.
 
-###### **_Nota._** Es posible observar que se tienen comentarios multilinea (/* ... */) y comentarios de una sola linea (//).
+> ***Nota.*** Es posible observar que se tienen comentarios multilinea `/*...*/` y comentarios de una sola linea `//`.
 
-Regresar al menú de fundamentos <a href="../01 - FundamentosDeProgramacion/00 - Fundamentos.md">Click aquí</a>.
+Regresar al menú anterior [click auí](./00%20-%20Fundamentos.md).
+
+Regresar al inicio [click auí](../Inicio.md).

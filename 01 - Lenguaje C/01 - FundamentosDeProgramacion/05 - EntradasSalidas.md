@@ -22,10 +22,14 @@ El siguiente ejemplo de código permite al usuario ingresar datos para su poster
 ** #########################################################################################
 */
 
-// DIRECTIVAS DE PREPROCESADOR
+// =================================
+// == DIRECTIVAS DE PREPROCESADOR ==
+// =================================
 #include <stdio.h>
 
-// FUNCION PRINCIPAL
+// =================================
+// ======= FUNCION PRINCIPAL =======
+// =================================
 int main(void){
     // Variables locales.
     int n = 0; char c;
@@ -39,4 +43,6 @@ El numero es (numero dado) y la letra es (letra dada).
 */
 ```
 
-Regresar al menú de fundamentos <a href="../01 - FundamentosDeProgramacion/00 - Fundamentos.md">Click aquí</a>.
+Regresar al menú anterior [click auí](./00%20-%20Fundamentos.md).
+
+Regresar al inicio [click auí](../Inicio.md).
