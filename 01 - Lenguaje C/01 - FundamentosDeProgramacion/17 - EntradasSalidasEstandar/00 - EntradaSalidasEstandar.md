@@ -223,7 +223,7 @@ void miniPrintf(char *fmt, ...) {
                 break;
 ```
 
-- `case 's' `: Si el especificador de formato es `s`, se obtiene un argumento de tipo `char*` (cadena de caracteres) usando `va_arg` y se almacena en `sval`. Luego se imprime la cadena carácter por carácter usando un bucle `for` y `putchar`.
+- `case 's': Si el especificador de formato es `s`, se obtiene un argumento de tipo `char*` (cadena de caracteres) usando `va_arg` y se almacena en `sval`. Luego se imprime la cadena carácter por carácter usando un bucle `for` y `putchar`.
 
 ```C
             default:
