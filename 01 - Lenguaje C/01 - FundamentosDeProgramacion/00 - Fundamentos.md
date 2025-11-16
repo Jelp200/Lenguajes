@@ -25,12 +25,12 @@ En este apartado se podrán visualizar los siguiente temas:
 12. Funciones de trabajo
     - [Caracteres](./11%20-%20Caracteres/00%20-%20Caracteres.md).
     - [String](./11%20-%20FuncionesString/00%20-%20FuncionesString.md).
-    - [Matematicas](./).
-    - [Aleatorias](./)
-13. [Estructuras de datos básicas (Arreglos)](./)
-14. [Apuntadores 1](./)
-15. [Estructuras, uniones y enumeraciones](./)
-16. [Nuevos tipos de datos](./)
-17. [Entradas y salidas estandar](./)
+    - [Matematicas](./12%20-%20FuncionesMatematicas.md).
+    - [Aleatorias](./12%20-%20FuncionesAleatorias/00%20-%20FuncionesAleatorias.md)
+13. [Estructuras de datos básicas (Arreglos)](./13%20-%20Arreglos/00%20-%20Arreglos.md)
+14. [Apuntadores 1](./14%20-%20Apuntadores/00%20-%20Apuntadores.md)
+15. [Estructuras, uniones y enumeraciones](./15%20-%20EstructurasUnionesEnumeraciones/00%20-%20EstructurasUnionesEnumeraciones.md)
+16. [Nuevos tipos de datos](./16%20-%20NuevosTiposDatos/00%20-%20NuevosTiposDatos.md)
+17. [Entradas y salidas estandar](./17%20-%20EntradasSalidasEstandar/00%20-%20EntradaSalidasEstandar.md)
 
 Regresar al inicio [click auí](../Inicio.md).
