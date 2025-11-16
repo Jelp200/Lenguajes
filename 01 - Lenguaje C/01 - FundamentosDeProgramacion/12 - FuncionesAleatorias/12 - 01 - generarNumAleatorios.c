@@ -1,23 +1,29 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 08 - isspace.c
-**      SO: Windows 11
+**      Archivo: 12 - 01 - generarNumAleatorios.c
+**      SO: GNU/Linux
 **      Herramienta: Visual Studio Code
 ** #########################################################################################
 */
+
 // DIRECTIVAS DE PREPROCESADOR
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include <time.h>
+
+// PROTOTIPO(S) DE FUNCION(ES)
+void fncRand();
 
 // FUNCIÓN PRINCIPAL
-int main() {
-    char c = ' ';
-    
-    if (isspace(c)) {
-        printf("El carácter es un espacio en blanco.\n");
-    } else {
-        printf("El carácter no es un espacio en blanco.\n");
-    }
-    
+int main(){
+    fncRand();
     return 0;
+}
+
+// FUNCION(ES)
+void fncRand(){
+    int n;
+    srand(time(NULL));
+    n = 1 + rand() % ((10 + 1) - 1);
+    printf("%d", n);
 }

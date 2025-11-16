@@ -1,23 +1,21 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 08 - isspace.c
+**      Archivo: 07 - 01 - Preincremento.md
 **      SO: Windows 11
 **      Herramienta: Visual Studio Code
 ** #########################################################################################
 */
+
 // DIRECTIVAS DE PREPROCESADOR
 #include <stdio.h>
-#include <ctype.h>
 
 // FUNCIÓN PRINCIPAL
-int main() {
-    char c = ' ';
-    
-    if (isspace(c)) {
-        printf("El carácter es un espacio en blanco.\n");
-    } else {
-        printf("El carácter no es un espacio en blanco.\n");
-    }
-    
+int main(void){
+    int a = 0;
+    int b = ++a;
+
+    // 'a' se hace 1 y 'b' se hace 1 (toma el mismo valor que a).
+    printf("El valor de a es \'%i\' y el valor de b es \'%i\'.", a, b);
+
     return 0;
 }

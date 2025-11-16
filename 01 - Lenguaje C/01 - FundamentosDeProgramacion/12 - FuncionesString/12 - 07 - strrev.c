@@ -1,23 +1,27 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 08 - isspace.c
+**      Archivo: 12 - 08 - strrev.c
 **      SO: Windows 11
 **      Herramienta: Visual Studio Code
 ** #########################################################################################
 */
 // DIRECTIVAS DE PREPROCESADOR
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 
 // FUNCIÓN PRINCIPAL
 int main() {
-    char c = ' ';
+    char cadena[] = "Jelp200";
+    char copia[50];
     
-    if (isspace(c)) {
-        printf("El carácter es un espacio en blanco.\n");
-    } else {
-        printf("El carácter no es un espacio en blanco.\n");
-    }
+    // Copiar la cadena original a una copia
+    strcpy(copia, cadena);
+    
+    // Invertir la cadena usando strrev
+    strrev(copia);
+    
+    printf("Cadena original: %s\n", cadena);
+    printf("Cadena invertida: %s\n", copia);
     
     return 0;
 }

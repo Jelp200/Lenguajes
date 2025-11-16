@@ -2,27 +2,22 @@
 
 Las estructuras de selección `switch – case` a diferencia se la estructura condicional `if`, son estructuras las cuales tener múltiples casos y de estos múltiples casos poder seleccionar uno que cumpla la condición de dicho caso, una analogía muy utilizada en las estructuras de selección es la de un menú, su diagrama de flujo y declaración están dados de la siguiente manera:
 
-<div> <img src="../../../IMGS/01 - Lenguaje C/01 - FundamentosDeProgramacion/08 - EstructurasDeSeleccion/01 - switchCase.png"> </div>
+[!switch](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/08%20-%20EstructurasDeSeleccion/01%20-%20switchCase.png)
 
 ```C
-// DIRECTIVAS DE PREPROCESADOR
-#include <stdio.h>
-
-// FUNCIÓN PRINCIPAL
-int main(){
-    switch(Preparación){
-        case 1: // Código case 1;
-            break;
-        // …
-        case n: // Código case n;
-            break;
-        default: // Código default;
-            break;
-    }
-   return 0;
+switch(preparacion){
+    case 1: // Código case 1;
+        break;
+    // …
+    case n: // Código case n;
+        break;
+    default: // Código default;
+        break;
 }
 ```
 
-Código de ejemplo <a href="08 - 01 - switchCase.c">click aquí</a>.
+Código de ejemplo [click aquí](./08%20-%2001%20-%20switchCase.c).
 
-Regresar al menú de fundamentos <a href="../../01 - FundamentosDeProgramacion/00 - Fundamentos.md">Click aquí</a>.
+Regresar al menú anterior [click auí](../00%20-%20Fundamentos.md).
+
+Regresar al inicio [click auí](../../Inicio.md).

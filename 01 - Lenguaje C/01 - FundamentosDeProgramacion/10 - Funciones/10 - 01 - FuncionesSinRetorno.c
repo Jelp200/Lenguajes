@@ -1,23 +1,24 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 08 - isspace.c
-**      SO: Windows 11
+**      Archivo: 10 - 01 - FuncionesSinRetorno.c
+**      SO: GNU/Linux
 **      Herramienta: Visual Studio Code
 ** #########################################################################################
 */
+
 // DIRECTIVAS DE PREPROCESADOR
 #include <stdio.h>
-#include <ctype.h>
+
+// PROTOTIPOS DE FUNCIONES
+void ESIME();
 
 // FUNCIÓN PRINCIPAL
-int main() {
-    char c = ' ';
-    
-    if (isspace(c)) {
-        printf("El carácter es un espacio en blanco.\n");
-    } else {
-        printf("El carácter no es un espacio en blanco.\n");
-    }
-    
+int main(void){
+    ESIME();
     return 0;
+}
+
+// FUNCIONES
+void ESIME(){
+    puts("Escuela Superior de Ingenieria Mecanica y Electrica | Zacatenco | ICE | Electronica");
 }

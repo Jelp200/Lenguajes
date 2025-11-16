@@ -55,7 +55,7 @@ void recursiveTraversal(struct Node* head) {
 
 //* FUNCIÓN PRINCIPAL
 int main() {
-    // Creación de la lista: 10 -> 20 -> 30 -> 40
+    // Creación de la lista: 08 -> 20 -> 30 -> 40
     struct Node* head = createNode(10);
     head->next = createNode(20);
     head->next->next = createNode(30);

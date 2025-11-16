@@ -1,23 +1,23 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 08 - isspace.c
+**      Archivo: 12 - 01 - strcpy.c
 **      SO: Windows 11
 **      Herramienta: Visual Studio Code
 ** #########################################################################################
 */
 // DIRECTIVAS DE PREPROCESADOR
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 
 // FUNCIÓN PRINCIPAL
-int main() {
-    char c = ' ';
-    
-    if (isspace(c)) {
-        printf("El carácter es un espacio en blanco.\n");
-    } else {
-        printf("El carácter no es un espacio en blanco.\n");
-    }
-    
+int main(void){
+    char origen[] = "Programación";
+
+    char destino[12];   // Declaramos el arreglo de 12 ya que nuestro arreglo de origen tiene 12 caracteres.
+
+    //Copiamos el contenido y lo mostramos
+    strcpy(destino, origen);
+    printf("%s", destino);
+
     return 0;
 }

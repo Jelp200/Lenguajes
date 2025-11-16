@@ -1,23 +1,22 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 08 - isspace.c
+**      Archivo: 08 - 01 - if.c
 **      SO: Windows 11
 **      Herramienta: Visual Studio Code
 ** #########################################################################################
 */
+
 // DIRECTIVAS DE PREPROCESADOR
 #include <stdio.h>
-#include <ctype.h>
 
-// FUNCIÓN PRINCIPAL
-int main() {
-    char c = ' ';
-    
-    if (isspace(c)) {
-        printf("El carácter es un espacio en blanco.\n");
-    } else {
-        printf("El carácter no es un espacio en blanco.\n");
-    }
-    
+// FUNCION PRINCIPAL
+int main(){
+    int n = 0;
+
+    printf("De un numero: "); scanf("%i", &n);
+
+    if (n >= 0)
+        puts("\n\nEl numero es mayor o igual a 0."); 
+
     return 0;
 }

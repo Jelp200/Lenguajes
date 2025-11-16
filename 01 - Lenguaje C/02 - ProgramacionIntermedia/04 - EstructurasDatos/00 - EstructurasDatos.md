@@ -147,10 +147,10 @@ Siendo su algoritmo el siguiente:
 
 #### Implementaciones de las pilas
 
-- <a href="04 - 04 - Stack/04 - 04 - 07 - IPUA/04 - 04 - 07 - IPUA.md">**_Implementación de una pila utilizando arreglos._**</a>
+- <a href="04 - 04 - Stack/04 - 04 - 08 - IPUA/04 - 04 - 08 - IPUA.md">**_Implementación de una pila utilizando arreglos._**</a>
 - <a href="04 - 04 - Stack/04 - 04 - 08 - IPULE/04 - 04 - 08 - IPULE.md">**_Implementación de una pila utilizando listas enlazadas._**</a>
 
-### <a href="04 - 05 - Queue/04 - 05 - 07 - QueueComplete.c">Colas</a>
+### <a href="04 - 05 - Queue/04 - 05 - 08 - QueueComplete.c">Colas</a>
 
 Las colas son estructuras de datos que sigues el principio **_FIFO (First-in, First-out)_**, es decir, el primer elemento que entra es el primero que sale.
 
@@ -233,7 +233,7 @@ La aplicación de colas es común. En un sistema informático, puede haber colas
 
 #### Implementaciones de las colas
 
-- <a href="04 - 05 - Queue/04 - 05 - 08 - ICUA/04 - 05 - 07 - ICUA.md">**_Implementación de colas utilizando arreglos._**</a>
+- <a href="04 - 05 - Queue/04 - 05 - 08 - ICUA/04 - 05 - 08 - ICUA.md">**_Implementación de colas utilizando arreglos._**</a>
 - <a href="04 - 05 - Queue/04 - 05 - 09 - ICULE/04 - 05 - 09 - ICULE.md">**_Implementación de colas utilizando listas enlazadas._**</a>
 
 ### <a href="./04 - 06 - LinkedList/04 - 06 - 04 - LinkedListComplete.c">Listas Enlazadas</a>

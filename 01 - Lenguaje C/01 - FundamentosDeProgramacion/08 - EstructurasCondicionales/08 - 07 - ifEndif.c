@@ -1,23 +1,26 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 08 - isspace.c
+**      Archivo: 08 - 08 - inEndif.c
 **      SO: Windows 11
 **      Herramienta: Visual Studio Code
 ** #########################################################################################
 */
+
 // DIRECTIVAS DE PREPROCESADOR
 #include <stdio.h>
-#include <ctype.h>
 
-// FUNCIÓN PRINCIPAL
-int main() {
-    char c = ' ';
-    
-    if (isspace(c)) {
-        printf("El carácter es un espacio en blanco.\n");
-    } else {
-        printf("El carácter no es un espacio en blanco.\n");
-    }
-    
+// DEFINES
+#define MODE 2
+
+// FUNCION PRINCIPAL
+int main(){
+    #if MODE == 1
+        printf("Modo 1 seleccionado\n");
+    #elif MODE == 2
+        printf("Modo 2 seleccionado\n");
+    #else
+        printf("Modo desconocido\n");
+    #endif
+
     return 0;
 }

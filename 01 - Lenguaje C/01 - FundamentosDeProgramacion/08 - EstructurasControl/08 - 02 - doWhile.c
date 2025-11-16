@@ -1,23 +1,31 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 08 - isspace.c
+**      Archivo: 08 - 02 - doWhile.md
 **      SO: Windows 11
 **      Herramienta: Visual Studio Code
 ** #########################################################################################
 */
 // DIRECTIVAS DE PREPROCESADOR
 #include <stdio.h>
-#include <ctype.h>
 
 // FUNCIÓN PRINCIPAL
-int main() {
-    char c = ' ';
+int main(void){
+    int i = 0;
     
-    if (isspace(c)) {
-        printf("El carácter es un espacio en blanco.\n");
-    } else {
-        printf("El carácter no es un espacio en blanco.\n");
-    }
-    
+    do{
+        printf("%i.\n", i);
+        i++;
+        /* PROCESO DEL CÓDIGO
+        i = 1, 1 + 1 = 2, 2 + 1 = 3, 3 + 1 = 4, ...
+        0.
+        1.
+        2.
+        3.
+        4.
+        ...
+        20.
+        */
+    }while (i <= 20);
+
     return 0;
 }

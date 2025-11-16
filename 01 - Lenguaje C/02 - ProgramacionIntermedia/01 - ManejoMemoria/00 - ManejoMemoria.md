@@ -197,7 +197,7 @@ int main() {
 
 Aunque `realloc(pr, 0)` técnicamente libera memoria, no siempre es equivalente a `free(ptr)` debido a que el comportamiento de `realloc()` puede depender del sistema. En algunos casos, puede devolver un puntero `>NULL` sin liberar memoria correctamente.
 
-### <a href="../01 - ManejoMemoria/01 - 07 - VLA.c">Arreglos Multidimensionales de Tamaño Variable</a>
+### <a href="../01 - ManejoMemoria/01 - 08 - VLA.c">Arreglos Multidimensionales de Tamaño Variable</a>
 
 C permite tener arreglos de longitud variable (VLA), estos arreglos son modelados con límites que solo se conocen en el momento, por lo tanto, es importante no asignar un VLA muy largo, utilizar apuntadores para VLAs con `sizeof` es correcto.
 

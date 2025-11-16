@@ -1,23 +1,21 @@
 /*
 ** #########################################################################################
-**      Archivo: 12 - 08 - isspace.c
+**      Archivo: 08 - 03 - for.md
 **      SO: Windows 11
 **      Herramienta: Visual Studio Code
 ** #########################################################################################
 */
 // DIRECTIVAS DE PREPROCESADOR
 #include <stdio.h>
-#include <ctype.h>
 
 // FUNCIÓN PRINCIPAL
-int main() {
-    char c = ' ';
-    
-    if (isspace(c)) {
-        printf("El carácter es un espacio en blanco.\n");
-    } else {
-        printf("El carácter no es un espacio en blanco.\n");
+int main(void){
+    // int i = 0;
+
+    // Tambien podemos inicializar la variable dentro del ciclo.
+    for (int i = 0; i <= 254; i++){
+        printf("%c\n", i);                    // Imprime el código ASCII.
     }
-    
+
     return 0;
 }

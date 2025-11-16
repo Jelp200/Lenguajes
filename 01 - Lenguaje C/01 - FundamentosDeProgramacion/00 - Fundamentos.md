@@ -8,22 +8,23 @@ La programación es uno de los saberes que como ingeniero uno debe de saberlo ma
 
 En este apartado se podrán visualizar los siguiente temas:
 
-1. [Estructura general de un programa en C](./01%20-%20EstructuraGeneral.md).
-2. [Hola, Mundo!](./02%20-%20HolaMundo.c).
-3. [Variables](./03%20-%20Variables.md).
-4. [Tipos de datos](./04%20-%20TiposDatos.md).
-5. [Entradas y salidas](./05%20-%20EntradasSalidas.md).
-6. [Operadores](./06%20-%20Operadores.md).
-7. [Postincremento y preincremento](./)
+1. [Estructura general de un programa en C](./01%20-%20EstructuraGeneral.md)
+2. [Hola, Mundo!](./02%20-%20HolaMundo.c)
+3. [Variables](./03%20-%20Variables.md)
+4. [Tipos de datos](./04%20-%20TiposDatos.md)
+5. [Entradas y salidas](./05%20-%20EntradasSalidas.md)
+6. [Operadores](./06%20-%20Operadores.md)
+7. [Postincremento y preincremento](./07%20-%20PostPreIncremento/00%20-%20PostPreIncremento.md)
 8. Estructuras
-    - [Condicionales](./).
-    - [Selección](./)
-    - [Control](./)
-9. [Break y continue](./)
-10. [Funciones](./)
+    - [Condicionales](./08%20-%20EstructurasCondicionales/00%20-%20EstructurasCondicionales.md)
+    - [Selección](./08%20-%20EstructurasSeleccion/00%20-%20EstructurasSeleccion.md)
+    - [Control](./08%20-%20EstructurasControl/00%20-%20EstructurasControl.md)
+9. [Break y continue](./09%20-%20BreakContinue/00%20-%20BreakContinue.md)
+10. [Funciones](./10%20-%20Funciones/00%20-%20Funciones.md)
 11. [Funciones recursivas](./)
 12. Funciones de trabajo
-    - [String](./).
+    - [Caracteres](./11%20-%20Caracteres/00%20-%20Caracteres.md).
+    - [String](./11%20-%20FuncionesString/00%20-%20FuncionesString.md).
     - [Matematicas](./).
     - [Aleatorias](./)
 13. [Estructuras de datos básicas (Arreglos)](./)
