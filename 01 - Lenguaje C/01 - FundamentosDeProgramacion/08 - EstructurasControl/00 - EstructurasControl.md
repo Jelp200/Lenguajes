@@ -12,7 +12,7 @@ while(condicion_a_cumplir) {
 }
 ```
 
-[!While](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/10%20-%20EstructurasControl/01%20-%20while.png)
+[!While](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/10%20-%20EstructurasControl/01%20-%20while.png)
 
 ## [Do/While](./10%20-%2002%20-%20doWhile.c)
 
@@ -24,7 +24,7 @@ do {
 } while(condicion_a_cumplir);
 ```
 
-[!DoWhile](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/10%20-%20EstructurasControl/02%20-%20doWhile.png)
+[!DoWhile](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/10%20-%20EstructurasControl/02%20-%20doWhile.png)
 
 ## [For](./10%20-%2003%20-%20for.c)
 
@@ -32,7 +32,7 @@ El ciclo `for` (para) es un bucle el cual permite realizar un código para ciert
 
 Algo importante que destacar es que estos ciclos `for` permiten ingresar datos dentro de un arreglo de tamaño `n`, por lo cual para poder llenar dicho arreglo lo que se hace es que el ciclo o bucle recorre cada elemento del arreglo para poder llenarlo con su respectivo dato, su diagrama de flujo y declaración están dados de la siguiente manera:
 
-[!For](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/10%20-%20EstructurasControl/03%20-%20for.png)
+[!For](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/10%20-%20EstructurasControl/03%20-%20for.png)
 
 Se puede observar que para poder utilizar un ciclo al menos en el lenguaje de programación C/C++ es necesario tener una variable la cual permite controlar dicho ciclo, la mayoría de las veces por convicción esta variable es llamada `i`, está `i` comenzara desde algún lugar y llega a otro, y siempre dará ciertos pasos, ya sea hacía atrás o hacía adelante.
 
@@ -48,7 +48,7 @@ for(inicializacion; condicion; pasos){
 
 Al igual que las estructuras condicionales `if`, los ciclos `for` de igual manera pueden ser anidados, su diagrama de flujo y declaración están dados de la siguiente manera:
 
-[!ForA](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/10%20-%20EstructurasControl/04%20-%20forA.png)
+[!ForA](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/10%20-%20EstructurasControl/04%20-%20forA.png)
 
 ```C
 for(inicializacion_1; condicion_1; pasos) {

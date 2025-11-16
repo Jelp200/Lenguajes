@@ -1,6 +1,6 @@
 # PROGRAMACIÓN C :croissant:
 
-![HEADER](../imgs/01%20-%20Lenguaje%20C/Header_C.png)
+![HEADER](../IMGS/01%20-%20Lenguaje%20C/Header_C.png)
 
 Bienvenido a la carpeta de ***PROGRAMACIÓN EN C***, en esta carpeta se visualizarán desde los temas más básicos, hasta los más avanzados de dicho lenguaje de programación. La carpeta se divide en los siguientes modulos:
 

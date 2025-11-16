@@ -14,7 +14,7 @@ Código de ejemplo [click aquí](./09%20-%2001%20-%20breakContinue.c).
 
 Siendo el diagrama de flujo del código ejemplo el siguiente:
 
-[!BC](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/11%20-%20BreakContinue/01%20-%20BreakContinue.png)
+[!BC](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/11%20-%20BreakContinue/01%20-%20BreakContinue.png)
 
 Regresar al menú anterior [click auí](../00%20-%20Fundamentos.md).
 

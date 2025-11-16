@@ -67,7 +67,7 @@ void msjFuncion(){
 
 Siendo su diagrama de flujo el siguiente:
 
-[!Fnc](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/14%20-%20Funciones/01%20-%20voidF.png)
+[!Fnc](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/14%20-%20Funciones/01%20-%20voidF.png)
 
 ## [Funciones con retorno](./10%20-%2002%20-%20FuncionesConRetorno.c)
 
@@ -119,7 +119,7 @@ int Sumar(int n1, int n2) {
 
 Siendo su diagrama de flujo el siguiente:
 
-[!FncR](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/14%20-%20Funciones/02%20-%20returnF.png)
+[!FncR](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/14%20-%20Funciones/02%20-%20returnF.png)
 
 Regresar al menú anterior [click auí](../00%20-%20Fundamentos.md).
 

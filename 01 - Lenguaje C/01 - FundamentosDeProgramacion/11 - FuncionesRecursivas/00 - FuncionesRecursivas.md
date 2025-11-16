@@ -48,7 +48,7 @@ long Factorial(int a){
 
 El proceso del código es el siguiente para `n = 3`:
 
-[!FncRec1](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/15%20-%20FuncionesRecursivas/02%20-%20procesoFactNum.png)
+[!FncRec1](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/15%20-%20FuncionesRecursivas/02%20-%20procesoFactNum.png)
 
 Se puede observar que en primera instancia se llama a la función factorial de 3, se evalúa el valor dado por el usuario dentro de ella y el valor dado por el usuario se multiplica por la función factorial de `3 - 1`, ósea, la función factorial de 2, al hacer esto es necesario calcular el factorial de 2 y a su vez, el factorial de 1, una vez calculados el factorial de `n - 1`  lo que se hace es multiplicar el resultado de cada factorial calculado por la función, siendo así que el factorial de 3 es igual a 6.
 
@@ -78,9 +78,9 @@ long Factorial(int a){
 }
 ```
 
-[!FncRec1](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/15%20-%20FuncionesRecursivas/03%20-%20factNumeroCompleto.png)
+[!FncRec1](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/15%20-%20FuncionesRecursivas/03%20-%20factNumeroCompleto.png)
 
-[!FncRec1](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/15%20-%20FuncionesRecursivas/04%20-%20procesoFactNumCompleto.png)
+[!FncRec1](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/15%20-%20FuncionesRecursivas/04%20-%20procesoFactNumCompleto.png)
 
 Se puede observar que los códigos anteriormente vistos llaman a la función factorial y una vez hecho esto la misma función se llama a si misma para poder realizar las operaciones correspondientes dentro del programa.
 

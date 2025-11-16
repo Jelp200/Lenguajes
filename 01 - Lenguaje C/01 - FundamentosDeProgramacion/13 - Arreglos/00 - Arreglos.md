@@ -8,7 +8,7 @@ En C es posible tener dos tipos de arreglos, los unidimensionales (vectores) y l
 
 Son conjuntos de datos individuales del mismo tipo bajo el mismo nombre y con el mismo tipo de almacenamiento; estos datos pueden ser caracteres, enteros, flotantes, etc. Cada dato del conjunto es accesible mediante un índice, esto puede verse cómo:
 
-[!A1D](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/18%20-%20Arreglos/01%20-%20RecorridoArreglo.png)
+[!A1D](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/18%20-%20Arreglos/01%20-%20RecorridoArreglo.png)
 
 Este conjunto de datos puede ser visualizado como un vector, la analogía entre el lenguaje C y el algebra lineal es la siguiente:
 
@@ -28,7 +28,7 @@ printf("El 3er valor del arreglo es %i: ", arreglo[2]);
 
 Es posible observar que el conteo de las posiciones del arreglo comienza desde la posición 0 o el índice 0, entonces, para poder visualizar o modificar los datos de un arreglo en necesario ser específico que índice se desea modificar.
 
-[!A1D](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/18%20-%20Arreglos/01%20-%20RecorridoArreglo.png)
+[!A1D](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/18%20-%20Arreglos/01%20-%20RecorridoArreglo.png)
 
 Para ello se tienen tres formas básicas de modificación para los arreglos, estas son:
 
@@ -65,7 +65,7 @@ while(++indice < 10){
 
 El diagrama de flujo del fragmento de código anterior es el siguiente:
 
-[!FTA](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/18%20-%20Arreglos/03%20-%20DiagramaFlujoBucleParaModificacion.png)
+[!FTA](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/18%20-%20Arreglos/03%20-%20DiagramaFlujoBucleParaModificacion.png)
 
 ## [Arreglos bidimensionales.](./13%20-%2002%20-%20arregloBidimensional.c)
 

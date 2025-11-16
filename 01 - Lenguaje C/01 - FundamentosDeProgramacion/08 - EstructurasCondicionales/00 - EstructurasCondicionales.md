@@ -16,7 +16,7 @@ if(condicion_a_cumplir) {
 }
 ```
 
-[!if](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/01%20-%20if.png)
+[!if](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/01%20-%20if.png)
 
 ## [If's Anidados.](./08%20-%2002%20-%20ifs.c)
 
@@ -33,7 +33,7 @@ if(condicion_1_a_cumplir){
 }
 ```
 
-[!ifsA](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/02%20-%20ifA.png)
+[!ifsA](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/02%20-%20ifA.png)
 
 ## [If/Else.](./08%20-%2004%20-%20ifElse.c)
 
@@ -47,7 +47,7 @@ if(condicion_a_cumplir) {
 }
 ```
 
-[!ifElse](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/03%20-%20ifElse.png)
+[!ifElse](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/03%20-%20ifElse.png)
 
 ## [If/Else/If.](./08%20-%2005%20-%20ifElseIf.c)
 
@@ -60,7 +60,7 @@ if(condición_a_cumplir) {
     // Proceso a realizar sino se cumple la condición
 }
 ```
-[!ifElseIf](../../../imgs/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/04%20-%20ifElseIf.png)
+[!ifElseIf](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/04%20-%20ifElseIf.png)
 
 ## [Operador ternario](./08%20-%2006%20-%20opTernario.c)
 
