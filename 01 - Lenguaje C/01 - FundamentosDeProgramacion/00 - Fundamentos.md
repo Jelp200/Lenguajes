@@ -33,4 +33,4 @@ En este apartado se podrán visualizar los siguiente temas:
 16. [Nuevos tipos de datos](./16%20-%20NuevosTiposDatos/00%20-%20NuevosTiposDatos.md)
 17. [Entradas y salidas estandar](./17%20-%20EntradasSalidasEstandar/00%20-%20EntradaSalidasEstandar.md)
 
-Regresar al inicio [click auí](../Inicio.md).
+Regresar al inicio [click aquí](../Inicio.md).
