@@ -9,7 +9,7 @@ Para entender por qué es importante el manejo de archivos, veamos algunas carac
 - Eficiencia: Puede requerirse una gran cantidad de entrada para algunos programas. El manejo de archivos le permite acceder fácilmente a una parte de un archivo utilizando pocas instrucciones, lo que ahorra mucho tiempo y reduce la posibilidad de errores.
 - Capacidad de almacenamiento: Los archivos le permiten almacenar una gran cantidad de datos sin tener que preocuparse por almacenar todo simultáneamente en un programa.
 
-## <a href="03 - 01 - LEA_Txt&Bin.c">Lectura y Escritura de Archivos (Modo Texto y Binario)</a>
+## [Lectura y Escritura de Archivos (Modo Texto y Binario)](./03%20-%2001%20-%20LEA_Txt&Bin.c)
 
 Un archivo puede ser clasificado en dos tipos basado en la forma de almacenar sus datos.
 
@@ -30,7 +30,7 @@ Un archivo de texto contiene datos en forma binaria, por lo general es utilizado
 - Son más seguros porque no son fáciles de leer.
 - Generalmente se almacenan con la extensión de archivo `.bin`.
 
-<div><img src="../../../IMGS/01 - Lenguaje C/02 - ProgramacionIntermedia/02 - Apuntadores (Avanzado)/TAC.png"></div>
+[!TAC](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/TAC.png)
 
 ### Operaciones con Archivos
 
