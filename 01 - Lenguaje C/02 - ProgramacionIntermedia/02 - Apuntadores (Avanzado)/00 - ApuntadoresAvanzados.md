@@ -58,7 +58,7 @@ int main() {
 
 Ilustrando el ejemplo anterior.
 
-[!PP](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/PunteroPuntero.png)
+![PP](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/PunteroPuntero.png)
 
 > **Nota 1:** El tamaño de la variable del apuntador doble siempre será igual a la de los apuntadores normales.
 
@@ -179,17 +179,17 @@ Existen varias operaciones las cuales pueden ser realizadas con apuntadores, dic
 
 - Incremento/Decremento de un apuntador. Cuando un apuntador se incrementa, este se incrementa por el tamaño del tipo de dato de la variable apuntador. De igual forma pasa lo mismo con el decremento, este se decrementa por el tañao del tipo de la variable apuntador.
 
-[!IDP](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/IDPuntero.png)
+![IDP](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/IDPuntero.png)
 
 > **Nota 2:** El tamaño de la variable del apuntador de la imagen de ejemplo es de 32b (4B), osea una variable apuntador flotante.
 
 - Suma de un entero a un apuntador. Cuando a un apuntador se le suma un tipo de dato entero, lo primero que pasa es que el valor del entero es multiplicado por el tamaño en Bytes del entero y consecuentemente se agrega al valor de la dirección de memoria de la variable apuntador.
 
-[!SP](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/Spuntero.png)
+![SP](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/Spuntero.png)
 
 - Resta de un entero a un apuntador. Cuando a un apuntador se le resta un tipo de dato entero, lo primero que pasa es que el valor del entero es multiplicado por el tamaño en Bytes del entero y consecuentemente se quita al valor de la dirección de memoria de la variable apuntador.
 
-[!SP](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/Rpuntero.png)
+![SP](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/Rpuntero.png)
 
 - Resta de dos apuntadores. La resta de dos apuntadores es posible solo cuando estos son del mismo tipo de dato. El resultado se da cuando se calcula la diferencia entre las direcciones de memoria de los dos apuntadores, y se calcula cuantos Bytes de datos existen de diferencia entre estos dos, por ejemplo:
 
@@ -260,6 +260,51 @@ int main() {
     return 0;
 }
 ```
+
+```mermaid
+flowchart LR
+    %% Inicialización
+    Start([Inicio]) --> Init["n = 10 <br/>arr = { 1..10 }"]
+    Init --> PtrInit["ptr = arr <br/>count_even = 0 <br/>count_odd = 0"]
+    
+    %% Ciclo For
+    PtrInit --> Loop{Desde i = 0 <br/>Hasta i < n <br/>i++}
+    
+    subgraph Cuerpo_Ciclo [Lógica de Conteo]
+        direction TB
+        Loop -- "Sí" --> CheckEven{"*ptr % 2 == 0"}
+        
+        %% Condicionales
+        CheckEven -- "Sí" --> IncEven[count_even++]
+        CheckEven -- "No" --> CheckOdd{"*ptr % 2 != 0"}
+        CheckOdd -- "Sí" --> IncOdd[count_odd++]
+        
+        %% Aritmética de Punteros
+        IncEven --> PtrNext[ptr++]
+        IncOdd --> PtrNext
+        CheckOdd -- "No" --> PtrNext
+    end
+    
+    %% Retorno al ciclo y Salida
+    PtrNext -- "Siguiente" --> Loop
+    Loop -- "No" --> Print[/Imprimir resultados/]
+    Print --> Fin([Fin])
+
+    %% Estilos Profesionales
+    classDef terminador fill:#ffffff,stroke:#333,stroke-width:2px;
+    classDef logica fill:#d1e6ff,stroke:#000;
+    classDef accion fill:#ffe6cc,stroke:#000;
+    classDef puntero fill:#f5f5f5,stroke:#999,stroke-dasharray: 5 5;
+    classDef entradaSalida fill:#fff9c4,stroke:#fbc02d;
+
+    class Start,Fin terminador;
+    class Loop,CheckEven,CheckOdd logica;
+    class Init,PtrInit,IncEven,IncOdd accion;
+    class PtrNext puntero;
+    class Print entradaSalida;
+```
+
+
 
 Regresar al menú anterior [click aquí](../00%20-%20Intermedio.md).
 

@@ -30,7 +30,7 @@ Un archivo de texto contiene datos en forma binaria, por lo general es utilizado
 - Son más seguros porque no son fáciles de leer.
 - Generalmente se almacenan con la extensión de archivo `.bin`.
 
-[!TAC](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/TAC.png)
+![TAC](../../../IMGS/01%20-%20Lenguaje%20C/02%20-%20ProgramacionIntermedia/02%20-%20Apuntadores%20(Avanzado)/TAC.png)
 
 ### Operaciones con Archivos
 
@@ -119,6 +119,43 @@ int main(){
 }
 ```
 
+```mermaid
+flowchart TD
+    %% Inicialización
+    Start([Inicio]) --> Open["FILE *fp = fopen('nombreArchivo.txt', 'r')"]
+    
+    %% Validación del Puntero
+    Open --> Check{"fp == NULL"}
+    
+    subgraph Gestion_Errores [Manejo de Excepción]
+        direction TB
+        Check -- "Sí" --> Msg[/Imprimir: El archivo no existe/]
+        Msg --> Exit["exit(0)"]
+    end
+    
+    %% Flujo Exitoso
+    Check -- "No" --> Success[Archivo abierto correctamente]
+    Success --> Return[return 0]
+    
+    Exit --> Fin([Fin])
+    Return --> Fin
+
+    %% Estilos Profesionales
+    classDef terminador fill:#ffffff,stroke:#333,stroke-width:2px;
+    classDef logica fill:#d1e6ff,stroke:#000;
+    classDef accion fill:#ffe6cc,stroke:#000;
+    classDef error fill:#ffcdd2,stroke:#c62828;
+    classDef entradaSalida fill:#fff9c4,stroke:#fbc02d;
+
+    class Start,Fin terminador;
+    class Check logica;
+    class Open,Success,Return accion;
+    class Exit error;
+    class Msg entradaSalida;
+```
+
+
+
 El archivo no se abre debido a que no existe en el directorio fuente. Pero `fopen()` es capaz de crear un archivo el cual no existe.
 
 ### Crear un Archivo en C
@@ -150,6 +187,45 @@ int main(){
     return 0;
 }
 ```
+
+```mermaid
+flowchart TD
+    %% Inicialización
+    Start([Inicio]) --> Open["fp = fopen('nombreArchivo.txt', 'w')"]
+    
+    %% Validación del Puntero
+    Open --> Check{"fp == NULL"}
+    
+    subgraph Gestion_Errores [Manejo de Excepción]
+        direction TB
+        Check -- "Sí" --> MsgErr[/ "Imprimir: Error al abrir" /]
+        MsgErr --> Exit["exit(0)"]
+    end
+    
+    subgraph Flujo_Exitoso [Confirmación]
+        direction TB
+        Check -- "No" --> MsgOk[/ "Imprimir: Archivo creado" /]
+        MsgOk --> Return["return 0"]
+    end
+    
+    Exit --> Fin([Fin])
+    Return --> Fin
+
+    %% Estilos Profesionales
+    classDef terminador fill:#ffffff,stroke:#333,stroke-width:2px;
+    classDef logica fill:#d1e6ff,stroke:#000;
+    classDef accion fill:#ffe6cc,stroke:#000;
+    classDef error fill:#ffcdd2,stroke:#c62828;
+    classDef entradaSalida fill:#fff9c4,stroke:#fbc02d;
+
+    class Start,Fin terminador;
+    class Check logica;
+    class Open,Return accion;
+    class Exit error;
+    class MsgErr,MsgOk entradaSalida;
+```
+
+
 
 ### Lectura Desde un Archivo
 
@@ -328,6 +404,52 @@ int main() {
     return 0;
 }
 ```
+
+```mermaid
+flowchart TD
+    %% Inicialización
+    Start([Inicio]) --> Open["fp = fopen('C://programa.bin', 'wb')"]
+    
+    %% Validación de Apertura
+    Open --> CheckOpen{"fp == NULL"}
+    CheckOpen -- "Sí" --> ErrOpen[/ "Imprimir: Error al abrir" /]
+    ErrOpen --> Exit["exit(1)"]
+    
+    %% Ciclo de Escritura
+    CheckOpen -- "No" --> Loop{"Desde n = 1; Hasta n < 5; n++"}
+    
+    subgraph Proceso_Escritura [Carga de Datos y fwrite]
+        direction TB
+        Loop -- "Sí" --> Assign["num.n1 = n; num.n2 = n*5; num.n3 = n*5+1"]
+        Assign --> Write["flag = fwrite(&num, sizeof(struct), 1, fp)"]
+        Write --> Loop
+    end
+    
+    %% Validación de Escritura Final
+    Loop -- "No" --> CheckWrite{"!flag"}
+    CheckWrite -- "Sí" --> ErrWrite[/ "Imprimir: Escritura fallida" /]
+    CheckWrite -- "No" --> Success[/ "Imprimir: Escritura correcta" /]
+    
+    %% Cierre y Fin
+    ErrWrite --> Close["fclose(fp)"]
+    Success --> Close
+    Close --> Fin([Fin])
+
+    %% Estilos Profesionales
+    classDef terminador fill:#ffffff,stroke:#333,stroke-width:2px;
+    classDef logica fill:#d1e6ff,stroke:#000;
+    classDef accion fill:#ffe6cc,stroke:#000;
+    classDef entradaSalida fill:#fff9c4,stroke:#fbc02d;
+    classDef error fill:#ffcdd2,stroke:#c62828;
+
+    class Start,Fin terminador;
+    class CheckOpen,Loop,CheckWrite logica;
+    class Open,Assign,Write,Close accion;
+    class ErrOpen,ErrWrite,Success entradaSalida;
+    class Exit error;
+```
+
+
 
 ### `fseek()` en C
 

@@ -16,7 +16,30 @@ if(condicion_a_cumplir) {
 }
 ```
 
-[!if](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/01%20-%20if.png)
+``````mermaid
+flowchart LR
+    %% Definición de Nodos principales
+    A([Inicio]) --> B{Decisión}
+    B -- Sí --> C[Proceso]
+    C --> D([Fin])
+
+    %% Rutas de salida para el "No"
+    B -- No --> D([Fin])
+
+    %% Configuración de Estilos Profesionales
+    classDef terminador fill:#ffffff,stroke:#333,stroke-width:2px;
+    classDef decision fill:#d1e6ff,stroke:#000,stroke-width:1px;
+    classDef proceso fill:#ffe6cc,stroke:#000,stroke-width:1px;
+
+    %% Aplicación de clases a los nodos
+    class A,D terminador;
+    class B decision;
+    class C proceso;
+
+    %% Estilos de las flechas (Verde para Sí, Rojo para No)
+    linkStyle 1 stroke:green,stroke-width:2px,color:green;
+    linkStyle 3 stroke:red,stroke-width:2px,color:red;
+``````
 
 ## [If's Anidados.](./08%20-%2002%20-%20ifs.c)
 
@@ -33,7 +56,34 @@ if(condicion_1_a_cumplir){
 }
 ```
 
-[!ifsA](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/02%20-%20ifA.png)
+```mermaid
+flowchart LR
+    %% Definición de Nodos principales
+    A([Inicio]) --> B{Decisión 1}
+    B -- Sí --> C{Decisión 2}
+    C -- Sí --> D{Decisión n}
+    D -- Sí --> E[Proceso]
+    E --> F([Fin])
+
+    %% Rutas de salida para el "No"
+    B -- No ----> F
+    C -- No ----> F
+    D -- No ----> F
+
+    %% Configuración de Estilos Profesionales
+    classDef terminador fill:#ffffff,stroke:#333,stroke-width:2px;
+    classDef decision fill:#d1e6ff,stroke:#000,stroke-width:1px;
+    classDef proceso fill:#ffe6cc,stroke:#000,stroke-width:1px;
+
+    %% Aplicación de clases a los nodos
+    class A,F terminador;
+    class B,C,D decision;
+    class E proceso;
+
+    %% Estilos de las flechas (Verde para Sí, Rojo para No)
+    linkStyle 1,2,3 stroke:green,stroke-width:2px,color:green;
+    linkStyle 5,6,7 stroke:red,stroke-width:2px,color:red;
+```
 
 ## [If/Else.](./08%20-%2004%20-%20ifElse.c)
 
@@ -47,7 +97,31 @@ if(condicion_a_cumplir) {
 }
 ```
 
-[!ifElse](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/03%20-%20ifElse.png)
+```mermaid
+flowchart LR
+    %% Definición de Nodos principales
+    A([Inicio]) --> B{Decisión}
+    B -- Sí --> C[Proceso]
+    C --> D([Fin])
+    E --> D([Fin])
+
+    %% Rutas de salida para el "No"
+    B -- No --> E[Proceso]
+
+    %% Configuración de Estilos Profesionales
+    classDef terminador fill:#ffffff,stroke:#333,stroke-width:2px;
+    classDef decision fill:#d1e6ff,stroke:#000,stroke-width:1px;
+    classDef proceso fill:#ffe6cc,stroke:#000,stroke-width:1px;
+
+    %% Aplicación de clases a los nodos
+    class A,D terminador;
+    class B decision;
+    class C,E proceso;
+
+    %% Estilos de las flechas (Verde para Sí, Rojo para No)
+    linkStyle 1 stroke:green,stroke-width:2px,color:green;
+    linkStyle 4 stroke:red,stroke-width:2px,color:red;
+```
 
 ## [If/Else/If.](./08%20-%2005%20-%20ifElseIf.c)
 
@@ -60,7 +134,34 @@ if(condición_a_cumplir) {
     // Proceso a realizar sino se cumple la condición
 }
 ```
-[!ifElseIf](../../../IMGS/01%20-%20Lenguaje%20C/01%20-%20FundamentosDeProgramacion/07%20-%20EstructurasCondicionales/04%20-%20ifElseIf.png)
+```mermaid
+flowchart LR
+    %% Definición de Nodos y Flujo
+    A([Inicio]) --> B{Decisión}
+    
+    %% Rama superior
+    B -- Sí --> C[Proceso]
+    C --> F([Fin])
+
+    %% Rama inferior (Fallback)
+    B -- No --> D{Decisión}
+    D -- Sí --> E[Proceso]
+    E --> F
+    D -- No --> F
+
+    %% Estilos Profesionales
+    classDef terminador fill:#ffffff,stroke:#333,stroke-width:2px;
+    classDef decision fill:#d1e6ff,stroke:#000,stroke-width:1px;
+    classDef proceso fill:#ffe6cc,stroke:#000,stroke-width:1px;
+
+    class A,F terminador;
+    class B,D decision;
+    class C,E proceso;
+
+    %% Colores de flechas
+    linkStyle 1,4 stroke:green,stroke-width:2px,color:green;
+    linkStyle 3,6 stroke:red,stroke-width:2px,color:red;
+```
 
 ## [Operador ternario](./08%20-%2006%20-%20opTernario.c)
 

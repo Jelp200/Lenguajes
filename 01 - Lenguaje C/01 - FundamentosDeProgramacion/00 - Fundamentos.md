@@ -4,7 +4,7 @@
 
 La programación es uno de los saberes que como ingeniero uno debe de saberlo manejar de pies a cabeza, por ello se ha decidido realizar este pequeño *curso* en github para todos aquellos estudiantes, ingenieros y amantes de la programación que deseen tanto afianzar, repasar y aprender este hermoso arte de la programación.
 
-***¿Por qué C?*** Por lo regular la mayoria de las personas creen que C es un lenguaje obsoleto debido a que ya no se escucha hablar de el para programar videojuegos, IA, etc., pero no es así, C no solo no es obsoleto, sino, es uno de los lenguajes de programación que junto con Python, C++ y Java dominan la industria. Esto debido a que C esta enfocado en soluciones más especificas tanto para la electrónica, como para las ciencias computacionales.
+***¿Por qué C?*** Por lo regular la mayoría de las personas creen que C es un lenguaje obsoleto debido a que ya no se escucha hablar de el para programar videojuegos, IA, etc., pero no es así, C no solo no es obsoleto, sino, es uno de los lenguajes de programación que junto con Python, C++ y Java dominan la industria. Esto debido a que C esta enfocado en soluciones más especificas tanto para la electrónica, como para las ciencias computacionales.
 
 En este apartado se podrán visualizar los siguiente temas:
 
