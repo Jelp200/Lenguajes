@@ -1,4 +1,4 @@
-# ESTRUCTURAS DE CONTROL :military_helmet:
+# ESTRUCTURAS DE CONTROL :control_knobs:
 
 Las estructuras de control como su nombre lo dice, son estructuras que permiten realizar un control de una parte o bloques de código siempre y cuando se cumplan ciertas condiciones.
 

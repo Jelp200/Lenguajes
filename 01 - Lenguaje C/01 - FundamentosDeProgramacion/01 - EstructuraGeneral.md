@@ -46,8 +46,10 @@ Las directivas de preprocesador tambien llamadas headers, librerias o archivos d
 
 La función principal es aquella en la cual se tendrá el bloque de código principal del programa.
 
-> ***Nota.*** Es posible observar que se tienen comentarios multilinea `/*...*/` y comentarios de una sola linea `//`.
+> [!note]
+>
+> Es posible observar que se tienen comentarios multilínea `/*...*/` y comentarios de una sola lineal `//`.
 
-Regresar al menú anterior [click auí](./00%20-%20Fundamentos.md).
+Regresar al menú anterior [click aquí](./00%20-%20Fundamentos.md).
 
-Regresar al inicio [click auí](../Inicio.md).
+Regresar al inicio [click aquí](../Inicio.md).
